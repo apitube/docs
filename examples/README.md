@@ -1,4 +1,4 @@
-# Integrations for APITUBE
+# Examles for APITUBE
 
 #### See integrations in other languages(and frameworks) below:
 

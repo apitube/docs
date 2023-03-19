@@ -12,7 +12,7 @@
 
 - [Overview](#overview)
 - [Documentation](#documentation)
-- [Examples in different programming languages](#examples)
+- [Examples in different programming languages(and frameworks)](#examples)
 - [Other competitors](#competitors)
 
 ## Overview
@@ -20,7 +20,7 @@ With our news API, integrating real-time and archived news content into your pro
 
 ## Importing
 ```
-https://apitube.io/v1/news?limit=5
+https://apitube.io/v1/news?limit=200
 ```
 
 ## Output
@@ -30,8 +30,23 @@ https://apitube.io/v1/news?limit=5
 
 ## Documentation
 
-### Response item structure
+### Searching query
 
+Field | Description
+------|------------
+query | The text to match in the news content.
+limit | From 1 to 1000. By default: <code>500</code>.
+offset | By default: <code>0</code>.
+language | Enabled languages:<code>en</code>
+category | Enabled languages:<code>en</code>
+domain | By default: <code>all domains</code>.
+resourceType | Type of resouce. Can be: <code>news</code>, <code>blog</code>.
+resourceRankMin | Minimum resouce rank.
+resourceRankMax | Maximum resouce rank.
+dateStart | Available formats: <code>2018-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.
+dateEnd | Available formats: <code>2018-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.
+
+### Response item structure
 
 Field | Description
 ------|------------
