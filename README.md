@@ -4,9 +4,6 @@
   Powerful News API
 </h1>
 <div align="center">
-  <strong>News API</strong>
-</div>
-<div align="center">
   With our news API, integrating real-time and archived news content into your products and services has never been easier.
 </div>
 
