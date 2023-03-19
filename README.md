@@ -1,10 +1,10 @@
 <h1 align="center">
-  <img src="https://apitube.pub/images/github/apitube.png" alt="APITUBE - Free News API" height="45">
+  <img src="https://apitube.pub/images/github/apitube.png" alt="APITUBE - News API" height="45">
   <br/>
-  Free News API
+  Powerful News API
 </h1>
 <div align="center">
-  <strong>Free News API</strong>
+  <strong>News API</strong>
 </div>
 <div align="center">
   With our news API, integrating real-time and archived news content into your products and services has never been easier.
@@ -25,7 +25,7 @@ https://apitube.io/v1/news?limit=200
 
 ### Response
 <p align="center">
-<img src="https://apitube.pub/images/github/apitube.png" alt="APITUBE - Free News API" height="45">
+<img src="https://apitube.pub/images/github/apitube.png" alt="APITUBE - News API" height="45">
 </p>    
 
 ## Documentation
