@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://apitube.pub/images/github/apitube.png" alt="APITUBE - Free News API" height="76">
+  <img src="https://apitube.pub/images/github/apitube.png" alt="APITUBE - Free News API" height="45">
   <br/>
   Free News API
 </h1>
@@ -18,14 +18,14 @@
 ## Overview
 With our news API, integrating real-time and archived news content into your products and services has never been easier.
 
-## Importing
+## Request
 ```
 https://apitube.io/v1/news?limit=200
 ```
 
-## Output
+## Response
 <p align="center">
-![screenshot](https://apitube.pub/images/github/example.png)
+<img src="https://apitube.pub/images/github/apitube.png" alt="APITUBE - Free News API" height="45">
 </p>    
 
 ## Documentation
