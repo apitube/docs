@@ -10,14 +10,14 @@
 - [Overview](#overview)
 - [Documentation](#documentation)
 - [Examples in different programming languages(and frameworks)](#examples)
-- [Other competitors](#competitors)33
+- [Other competitors](#competitors)
 
 ## Overview
 With our news API, integrating real-time and archived news content into your products and services has never been easier.
 
 ### Request
 ```
-https://apitube.io/v1/news?limit=205
+https://apitube.io/v1/news?limit=200
 ```
 
 ### Response
