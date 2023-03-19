@@ -18,12 +18,12 @@
 ## Overview
 With our news API, integrating real-time and archived news content into your products and services has never been easier.
 
-## Request
+### Request
 ```
 https://apitube.io/v1/news?limit=200
 ```
 
-## Response
+### Response
 <p align="center">
 <img src="https://apitube.pub/images/github/apitube.png" alt="APITUBE - Free News API" height="45">
 </p>    
@@ -43,8 +43,8 @@ domain | By default: <code>all domains</code>.
 resourceType | Type of resouce. Can be: <code>news</code>, <code>blog</code>.
 resourceRankMin | Minimum resouce rank.
 resourceRankMax | Maximum resouce rank.
-dateStart | Available formats: <code>2018-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.
-dateEnd | Available formats: <code>2018-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.
+dateStart | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.
+dateEnd | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.
 
 ### Response item structure
 
