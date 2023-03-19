@@ -30,6 +30,22 @@ https://apitube.io/v1/news?limit=5
 
 ## Documentation
 
+### Response item structure
+
+
+Field | Description
+------|------------
+author | Article title.
+description | Article short text preview.
+content | Article full content with formatting.
+textplain | Article full content without formatting.
+image | Full url path to the image.
+language | Detected language.
+category | Detected category.
+resourceType | Resource type(<code>news</code>, <code>blog</code>)
+resourceRank | Rank of news resource (from 0 to 99)
+sentimentContent | Sentiment of article content.
+
 ## Examples
 - C
   - [Libcurl.c](https://github.com/apitube/documentation/blob/main/examples/C/Libcurl.c)
