@@ -10,14 +10,14 @@
 - [Overview](#overview)
 - [Documentation](#documentation)
 - [Examples in different programming languages(and frameworks)](#examples)
-- [Other competitors](#competitors)
+- [Other competitors](#competitors)33
 
 ## Overview
 With our news API, integrating real-time and archived news content into your products and services has never been easier.
 
 ### Request
 ```
-https://apitube.io/v1/news?limit=200
+https://apitube.io/v1/news?limit=205
 ```
 
 ### Response
@@ -56,7 +56,7 @@ language | Detected language.
 category | Detected category.
 resourceType | Resource type(<code>news</code>, <code>blog</code>)
 resourceRank | Rank of news resource (from 0 to 99)
-sentimentContent | Sentiment of article content.
+sentimentContent | Sentiment of article content(<code>negative</code>, <code>neutral</code>, <code>positive</code>, <code>compound</code>). Values <code>-1</code> to <code>1</code>.
 
 ## Examples
 - C
