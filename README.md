@@ -36,34 +36,35 @@ https://apitube.io/v1/news?limit=200
 
 ### Searching query
 
-Field | Description | Default parameters
-------|------------|-----------
-searchingText | The text to match in the news content. | <code>empty</code>
-limit | From 1 to 1000. | <code>500</code>
-offset | Offset | <code>0</code>
-language | Enabled languages:<code>en</code> | <code>null</code>
-category | Enabled languages:<code>en</code> | <code>null</code>
-domain | Domain name | <code>null</code>
-resourceType | Type of resouce. Can be: <code>news</code>, <code>blog</code>. | <code>null</code>
-resourceRankMin | Minimum resouce rank. | <code>0</code>
-resourceRankMax | Maximum resouce rank. | <code>99</code>
-dateStart | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>. | <code>today date</code>
-dateEnd | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.. | <code>last inserted date</code>
+| Field           | Description                                                                            | Default parameters              |
+|-----------------|----------------------------------------------------------------------------------------|---------------------------------|
+| searchTitle     | Searching articles by <code>title</code>                                               | <code>empty</code>              |
+| searchContent   | Searching articles by <code>content</code>                                             | <code>empty</code>              |
+| limit           | From 1 to 1000.                                                                        | <code>500</code>                |
+| offset          | Offset                                                                                 | <code>0</code>                  |
+| language        | Enabled languages:<code>en</code>                                                      | <code>null</code>               |
+| category        | Enabled languages:<code>en</code>                                                      | <code>null</code>               |
+| domain          | Domain name                                                                            | <code>null</code>               |
+| resourceType    | Type of resource. Can be: <code>news</code>, <code>blog</code>.                        | <code>null</code>               |
+| resourceRankMin | Minimum resource rank.                                                                 | <code>0</code>                  |
+| resourceRankMax | Maximum resource rank.                                                                 | <code>99</code>                 |
+| dateStart       | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.  | <code>today date</code>         |
+| dateEnd         | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.. | <code>last inserted date</code> |
 
 ### Response item structure
 
-Field | Description
-------|------------
-author | Article title.
-description | Article short text preview.
-content | Article full content with formatting.
-textplain | Article full content without formatting.
-image | Full url path to the image.
-language | Detected language.
-category | Detected category.
-resourceType | Resource type(<code>news</code>, <code>blog</code>)
-resourceRank | Rank of news resource (from 0 to 99)
-sentimentContent | Sentiment of article content(<code>negative</code>, <code>neutral</code>, <code>positive</code>, <code>compound</code>). Values <code>-1</code> to <code>1</code>.
+| Field            | Description                                                                                                                                                        |
+|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| author           | Article title.                                                                                                                                                     |
+| description      | Article short text preview.                                                                                                                                        |
+| content          | Article full content with formatting.                                                                                                                              |
+| textplain        | Article full content without formatting.                                                                                                                           |
+| image            | Full url path to the image.                                                                                                                                        |
+| language         | Detected language.                                                                                                                                                 |
+| category         | Detected category.                                                                                                                                                 |
+| resourceType     | Resource type(<code>news</code>, <code>blog</code>)                                                                                                                |
+| resourceRank     | Rank of news resource (from 0 to 99)                                                                                                                               |
+| sentimentContent | Sentiment of article content(<code>negative</code>, <code>neutral</code>, <code>positive</code>, <code>compound</code>). Values <code>-1</code> to <code>1</code>. |
 
 ## Examples
 - C
