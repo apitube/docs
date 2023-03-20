@@ -34,7 +34,7 @@ https://apitube.io/v1/news?limit=200
 
 ## Documentation
 
-### Searching parameters
+### Search parameters
 
 | Field           | Description                                                                            | Default parameters              |
 |-----------------|----------------------------------------------------------------------------------------|---------------------------------|
