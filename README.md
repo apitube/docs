@@ -17,6 +17,12 @@
 ## Overview
 With our news API, integrating real-time and archived news content into your products and services has never been easier.
 
+## Features
+* Easy to use
+* API hirdfdfdf
+* Multiple export formats: <code>JSON</code>, <code>XML</code>, <code>XLS/XLSX</code>, <code>CSV</code>, <code>RSS</code>
+* <strong>Free!</strong>
+
 ### Request
 ```
 https://apitube.io/v1/news?limit=200
