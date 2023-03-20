@@ -19,7 +19,6 @@ With our news API, integrating real-time and archived news content into your pro
 
 ## Features
 * Easy to use
-* API hirdfdfdf
 * Multiple export formats: <code>JSON</code>, <code>XML</code>, <code>XLS/XLSX</code>, <code>CSV</code>, <code>RSS</code>
 * <strong>Free!</strong>
 
