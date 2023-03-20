@@ -31,19 +31,19 @@ https://apitube.io/v1/news?limit=200
 
 ### Searching query
 
-Field | Description
-------|------------
-query | The text to match in the news content.
-limit | From 1 to 1000. By default: <code>500</code>.
-offset | By default: <code>0</code>.
-language | Enabled languages:<code>en</code>
-category | Enabled languages:<code>en</code>
-domain | By default: <code>all domains</code>.
-resourceType | Type of resouce. Can be: <code>news</code>, <code>blog</code>.
-resourceRankMin | Minimum resouce rank.
-resourceRankMax | Maximum resouce rank.
-dateStart | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.
-dateEnd | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.
+Field | Description | Default parameters
+------|------------|-----------
+searchingText | The text to match in the news content. | <code>empty</code>
+limit | From 1 to 1000. | <code>500</code>
+offset | Offset | <code>0</code>
+language | Enabled languages:<code>en</code> | <code>null</code>
+category | Enabled languages:<code>en</code> | <code>null</code>
+domain | Domain name | <code>null</code>
+resourceType | Type of resouce. Can be: <code>news</code>, <code>blog</code>. | <code>null</code>
+resourceRankMin | Minimum resouce rank. | <code>0</code>
+resourceRankMax | Maximum resouce rank. | <code>99</code>
+dateStart | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>. | <code>today date</code>
+dateEnd | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.. | <code>last inserted date</code>
 
 ### Response item structure
 
