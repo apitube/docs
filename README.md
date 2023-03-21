@@ -37,26 +37,31 @@ https://apitube.io/v1/news?limit=200
 
 ### Search parameters
 
-| Field           | Description                                                                            | Default parameters              |
-|-----------------|----------------------------------------------------------------------------------------|---------------------------------|
-| searchTitle     | Searching articles by <code>title</code>                                               | <code>empty</code>              |
-| searchContent   | Searching articles by <code>content</code>                                             | <code>empty</code>              |
-| limit           | From 1 to 1000.                                                                        | <code>500</code>                |
-| offset          | Offset                                                                                 | <code>0</code>                  |
-| language        | Enabled languages:<code>en</code>                                                      | <code>null</code>               |
-| category        | Enabled languages:<code>en</code>                                                      | <code>null</code>               |
-| domain          | Domain name                                                                            | <code>null</code>               |
-| resourceType    | Type of resource. Can be: <code>news</code>, <code>blog</code>.                        | <code>null</code>               |
-| resourceRankMin | Minimum resource rank.                                                                 | <code>0</code>                  |
-| resourceRankMax | Maximum resource rank.                                                                 | <code>99</code>                 |
-| dateStart       | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.  | <code>today date</code>         |
-| dateEnd         | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.. | <code>last inserted date</code> |
+| Field           | Description                                                                                          | Default parameters              |
+|-----------------|------------------------------------------------------------------------------------------------------|---------------------------------|
+| limit           | From 1 to 1000.                                                                                      | <code>500</code>                |
+| offset          | Offset                                                                                               | <code>0</code>                  |
+| searchTitle     | Searching articles by <code>title</code>                                                             | <code>empty</code>              |
+| searchContent   | Searching articles by <code>content</code>                                                           | <code>empty</code>              |
+| language        | Enabled languages:<code>en</code>                                                                    | <code>null</code>               |
+| category        | Enabled languages:<code>en</code>                                                                    | <code>null</code>               |
+| resourceType    | Type of resource. Can be: <code>news</code>, <code>blog</code>.                                      | <code>null</code>               |
+| domain          | Domain name                                                                                          | <code>null</code>               |
+| dateStart       | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                | <code>today date</code>         |
+| dateEnd         | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                | <code>last inserted date</code> |
+| resourceRankMin | Minimum resource rank.                                                                               | <code>0</code>                  |
+| resourceRankMax | Maximum resource rank.                                                                               | <code>99</code>                 |
+| minSentiment    | The minimum value of the sentiment.                                                                  | <code>-1</code>                 |
+| maxSentiment    | The maximum value of the sentiment.                                                                  | <code>1</code>                  |
+| sortBy          | Choose the criteria for sorting the news articles. Can be: <code>date</code>, <code>sentiment</code> | <code>date</code>               |
+| sortDirection   | Choose the criteria for sorting the news articles. Can be: <code>desc</code>, <code>asc</code>       | <code>desc</code>               |
 
 ### Response item structure
 
 | Field            | Description                                                                                                                                                        |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| author           | Article title.                                                                                                                                                     |
+| title            | Article title.                                                                                                                                                     |
+| author           | Article author.                                                                                                                                                    |
 | description      | Article short text preview.                                                                                                                                        |
 | content          | Article full content with formatting.                                                                                                                              |
 | textplain        | Article full content without formatting.                                                                                                                           |
