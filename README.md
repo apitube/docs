@@ -10,6 +10,7 @@
 <hr/>
 
 - [Overview](#overview)
+- [Features](#features)
 - [Documentation](#documentation)
 - [Examples in different programming languages(and frameworks)](#examples)
 - [Other competitors](#competitors)
@@ -18,7 +19,7 @@
 With our news API, integrating real-time and archived news content into your products and services has never been easier.
 
 ## Features
-* Easy to us
+* Easy to use
 * Many searching [filters](#search-parameters)
 * Multiple export formats: <code>JSON</code>, <code>XML</code>, <code>XLS/XLSX</code>, <code>CSV</code>, <code>RSS</code>
 * <strong>Free!</strong>
