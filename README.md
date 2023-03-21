@@ -39,7 +39,7 @@ https://apitube.io/v1/news?limit=200
 
 | Field           | Description                                                                                          | Default parameters              |
 |-----------------|------------------------------------------------------------------------------------------------------|---------------------------------|
-| limit           | From 1 to 1000.                                                                                      | <code>500</code>                |
+| limit           | From <code>1</code> to <code>1000</code>                                                             | <code>500</code>                |
 | offset          | Offset                                                                                               | <code>0</code>                  |
 | searchTitle     | Searching articles by <code>title</code>                                                             | <code>empty</code>              |
 | searchContent   | Searching articles by <code>content</code>                                                           | <code>empty</code>              |
