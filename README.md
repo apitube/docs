@@ -152,7 +152,7 @@ https://apitube.io/v1/news?limit=200
   - [NSURLSession](https://github.com/apitube/documentation/blob/master/examples/Swift/NSURLSession.swift)
 
 ## Competitors
-They are all paid. This is a free alternative.
+They are all paid. APITUBE is a free alternative.
 - [NewsCatcher News API](https://newscatcherapi.com/)
 - [Newsdata](https://newsdata.io/)
 - [uCrawler](https://ucrawler.app)
