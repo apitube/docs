@@ -31,7 +31,7 @@ https://apitube.io/v1/news?limit=200
 
 ### Response
 <p align="center">
-<img src="https://apitube.pub/images/github/preview.jpg" alt="APITUBE - News API" height="45">
+<img src="https://apitube.pub/images/github/preview.jpg" alt="APITUBE - News API">
 </p>    
 
 ## Documentation
