@@ -75,82 +75,82 @@ https://apitube.io/v1/news?limit=200
 
 ## Examples
 - C
-  - [Libcurl.c](https://github.com/apitube/documentation/blob/master/examples/C/Libcurl.c)
+  - [Libcurl.c](https://github.com/apitube/integrations/blob/master/C/Libcurl.c)
 
 - C#
-  - [HttpClient](https://github.com/apitube/documentation/blob/master/examples/C%23/HttpClient.cs)
-  - [RestSharp](https://github.com/apitube/documentation/blob/master/examples/C%23/RestSharp.cs)
-  - [Unirest](https://github.com/apitube/documentation/blob/master/examples/C%23/Unirest.cs)
+  - [HttpClient](https://github.com/apitube/integrations/blob/master/C%23/HttpClient.cs)
+  - [RestSharp](https://github.com/apitube/integrations/blob/master/C%23/RestSharp.cs)
+  - [Unirest](https://github.com/apitube/integrations/blob/master/C%23/Unirest.cs)
 
 - Clojure
-  - [clj-http](https://github.com/apitube/documentation/blob/master/examples/Clojure/clj-http.clj)
+  - [clj-http](https://github.com/apitube/integrations/blob/master/Clojure/clj-http.clj)
 
 - Go
-  - [clj-http](https://github.com/apitube/documentation/blob/master/examples/Go/NewRequest.go)
+  - [clj-http](https://github.com/apitube/integrations/blob/master/Go/NewRequest.go)
 
 - Clojure
-  - [clj-http](https://github.com/apitube/documentation/blob/master/examples/Clojure/clj-http.clj)
+  - [clj-http](https://github.com/apitube/integrations/blob/master/Clojure/clj-http.clj)
 
 - HTTP
-  - [HTTP_1.1](https://github.com/apitube/documentation/blob/master/examples/HTTP/HTTP_1.1)
+  - [HTTP_1.1](https://github.com/apitube/integrations/blob/master/HTTP/HTTP_1.1)
 
 - Java
-  - [AsyncHttp](https://github.com/apitube/documentation/blob/master/examples/Java/AsyncHttp.java)
-  - [Java_net_http](https://github.com/apitube/documentation/blob/master/examples/Java/Java_net_http.java)
-  - [OkHttp](https://github.com/apitube/documentation/blob/master/examples/Java/OkHttp.java)
-  - [Unirest](https://github.com/apitube/documentation/blob/master/examples/Java/Unirest.java)
+  - [AsyncHttp](https://github.com/apitube/integrations/blob/master/Java/AsyncHttp.java)
+  - [Java_net_http](https://github.com/apitube/integrations/blob/master/Java/Java_net_http.java)
+  - [OkHttp](https://github.com/apitube/integrations/blob/master/Java/OkHttp.java)
+  - [Unirest](https://github.com/apitube/integrations/blob/master/Java/Unirest.java)
 
 - Javascript
-  - [Axios](https://github.com/apitube/documentation/blob/master/examples/Javascript/Axios.js)
-  - [Fetch](https://github.com/apitube/documentation/blob/master/examples/Javascript/Fetch.js)
-  - [XMLHttpRequest](https://github.com/apitube/documentation/blob/master/examples/Javascript/XMLHttpRequest.js)
-  - [jQuery](https://github.com/apitube/documentation/blob/master/examples/Javascript/jQuery.js)
+  - [Axios](https://github.com/apitube/integrations/blob/master/Javascript/Axios.js)
+  - [Fetch](https://github.com/apitube/integrations/blob/master/Javascript/Fetch.js)
+  - [XMLHttpRequest](https://github.com/apitube/integrations/blob/master/Javascript/XMLHttpRequest.js)
+  - [jQuery](https://github.com/apitube/integrations/blob/master/Javascript/jQuery.js)
 
 - Kotlin
-  - [OkHttp](https://github.com/apitube/documentation/blob/master/examples/Kotlin/OkHttp.kt)
+  - [OkHttp](https://github.com/apitube/integrations/blob/master/Kotlin/OkHttp.kt)
 
 - Node.js
-  - [Axios](https://github.com/apitube/documentation/blob/master/examples/Node.js/Axios.js)
-  - [Fetch](https://github.com/apitube/documentation/blob/master/examples/Node.js/Fetch.js)
-  - [HTTP](https://github.com/apitube/documentation/blob/master/examples/Node.js/HTTP.js)
-  - [Request](https://github.com/apitube/documentation/blob/master/examples/Node.js/Request.js)
-  - [Unirest](https://github.com/apitube/documentation/blob/master/examples/Node.js/Unirest.js)
+  - [Axios](https://github.com/apitube/integrations/blob/master/Node.js/Axios.js)
+  - [Fetch](https://github.com/apitube/integrations/blob/master/Node.js/Fetch.js)
+  - [HTTP](https://github.com/apitube/integrations/blob/master/Node.js/HTTP.js)
+  - [Request](https://github.com/apitube/integrations/blob/master/Node.js/Request.js)
+  - [Unirest](https://github.com/apitube/integrations/blob/master/Node.js/Unirest.js)
 
 - OCaml
-  - [CoHTTP](https://github.com/apitube/documentation/blob/master/examples/OCaml/CoHTTP.ml)
+  - [CoHTTP](https://github.com/apitube/integrations/blob/master/OCaml/CoHTTP.ml)
 
 - Objective-C
-  - [NSURLSession](https://github.com/apitube/documentation/blob/master/examples/Objective-C/NSURLSession.m)
+  - [NSURLSession](https://github.com/apitube/integrations/blob/master/Objective-C/NSURLSession.m)
 
 - PHP
-  - [cURL](https://github.com/apitube/documentation/blob/master/examples/PHP/cURL.php)
-  - [HTTP_1](https://github.com/apitube/documentation/blob/master/examples/PHP/HTTP_1.php)
-  - [HTTP_2](https://github.com/apitube/documentation/blob/master/examples/PHP/HTTP_2.php)
+  - [cURL](https://github.com/apitube/integrations/blob/master/PHP/cURL.php)
+  - [HTTP_1](https://github.com/apitube/integrations/blob/master/PHP/HTTP_1.php)
+  - [HTTP_2](https://github.com/apitube/integrations/blob/master/PHP/HTTP_2.php)
 
 - Powershell
-  - [Invoke-WebRequest](https://github.com/apitube/documentation/blob/master/examples/Powershell/Invoke-WebRequest.ps1)
+  - [Invoke-WebRequest](https://github.com/apitube/integrations/blob/master/Powershell/Invoke-WebRequest.ps1)
 
 - Python
-  - [Requests](https://github.com/apitube/documentation/blob/master/examples/Python/Requests.py)
-  - [http_client](https://github.com/apitube/documentation/blob/master/examples/Python/http_client.py)
+  - [Requests](https://github.com/apitube/integrations/blob/master/Python/Requests.py)
+  - [http_client](https://github.com/apitube/integrations/blob/master/Python/http_client.py)
 
 - R
-  - [httr](https://github.com/apitube/documentation/blob/master/examples/R/httr.r)
+  - [httr](https://github.com/apitube/integrations/blob/master/R/httr.r)
 
 - RapidQL
-  - [RapidQL](https://github.com/apitube/documentation/blob/master/examples/RapidQL/RapidQL.js)
+  - [RapidQL](https://github.com/apitube/integrations/blob/master/RapidQL/RapidQL.js)
 
 - Ruby
-  - [net_http](https://github.com/apitube/documentation/blob/master/examples/Ruby/net_http.rb)
-  - [Unirest](https://github.com/apitube/documentation/blob/master/examples/Ruby/Unirest.rb)
+  - [net_http](https://github.com/apitube/integrations/blob/master/Ruby/net_http.rb)
+  - [Unirest](https://github.com/apitube/integrations/blob/master/Ruby/Unirest.rb)
 
 - Shell
-  - [HTTPie](https://github.com/apitube/documentation/blob/master/examples/Shell/HTTPie)
-  - [Wget](https://github.com/apitube/documentation/blob/master/examples/Shell/Wget)
-  - [cURL](https://github.com/apitube/documentation/blob/master/examples/Shell/cURL)
+  - [HTTPie](https://github.com/apitube/integrations/blob/master/Shell/HTTPie)
+  - [Wget](https://github.com/apitube/integrations/blob/master/Shell/Wget)
+  - [cURL](https://github.com/apitube/integrations/blob/master/Shell/cURL)
 
 - Swift
-  - [NSURLSession](https://github.com/apitube/documentation/blob/master/examples/Swift/NSURLSession.swift)
+  - [NSURLSession](https://github.com/apitube/integrations/blob/master/Swift/NSURLSession.swift)
 
 ## Competitors
 They are all paid. APITUBE is a free alternative.
