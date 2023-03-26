@@ -81,9 +81,9 @@ https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceDomain=bbc.com
 | sortBy          | Choose the criteria for sorting the news articles. Can be: <code>date</code>, <code>sentiment</code> | <code>date</code>               |
 | sortDirection   | Choose the criteria for sorting the news articles. Can be: <code>desc</code>, <code>asc</code>       | <code>desc</code>               |
 | location        | Find articles in a specific location.                                                                |                                 |
-| latitude        | Latitude of the location.                                                                            |                                 |
-| longitude       | Longitude of the location.                                                                           |                                 |
-| radius          | Find articles in a specific radius.                                                                  |                                 |
+| latitude        | Latitude of the location where search news.                                                          |                                 |
+| longitude       | Longitude of the location where search news.                                                         |                                 |
+| radius          | Find articles in a specific radius. Worked only with <code>latitude</code>, <code>longitude</code>   |                                 |
 
 ### Response item structure
 
