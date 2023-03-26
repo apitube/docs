@@ -48,7 +48,7 @@ https://apitube.io/v1/news?limit=200&minSentiment=0.5&dateStart=2020-04-01
 
 Get negative news coverage from BBC
 ```
-https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&domain=bbc.com
+https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceDomain=bbc.com
 ```
 
 ### Response
@@ -70,15 +70,20 @@ https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&domain=bbc.com
 | language        | Enabled languages:<code>en</code>                                                                    | <code>null</code>               |
 | category        | Enabled languages:<code>en</code>                                                                    | <code>null</code>               |
 | resourceType    | Type of resource. Can be: <code>news</code>, <code>blog</code>.                                      | <code>null</code>               |
-| domain          | Domain name                                                                                          | <code>null</code>               |
+| resourceDomain  | Domain name                                                                                          | <code>null</code>               |
 | dateStart       | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                | <code>today date</code>         |
 | dateEnd         | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                | <code>last inserted date</code> |
 | resourceRankMin | Minimum resource rank.                                                                               | <code>0</code>                  |
 | resourceRankMax | Maximum resource rank.                                                                               | <code>99</code>                 |
+| sentiment       | Sentiment content. Can be: <code>positive</code>, <code>negative</code>, <code>neutral</code>        |                                 |
 | minSentiment    | The minimum value of the sentiment.                                                                  | <code>-1</code>                 |
 | maxSentiment    | The maximum value of the sentiment.                                                                  | <code>1</code>                  |
 | sortBy          | Choose the criteria for sorting the news articles. Can be: <code>date</code>, <code>sentiment</code> | <code>date</code>               |
 | sortDirection   | Choose the criteria for sorting the news articles. Can be: <code>desc</code>, <code>asc</code>       | <code>desc</code>               |
+| location        | Find articles in a specific location.                                                                |                                 |
+| latitude        | Latitude of the location.                                                                            |                                 |
+| longitude       | Longitude of the location.                                                                           |                                 |
+| radius          | Find articles in a specific radius.                                                                  |                                 |
 
 ### Response item structure
 
