@@ -69,7 +69,7 @@ https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceDomain=bbc.com
 | searchAuthor    | Searching articles by <code>author</code>                                                                        | <code>empty</code>              |
 | language        | Enabled languages:<code>en</code>                                                                                | <code>null</code>               |
 | category        | Enabled languages:<code>en</code>                                                                                | <code>null</code>               |
-| resourceType    | Type of resource. Can be: <code>news</code>, <code>blog</code>.                                                  | <code>null</code>               |
+| resourceType    | Type of resource. Can be: <code>news</code>, <code>company_blog</code>, <code>personal_blog</code>.              | <code>null</code>               |
 | resourceDomain  | Domain name                                                                                                      | <code>null</code>               |
 | dateStart       | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                            | <code>today date</code>         |
 | dateEnd         | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                            | <code>last inserted date</code> |
