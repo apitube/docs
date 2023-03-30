@@ -60,30 +60,30 @@ https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceDomain=bbc.com
 
 ### Search parameters
 
-| Field           | Description                                                                                          | Default parameters              |
-|-----------------|------------------------------------------------------------------------------------------------------|---------------------------------|
-| limit           | From <code>1</code> to <code>1000</code>                                                             | <code>500</code>                |
-| offset          | Offset                                                                                               | <code>0</code>                  |
-| searchTitle     | Searching articles by <code>title</code>                                                             | <code>empty</code>              |
-| searchContent   | Searching articles by <code>content</code>                                                           | <code>empty</code>              |
-| searchAuthor    | Searching articles by <code>author</code>                                                            | <code>empty</code>              |
-| language        | Enabled languages:<code>en</code>                                                                    | <code>null</code>               |
-| category        | Enabled languages:<code>en</code>                                                                    | <code>null</code>               |
-| resourceType    | Type of resource. Can be: <code>news</code>, <code>blog</code>.                                      | <code>null</code>               |
-| resourceDomain  | Domain name                                                                                          | <code>null</code>               |
-| dateStart       | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                | <code>today date</code>         |
-| dateEnd         | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                | <code>last inserted date</code> |
-| resourceRankMin | Minimum resource rank.                                                                               | <code>0</code>                  |
-| resourceRankMax | Maximum resource rank.                                                                               | <code>99</code>                 |
-| sentiment       | Sentiment content. Can be: <code>positive</code>, <code>negative</code>, <code>neutral</code>        |                                 |
-| minSentiment    | The minimum value of the sentiment.                                                                  | <code>-1</code>                 |
-| maxSentiment    | The maximum value of the sentiment.                                                                  | <code>1</code>                  |
-| sortBy          | Choose the criteria for sorting the news articles. Can be: <code>date</code>, <code>sentiment</code> | <code>date</code>               |
-| sortDirection   | Choose the criteria for sorting the news articles. Can be: <code>desc</code>, <code>asc</code>       | <code>desc</code>               |
-| location        | Find articles in a specific location.                                                                |                                 |
-| latitude        | Latitude of the location where search news articles.                                                 |                                 |
-| longitude       | Longitude of the location where search news articles.                                                |                                 |
-| radius          | Find articles in a specific radius. Worked only with <code>latitude</code>, <code>longitude</code>   |                                 |
+| Field           | Description                                                                                                                      | Default parameters              |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| limit           | From <code>1</code> to <code>1000</code>                                                                                         | <code>500</code>                |
+| offset          | Offset                                                                                                                           | <code>0</code>                  |
+| searchTitle     | Searching articles by <code>title</code>                                                                                         | <code>empty</code>              |
+| searchContent   | Searching articles by <code>content</code>                                                                                       | <code>empty</code>              |
+| searchAuthor    | Searching articles by <code>author</code>                                                                                        | <code>empty</code>              |
+| language        | Enabled languages:<code>en</code>                                                                                                | <code>null</code>               |
+| category        | Enabled languages:<code>en</code>                                                                                                | <code>null</code>               |
+| resourceType    | Type of resource. Can be: <code>news</code>, <code>blog</code>.                                                                  | <code>null</code>               |
+| resourceDomain  | Domain name                                                                                                                      | <code>null</code>               |
+| dateStart       | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                                            | <code>today date</code>         |
+| dateEnd         | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                                            | <code>last inserted date</code> |
+| resourceRankMin | Minimum resource rank.                                                                                                           | <code>0</code>                  |
+| resourceRankMax | Maximum resource rank.                                                                                                           | <code>99</code>                 |
+| sentiment       | Sentiment content. Can be: <code>positive</code>, <code>negative</code>, <code>neutral</code>                                    |                                 |
+| minSentiment    | The minimum value of the sentiment.                                                                                              | <code>-1</code>                 |
+| maxSentiment    | The maximum value of the sentiment.                                                                                              | <code>1</code>                  |
+| sortBy          | Choose the criteria for sorting the news articles. Can be: <code>date</code>, <code>sentiment</code>                             | <code>date</code>               |
+| sortDirection   | Choose the criteria for sorting the news articles. Can be: <code>desc</code>, <code>asc</code>                                   | <code>desc</code>               |
+| location        | Find articles in a specific location.                                                                                            |                                 |
+| latitude        | Latitude of the location where search news articles.                                                                             |                                 |
+| longitude       | Longitude of the location where search news articles.                                                                            |                                 |
+| radius          | Find articles in a specific radius. Worked only with <code>latitude</code>, <code>longitude</code>. The radius is in kilometers. |                                 |
 
 ### Response item structure
 
