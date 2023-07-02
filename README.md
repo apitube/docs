@@ -48,7 +48,7 @@ https://apitube.io/v1/news?limit=200&minSentiment=0.5&dateStart=2020-04-01
 
 Get negative news coverage from BBC
 ```
-https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceSource=bbc.com
+https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceSource=techcrunch.com
 ```
 
 ### Response
