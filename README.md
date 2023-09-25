@@ -28,17 +28,17 @@ With our news API, integrating real-time and archived news content into your pro
 ### Examples
 Get all news from Germany that mention Italy in the title and sort them by sentiment in descending order.
 ```
-https://apitube.io/v1/news?limit=200&language=de&searchTitle=italy&sortBy=sentiment&sortDirection=desc
+https://apitube.io/v1/news?limit=200&language=de&searchText=italy&sortBy=sentiment&sortDirection=desc
 ```
 
 Get news about COVID-19 in English
 ```
-https://apitube.io/v1/news?limit=200&language=en&searchTitle=covid-19
+https://apitube.io/v1/news?limit=200&language=en&searchText=covid-19
 ```
 
 Get news mentioning Elon Musk
 ```
-https://apitube.io/v1/news?limit=200&searchTitle=elon%20musk
+https://apitube.io/v1/news?limit=200&searchText=elon%20musk
 ```
 
 Get positive news since April 1st
@@ -64,9 +64,7 @@ https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceSource=techcrunch
 |-----------------|------------------------------------------------------------------------------------------------------------------|---------------------------------|
 | limit           | From <code>1</code> to <code>1000</code>                                                                         | <code>500</code>                |
 | offset          | Offset                                                                                                           | <code>0</code>                  |
-| searchTitle     | Searching articles by <code>title</code>                                                                         | <code>empty</code>              |
-| searchContent   | Searching articles by <code>content</code>                                                                       | <code>empty</code>              |
-| searchAuthor    | Searching articles by <code>author</code>                                                                        | <code>empty</code>              |
+| searchText      | Searching articles by <code>text</code>                                                                          | <code>empty</code>              |
 | language        | Enabled languages:<code>en</code>                                                                                | <code>null</code>               |
 | category        | Enabled languages:<code>en</code>                                                                                | <code>null</code>               |
 | resourceType    | Type of resource. Can be: <code>news</code>, <code>company_blog</code>, <code>personal_blog</code>.              | <code>null</code>               |
