@@ -76,7 +76,7 @@ https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceSource=techcrunch
 | sentiment       | Sentiment content. Can be: <code>positive</code>, <code>negative</code>, <code>neutral</code>                    |                                 |
 | minSentiment    | The minimum value of the sentiment.                                                                              | <code>-1</code>                 |
 | maxSentiment    | The maximum value of the sentiment.                                                                              | <code>1</code>                  |
-| sortBy          | Choose the criteria for sorting the news articles. Can be: <code>date</code>, <code>sentiment</code>             | <code>date</code>               |
+| sortBy          | Choose the criteria for sorting the news articles. Can be: <code>published_at</code>, <code>sentiment</code>     | <code>created_at</code>         |
 | sortDirection   | Choose the criteria for sorting the news articles. Can be: <code>desc</code>, <code>asc</code>                   | <code>desc</code>               |
 | location        | Find articles in a specific location.                                                                            |                                 |
 | latitude        | Latitude of the location where search news articles.                                                             |                                 |
