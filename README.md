@@ -28,12 +28,12 @@ With our news API, integrating real-time and archived news content into your pro
 ### Examples
 Get all news from Germany that mention Italy in the title and sort them by sentiment in descending order.
 ```
-https://apitube.io/v1/news?language=en&search_text=italy&sort_by=sentiment&sort_direction=desc
+https://apitube.io/v1/news?language=en&search_title=italy&sort_by=sentiment&sort_direction=desc
 ```
 
 Get news about COVID-19 in English
 ```
-https://apitube.io/v1/news?language=en&search_text=covid-19
+https://apitube.io/v1/news?language=en&search_title=covid-19
 ```
 
 Get news mentioning Elon Musk
