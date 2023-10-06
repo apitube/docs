@@ -28,27 +28,27 @@ With our news API, integrating real-time and archived news content into your pro
 ### Examples
 Get all news from Germany that mention Italy in the title and sort them by sentiment in descending order.
 ```
-https://apitube.io/v1/news?limit=200&language=de&searchText=italy&sortBy=sentiment&sortDirection=desc
+https://apitube.io/v1/news?language=en&search_text=italy&sort_by=sentiment&sort_direction=desc
 ```
 
 Get news about COVID-19 in English
 ```
-https://apitube.io/v1/news?limit=200&language=en&searchText=covid-19
+https://apitube.io/v1/news?language=en&search_text=covid-19
 ```
 
 Get news mentioning Elon Musk
 ```
-https://apitube.io/v1/news?limit=200&searchText=elon%20musk
+https://apitube.io/v1/news?search_title=elon%20musk
 ```
 
-Get positive news since April 1st
+Get positive news since April 1st with 200 limit items
 ```
-https://apitube.io/v1/news?limit=200&minSentiment=0.5&dateStart=2020-04-01
+https://apitube.io/v1/news?limit=200&min_sentiment=0.5&date_start=2020-04-01
 ```
 
 Get negative news coverage from BBC
 ```
-https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceSource=techcrunch.com
+https://apitube.io/v1/news?limit=200&max_sentiment=-0.5&resource_source=techcrunch.com
 ```
 
 ### Response
@@ -60,44 +60,46 @@ https://apitube.io/v1/news?limit=200&maxSentiment=-0.5&resourceSource=techcrunch
 
 ### Search parameters
 
-| Field           | Description                                                                                                      | Default parameters              |
-|-----------------|------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| limit           | From <code>1</code> to <code>1000</code>                                                                         | <code>500</code>                |
-| offset          | Offset                                                                                                           | <code>0</code>                  |
-| searchText      | Searching articles by <code>text</code>                                                                          | <code>empty</code>              |
-| language        | Enabled languages:<code>en</code>                                                                                | <code>null</code>               |
-| category        | Enabled languages:<code>en</code>                                                                                | <code>null</code>               |
-| resourceType    | Type of resource. Can be: <code>news</code>, <code>company_blog</code>, <code>personal_blog</code>.              | <code>null</code>               |
-| resourceSource  | Source name                                                                                                      | <code>null</code>               |
-| dateStart       | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                            | <code>today date</code>         |
-| dateEnd         | Available formats: <code>2023-01-03</code> or <code>2023-02-12T15:19:21+00:00</code>.                            | <code>last inserted date</code> |
-| resourceRankMin | Minimum resource rank.                                                                                           | <code>0</code>                  |
-| resourceRankMax | Maximum resource rank.                                                                                           | <code>99</code>                 |
-| sentiment       | Sentiment content. Can be: <code>positive</code>, <code>negative</code>, <code>neutral</code>                    |                                 |
-| minSentiment    | The minimum value of the sentiment.                                                                              | <code>-1</code>                 |
-| maxSentiment    | The maximum value of the sentiment.                                                                              | <code>1</code>                  |
-| sortBy          | Choose the criteria for sorting the news articles. Can be: <code>published_at</code>, <code>sentiment</code>     | <code>created_at</code>         |
-| sortDirection   | Choose the criteria for sorting the news articles. Can be: <code>desc</code>, <code>asc</code>                   | <code>desc</code>               |
-| location        | Find articles in a specific location.                                                                            |                                 |
-| latitude        | Latitude of the location where search news articles.                                                             |                                 |
-| longitude       | Longitude of the location where search news articles.                                                            |                                 |
-| radius          | Find articles in a specific radius in kilometers. Worked only with <code>latitude</code>, <code>longitude</code> |                                 |
+| Field             | Description                                                                                                                                                                                                                                                                                       | Default parameters              |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| limit             | From <code>1</code> to <code>1000</code>                                                                                                                                                                                                                                                          | <code>500</code>                |
+| search_title      | Searching articles by <code>title</code>                                                                                                                                                                                                                                                          | <code>empty</code>              |
+| search_content    | Searching articles by <code>content</code>                                                                                                                                                                                                                                                        | <code>empty</code>              |
+| search_author     | Searching articles by <code>author</code>                                                                                                                                                                                                                                                         | <code>empty</code>              |
+| resource_language | Enabled languages:<code>en</code>                                                                                                                                                                                                                                                                 | <code>null</code>               |
+| resource_category | Enabled categories:<code>en</code>                                                                                                                                                                                                                                                                | <code>null</code>               |
+| resource_type     | Type of resource. Can be: <code>news</code>, <code>company_blog</code>, <code>personal_blog</code>.                                                                                                                                                                                               | <code>null</code>               |
+| resource_source   | Source name                                                                                                                                                                                                                                                                                       | <code>null</code>               |
+| date_start        | Available formats: <code>Y-m-d</code> or <code>d-m-Y</code> or <code>Y-m-d\TH:i:sP</code> or <code>l, d-M-Y H:i:s T</code> or <code>Y-m-d\TH:i:sO</code> or <code>D, d M y H:i:s O</code> or <code>l, d-M-y H:i:s T</code> or <code>Y-m-d\TH:i:s.vP</code> or <code>D, d M Y H:i:s \G\M\T</code>. | <code>today date</code>         |
+| date_end          | Available formats: <code>Y-m-d</code> or <code>d-m-Y</code> or <code>Y-m-d\TH:i:sP</code> or <code>l, d-M-Y H:i:s T</code> or <code>Y-m-d\TH:i:sO</code> or <code>D, d M y H:i:s O</code> or <code>l, d-M-y H:i:s T</code> or <code>Y-m-d\TH:i:s.vP</code> or <code>D, d M Y H:i:s \G\M\T</code>. | <code>last inserted date</code> |
+| resource_rank_min | Minimum resource rank.                                                                                                                                                                                                                                                                            | <code>0</code>                  |
+| resource_rank_max | Maximum resource rank.                                                                                                                                                                                                                                                                            | <code>99</code>                 |
+| sentiment         | Sentiment content. Can be: <code>positive</code>, <code>negative</code>, <code>neutral</code>                                                                                                                                                                                                     |                                 |
+| min_sentiment     | The minimum value of the sentiment.                                                                                                                                                                                                                                                               | <code>-1</code>                 |
+| max_sentiment     | The maximum value of the sentiment.                                                                                                                                                                                                                                                               | <code>1</code>                  |
+| sort_by           | Choose the criteria for sorting the news articles. Can be: <code>published_at</code>, <code>sentiment</code>                                                                                                                                                                                      | <code>created_at</code>         |
+| sort_direction    | Choose the criteria for sorting the news articles. Can be: <code>desc</code>, <code>asc</code>                                                                                                                                                                                                    | <code>desc</code>               |
+| location          | Find articles in a specific location.                                                                                                                                                                                                                                                             |                                 |
+| latitude          | Latitude of the location where search news articles.                                                                                                                                                                                                                                              |                                 |
+| longitude         | Longitude of the location where search news articles.                                                                                                                                                                                                                                             |                                 |
+| radius            | Find articles in a specific radius in kilometers. Worked only with <code>latitude</code>, <code>longitude</code>                                                                                                                                                                                  |                                 |
 
 ### Response item structure
 
-| Field            | Description                                                                                                                                                        |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| title            | Article title.                                                                                                                                                     |
-| author           | Article author.                                                                                                                                                    |
-| description      | Article short text preview.                                                                                                                                        |
-| content          | Article full content with formatting.                                                                                                                              |
-| textplain        | Article full content without formatting.                                                                                                                           |
-| image            | Full url path to the image.                                                                                                                                        |
-| language         | Detected language.                                                                                                                                                 |
-| category         | Detected category.                                                                                                                                                 |
-| resourceType     | Resource type(<code>news</code>, <code>blog</code>)                                                                                                                |
-| resourceRank     | Rank of news resource (from 0 to 99)                                                                                                                               |
-| sentimentContent | Sentiment of article content(<code>negative</code>, <code>neutral</code>, <code>positive</code>, <code>compound</code>). Values <code>-1</code> to <code>1</code>. |
+| Field             | Description                                                                                                                                                        |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| title             | Article title.                                                                                                                                                     |
+| author            | Article author.                                                                                                                                                    |
+| description       | Article short text preview.                                                                                                                                        |
+| content           | Article full content with formatting.                                                                                                                              |
+| text_plain        | Article full content without formatting.                                                                                                                           |
+| image             | Full url path to the image.                                                                                                                                        |
+| language          | Detected language.                                                                                                                                                 |
+| category          | Detected category.                                                                                                                                                 |
+| resource_type     | Resource type(<code>news</code>, <code>blog</code>)                                                                                                                |
+| resource_rank     | Rank of news resource (from 0 to 99)                                                                                                                               |
+| sentiment_content | Sentiment of article content(<code>negative</code>, <code>neutral</code>, <code>positive</code>, <code>compound</code>). Values <code>-1</code> to <code>1</code>. |
+| location          | Location of article content. Country or city.                                                                                                                      |
 
 ## Examples
 - C
