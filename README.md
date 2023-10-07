@@ -53,7 +53,7 @@ https://apitube.io/v1/news?limit=200&max_sentiment=-0.5&resource_source=techcrun
 
 ### Response
 <p align="center">
-<img src="https://apitube.pub/images/github/preview2.jpg" alt="APITUBE - News API">
+<img src="https://apitube.pub/images/github/preview3.jpg" alt="APITUBE - News API">
 </p>    
 
 ## Documentation
