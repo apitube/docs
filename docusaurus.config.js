@@ -90,12 +90,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/apitube-social-card.jpg',
       navbar: {
-        title: 'My Site',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'APITUBE Worldwide Live News API',
           src: 'img/logo.svg',
+          width: 84,
+          // height: 50,
         },
         items: [
           {
@@ -113,49 +114,111 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        // style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'APITUBE',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Features',
+                to: 'https://apitube.pub/product/features',
+              },
+              {
+                label: 'Blog & News',
+                to: 'https://apitube.pub/blog',
+              },
+              {
+                label: 'Privacy Policy',
+                to: 'https://apitube.pub/terms/privacy_policy',
+              },
+              {
+                label: 'Terms of Service',
+                to: 'https://apitube.pub/terms/terms_of_service',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Integrations',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Node.js',
+                to: 'https://github.com/apitube/integrations/tree/master/Node.js',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Python',
+                to: 'https://github.com/apitube/integrations/tree/master/Python',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'PHP',
+                to: 'https://github.com/apitube/integrations/tree/master/PHP',
+              },
+              {
+                label: 'Golang',
+                to: 'https://github.com/apitube/integrations/tree/master/Go',
+              },
+              {
+                label: 'All integrations',
+                to: 'https://github.com/apitube/integrations',
               },
             ],
           },
           {
-            title: 'More',
+            // title: '',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Node.js',
+                to: 'https://github.com/apitube/integrations/tree/master/Node.js',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Python',
+                to: 'https://github.com/apitube/integrations/tree/master/Python',
+              },
+              {
+                label: 'PHP',
+                to: 'https://github.com/apitube/integrations/tree/master/PHP',
+              },
+              {
+                label: 'Golang',
+                to: 'https://github.com/apitube/integrations/tree/master/Go',
+              },
+              {
+                label: 'All integrations',
+                to: 'https://github.com/apitube/integrations',
               },
             ],
           },
+          {
+            // title: '',
+            items: [
+              {
+                label: 'Node.js',
+                to: 'https://github.com/apitube/integrations/tree/master/Node.js',
+              },
+              {
+                label: 'Python',
+                to: 'https://github.com/apitube/integrations/tree/master/Python',
+              },
+              {
+                label: 'PHP',
+                to: 'https://github.com/apitube/integrations/tree/master/PHP',
+              },
+              {
+                label: 'Golang',
+                to: 'https://github.com/apitube/integrations/tree/master/Go',
+              },
+              {
+                label: 'All integrations',
+                to: 'https://github.com/apitube/integrations',
+              },
+            ],
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Worldwide Live News API for your Next project `,
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: true,
       },
       prism: {
         theme: lightCodeTheme,
