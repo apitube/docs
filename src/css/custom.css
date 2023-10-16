@@ -1,3 +1,9 @@
+@import "fonts.css";
+
+/*@tailwind base;*/
+@tailwind components;
+@tailwind utilities;
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -6,15 +12,19 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: rgb(0 108 250);
+  --ifm-color-primary-dark: #0260a4;
+  --ifm-color-primary-darker: #024272;
+  --ifm-color-primary-darkest: #01253f;
+  --ifm-color-primary-light: #0260a4;
+  --ifm-color-primary-lighter: #43aefc;
+  --ifm-color-primary-lightest: #75c4fd;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-menu-color-background-active: #e5f0ff;
+  --ifm-footer-background-color: #dce0e7;
+  --ifm-footer-link-color: rgb(49 43 65);
+  --ifm-background-color: rgb(220 224 231);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,4 +37,129 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  /*background-color: rgb(220 224 231);*/
+}
+
+body {
+  /*font-size: 90%;*/
+  margin: .75rem;
+}
+
+#__docusaurus {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33'%3E%3Cpath d='M0 0h2.25Zm0 0v2.25Zm33 33h-2.25Zm0 0v-2.25Zm0-33h-2.25Zm0 0v2.25ZM0 33v-2.25Zm0 0h2.25Z' stroke-opacity='.065' stroke-width='1.1' stroke='%23000'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ifm-heading-color);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+  line-height: var(--ifm-heading-line-height);
+  margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+}
+
+main {
+
+}
+
+.col {
+
+}
+
+aside {
+
+}
+
+article {
+
+}
+
+.container {
+
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--ifm-container-width-xl);
+  }
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+.navbar__title {
+  font-weight: 500;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 2rem;
+  padding: 1rem 0rem 3rem;
+}
+
+.card {
+  box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  padding: 10px;
+}
+
+img {
+  border-radius: 0.4rem;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Reset SVG to be inline by default */
+svg {
+  display: inline;
+}
+
+.row article .markdown a {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #4d9cff;
+}
+
+.row article .markdown a:hover {
+  border-bottom-width: 2px;
+}
+
+.header-sign-up-link {
+  background-color: #006cfa;
+  color: #ffffff;
+  border-radius: 18px;
+  font-size: 92%;
+  padding: 0.2rem 1rem;
+}
+
+.header-sign-up-link:hover {
+  opacity: 90%;
+  color: #ffffff;
 }
