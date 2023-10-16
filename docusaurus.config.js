@@ -43,6 +43,10 @@ const config = {
     environment: process.env.NODE_ENV,
   },
 
+  clientModules: [
+    require.resolve('./src/components/crisp.js'),
+  ],
+
   plugins: [
     async function tailwindCssPlugin(context, options) {
       return {
