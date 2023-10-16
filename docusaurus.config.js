@@ -43,8 +43,11 @@ const config = {
     environment: process.env.NODE_ENV,
   },
 
-  clientModules: [
-    require.resolve('./src/components/crisp.js'),
+  scripts: [
+    {
+      src: '/js/crisp.js',
+      async: false,
+    },
   ],
 
   plugins: [
