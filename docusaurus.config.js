@@ -72,6 +72,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        googleTagManager: {
+          containerId: 'G-TERKG9XM4F'
+        },
       }),
     ],
   ],
