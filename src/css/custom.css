@@ -1,8 +1,8 @@
 @import "fonts.css";
 
 /*@tailwind base;*/
-@tailwind components;
-@tailwind utilities;
+/*@tailwind components;*/
+/*@tailwind utilities;*/
 
 /**
  * Any CSS included here will be global. The classic template
@@ -144,7 +144,7 @@ svg {
   color: #ffffff;
   border-radius: 18px;
   font-size: 92%;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 1rem!important;
 }
 
 .header-sign-up-link:hover {

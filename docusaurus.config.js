@@ -50,6 +50,30 @@ const config = {
     },
   ],
 
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        // language: ["en", "zh"],
+        // ```
+        // indexDocs: true,
+        // indexBlog: true,
+        // indexPages: true,
+        docsRouteBasePath: '/',
+        docsDir: 'content',
+        blogDir: 'content',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        searchBarPosition: 'right'
+      }),
+    ],
+  ],
+
   plugins: [
     async function tailwindCssPlugin(context, options) {
       return {
@@ -104,6 +128,10 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
+          },
+          {
+            position: 'right',
+            type: 'search',
           },
           {
             position: 'right',
