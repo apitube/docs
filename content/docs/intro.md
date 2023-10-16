@@ -13,6 +13,19 @@ Get started by **creating a new site**.
 
 Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
+import CardList from '@site/src/components/CardList'
+
+<CardList
+items={[
+{
+icon: require("./assets/dialog.png").default,
+href: "reference/rpc-api#snap_dialog",
+title: "Dialogs",
+description: "Display custom alert, confirmation, or prompt screens in MetaMask."
+}
+]}
+/>
+
 ### What you'll need
 
 - [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
