@@ -19,7 +19,7 @@ import CardList from '@site/src/components/CardList'
 items={[
 {
 icon: require("./assets/dialog.png").default,
-href: "reference/rpc-api#snap_dialog",
+href: "/#snap_dialog",
 title: "Dialogs",
 description: "Display custom alert, confirmation, or prompt screens in MetaMask."
 }
