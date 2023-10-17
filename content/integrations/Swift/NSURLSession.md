@@ -8,7 +8,7 @@ slug: '/swift/NSURLSession'
 import Foundation
 
 let headers = [
-	"X-ApiTube-Key": "***KEY***"
+	"X-ApiTube-Key": "***YOUR_KEY***"
 ]
 
 let request = NSMutableURLRequest(url: NSURL(string: "https://apitube.io/v1/news?limit=250")! as URL,

@@ -7,5 +7,5 @@ slug: '/shell/cURL'
 ```shell
 curl --request GET \
 	--url 'https://apitube.io/v1/news?limit=250' \
-	--header 'X-ApiTube-Key: ***KEY***'
+	--header 'X-ApiTube-Key: ***YOUR_KEY***'
 ```

@@ -14,7 +14,7 @@ req.query({
 });
 
 req.headers({
-    "X-ApiTube-Key": "***KEY***",
+    "X-ApiTube-Key": "***YOUR_KEY***",
     "useQueryString": true
 });
 

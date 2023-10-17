@@ -17,7 +17,7 @@ class MyController extends Controller
 	public function actionMakeRequest()
 	{
 		$url = "https://apitube.io/v1/news?limit=250";
-		$apiKey = "***KEY***";
+		$apiKey = "***YOUR_KEY***";
 
 		$httpClient = new Client();
 		$response = $httpClient->createRequest()

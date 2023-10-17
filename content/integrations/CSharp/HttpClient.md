@@ -12,7 +12,7 @@ var request = new HttpRequestMessage
 	RequestUri = new Uri("https://apitube.io/v1/news?limit=250"),
 	Headers =
 	{
-		{ "X-ApiTube-Key", "***KEY***" },
+		{ "X-ApiTube-Key", "***YOUR_KEY***" },
 	},
 };
 using (var response = await client.SendAsync(request))

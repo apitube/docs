@@ -82,7 +82,7 @@ blockquote {
 }
 
 .header-sign-up-link {
-  background-color: #0050b4;
+  background-color: var(--ifm-color-primary);
   color: #ffffff;
   border-radius: 18px;
   font-size: 92%;

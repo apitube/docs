@@ -16,7 +16,7 @@ $request->setQueryData([
 ]);
 
 $request->setHeaders([
-    'X-ApiTube-Key' => '***KEY***'
+    'X-ApiTube-Key' => '***YOUR_KEY***'
 ]);
 
 try {

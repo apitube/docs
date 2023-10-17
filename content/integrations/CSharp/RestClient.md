@@ -7,6 +7,6 @@ slug: '/csharp/RestSharp'
 ```cs
 var client = new RestClient("https://apitube.io/v1/news?limit=250");
 var request = new RestRequest(Method.GET);
-request.AddHeader("X-ApiTube-Key", "***KEY***");
+request.AddHeader("X-ApiTube-Key", "***YOUR_KEY***");
 IRestResponse response = client.Execute(request);
 ```

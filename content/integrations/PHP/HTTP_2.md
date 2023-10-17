@@ -17,7 +17,7 @@ $request->setQuery(new http\QueryString([
 ]));
 
 $request->setHeaders([
-    'X-ApiTube-Key' => '***KEY***'
+    'X-ApiTube-Key' => '***YOUR_KEY***'
 ]);
 
 $client->enqueue($request)->send();

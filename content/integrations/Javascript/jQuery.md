@@ -11,7 +11,7 @@ const settings = {
     "url": "https://apitube.io/v1/news?limit=250",
     "method": "GET",
     "headers": {
-        "X-ApiTube-Key": "***KEY***"
+        "X-ApiTube-Key": "***YOUR_KEY***"
     }
 };
 

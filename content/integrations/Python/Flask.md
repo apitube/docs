@@ -13,7 +13,7 @@ app = Flask(__name__)
 @app.route('/')
 def make_request():
     url = "https://apitube.io/v1/news?limit=250"
-    api_key = "***KEY***"
+    api_key = "***YOUR_KEY***"
 
     headers = {
         "X-ApiTube-Key": api_key

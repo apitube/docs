@@ -15,7 +15,7 @@ rql.query(`{
   Http.get(
     url:"https://apitube.io/v1/news?limit=250"
     headers : {
-"X-ApiTube-Key":"***KEY***"
+"X-ApiTube-Key":"***YOUR_KEY***"
     }
     body : undefined
   ) {

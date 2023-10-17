@@ -16,7 +16,7 @@ http.use_ssl = true
 http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 request = Net::HTTP::Get.new(url)
-request["X-ApiTube-Key"] = '***KEY***'
+request["X-ApiTube-Key"] = '***YOUR_KEY***'
 
 response = http.request(request)
 puts response.read_body

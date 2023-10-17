@@ -19,7 +19,7 @@ func main() {
 
 	req, _ := http.NewRequest("GET", url, nil)
 
-	req.Header.Add("X-ApiTube-Key", "***KEY***")
+	req.Header.Add("X-ApiTube-Key", "***YOUR_KEY***")
 
 	res, _ := http.DefaultClient.Do(req)
 

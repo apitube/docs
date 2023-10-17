@@ -8,7 +8,7 @@ slug: '/javascript/Fetch'
 const options = {
     method: 'GET',
     headers: {
-        'X-ApiTube-Key': '***KEY***'
+        'X-ApiTube-Key': '***YOUR_KEY***'
     }
 };
 

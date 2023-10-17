@@ -17,7 +17,7 @@ class MyController extends Controller
 	public function makeRequest(Request $request)
 	{
 		$url = "https://apitube.io/v1/news?limit=250";
-		$apiKey = "***KEY***";
+		$apiKey = "***YOUR_KEY***";
 
 		$response = Http::withHeaders([
 			"X-ApiTube-Key" => $apiKey,

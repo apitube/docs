@@ -158,10 +158,10 @@ const config = {
         navbar: {
           logo: {
             alt: 'APITUBE Worldwide Live News API',
-            src: 'img/logo.svg',
-            width: 84,
+            src: 'img/logo2.svg',
+            width: 154,
             // height: 50,
-            srcDark: 'img/logo-dark.svg',
+            srcDark: 'img/logo2-dark.svg',
           },
           items: [
             {
@@ -178,14 +178,14 @@ const config = {
             },
             {
               position: 'right',
-              type: 'search',
-            },
-            {
-              position: 'right',
               href: 'https://apitube.pub/sign-up',
               className: 'header-sign-up-link',
               label: "Sign Up",
               'aria-label': 'Sign Up',
+            },
+            {
+              position: 'right',
+              type: 'search',
             },
           ],
         },

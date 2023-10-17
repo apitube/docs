@@ -13,7 +13,7 @@ const options = {
     "port": null,
     "path": "/v1/news?limit=250",
     "headers": {
-        "X-ApiTube-Key": "***KEY***"
+        "X-ApiTube-Key": "***YOUR_KEY***"
     }
 };
 
