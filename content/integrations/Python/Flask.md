@@ -1,23 +1,31 @@
 ---
-slug: '/python/Unirest'
+slug: '/python/Flask'
 ---
 
-# Unirest integration
+# Flask integration
 
 ```python
-require 'uri'
-require 'net/http'
-require 'openssl'
+from flask import Flask
+import requests
 
-url = URI("https://apitube.io/v1/news?limit=250")
+app = Flask(__name__)
 
-http = Net::HTTP.new(url.host, url.port)
-http.use_ssl = true
-http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+@app.route('/')
+def make_request():
+    url = "https://apitube.io/v1/news?limit=250"
+    api_key = "***KEY***"
 
-request = Net::HTTP::Get.new(url)
-request["X-ApiTube-Key"] = '***KEY***'
+    headers = {
+        "X-ApiTube-Key": api_key
+    }
 
-response = http.request(request)
-puts response.read_body
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        return response.text
+    else:
+        return f"HTTP Request Error: {response.status_code}"
+
+if __name__ == '__main__':
+    app.run()
 ```

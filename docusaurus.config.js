@@ -213,77 +213,90 @@ const config = {
               ],
             },
             {
-              title: 'Integrations',
+              title: 'JavaScript integrations',
               items: [
                 {
-                  label: 'Node.js',
-                  to: 'https://docs.apitube.pub/integrations/nodejs/',
+                  label: 'Axios',
+                  to: '/integrations/javascript/XMLHttpRequest',
                 },
                 {
-                  label: 'Python',
-                  to: 'https://github.com/apitube/integrations/tree/master/Python',
+                  label: 'jQuery',
+                  to: '/integrations/javascript/jQuery',
                 },
                 {
-                  label: 'PHP',
-                  to: 'https://github.com/apitube/integrations/tree/master/PHP',
+                  label: 'Fetch',
+                  to: '/integrations/javascript/Fetch',
                 },
                 {
-                  label: 'Golang',
-                  to: 'https://github.com/apitube/integrations/tree/master/Go',
-                },
-                {
-                  label: 'All integrations',
-                  to: 'https://github.com/apitube/integrations',
+                  label: 'XMLHttpRequest',
+                  to: '/integrations/javascript/XMLHttpRequest',
                 },
               ],
             },
             {
-              // title: '',
+              title: 'PHP integrations',
               items: [
                 {
-                  label: 'Node.js',
-                  to: 'https://github.com/apitube/integrations/tree/master/Node.js',
+                  label: 'Laravel',
+                  to: '/integrations/php/Laravel',
                 },
                 {
-                  label: 'Python',
-                  to: 'https://github.com/apitube/integrations/tree/master/Python',
+                  label: 'Symfony',
+                  to: '/integrations/php/Symfony',
                 },
                 {
-                  label: 'PHP',
-                  to: 'https://github.com/apitube/integrations/tree/master/PHP',
+                  label: 'Yii',
+                  to: '/integrations/php/Yii',
                 },
                 {
-                  label: 'Golang',
-                  to: 'https://github.com/apitube/integrations/tree/master/Go',
-                },
-                {
-                  label: 'All integrations',
-                  to: 'https://github.com/apitube/integrations',
-                },
+                  label: 'HTTP',
+                  to: '/integrations/php/http_1',
+                }
               ],
             },
             {
-              // title: '',
+              title: 'Python integrations',
               items: [
                 {
-                  label: 'Node.js',
-                  to: 'https://github.com/apitube/integrations/tree/master/Node.js',
+                  label: 'Flask',
+                  to: '/integrations/python/Flask',
                 },
                 {
-                  label: 'Python',
-                  to: 'https://github.com/apitube/integrations/tree/master/Python',
+                  label: 'Django',
+                  to: '/integrations/python/Django',
                 },
                 {
-                  label: 'PHP',
-                  to: 'https://github.com/apitube/integrations/tree/master/PHP',
+                  label: 'Requests',
+                  to: '/integrations/python/Requests',
                 },
+                {
+                  label: 'HTTP',
+                  to: '/integrations/python/HTTP_Client',
+                }
+              ],
+            },
+            {
+              title: 'Other integrations',
+              items: [
                 {
                   label: 'Golang',
-                  to: 'https://github.com/apitube/integrations/tree/master/Go',
+                  to: '/integrations/go/NewRequest',
+                },
+                {
+                  label: 'Ruby',
+                  to: '/integrations/ruby/Unirest',
+                },
+                {
+                  label: 'R',
+                  to: '/integrations/r/httr',
+                },
+                {
+                  label: 'Swift',
+                  to: '/integrations/swift/NSURLSession',
                 },
                 {
                   label: 'All integrations',
-                  to: 'https://github.com/apitube/integrations',
+                  to: '/integrations',
                 },
               ],
             }

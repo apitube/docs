@@ -20,9 +20,9 @@
   --ifm-heading-color: #111827;
   --ifm-link-color: #111827;
 
-  --ifm-spacing-horizontal: 0.1rem;
-  --ifm-spacing-vertical: 1.8rem;
-  --ifm-navbar-padding-horizontal: 0.75rem;
+  /*--ifm-spacing-horizontal: 0.1rem;*/
+  /*--ifm-spacing-vertical: 1.8rem;*/
+  /*--ifm-navbar-padding-horizontal: 0.75rem;*/
 
   /* Theme colors */
   --ifm-color-primary: #2160fd;
@@ -51,8 +51,8 @@
   --ifm-menu-color-active: #111827;
   --ifm-menu-color-background-active: #eae9eb;
 
-  --ifm-menu-link-padding-horizontal: 4px;
-  --ifm-menu-link-padding-vertical: 8px;
+  --ifm-menu-link-padding-horizontal: 10px;
+  --ifm-menu-link-padding-vertical: 10px;
 
   --ifm-footer-background-color: #dce0e7;
   --ifm-footer-link-color: #312b41;
@@ -195,7 +195,7 @@ a.navbar__item {
   margin: 0 12px;
 }
 
-a.navbar__link--active {
+a.navbar__item:hover, a.navbar__link--active {
   border-bottom: 1px solid #4d9cff;
 }
 
@@ -203,6 +203,7 @@ a.menu__link {
   padding: 8px 14px;
   font-weight: 500;
   color: #374151;
+  font-size: 92%;
 }
 
 a.menu__link--active {
