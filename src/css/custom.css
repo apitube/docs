@@ -192,7 +192,7 @@ svg {
 
 a.navbar__item {
   border-bottom: 1px solid transparent;
-  margin: 0 8px;
+  margin: 0 12px;
 }
 
 a.navbar__link--active {

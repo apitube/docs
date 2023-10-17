@@ -29,7 +29,7 @@ const meta = {
 const docs = [
   {
     id: 'cli',
-    path: 'integrations',
+    path: 'content/integrations',
     routeBasePath: '/integrations',
   }
 ];
@@ -171,7 +171,7 @@ const config = {
 
 
 
-            // {to: 'integrations', label: 'Integrations', position: 'left'},
+            {to: 'integrations', label: 'Integrations', position: 'left'},
 
 
 
@@ -292,17 +292,17 @@ const config = {
         },
         prism: {
           theme: require('prism-react-renderer/themes/oceanicNext'),
-          // additionalLanguages: [
-          //   'csharp',
-          //   'dart',
-          //   'http',
-          //   'java',
-          //   'kotlin',
-          //   'php',
-          //   'ruby',
-          //   'rust',
-          //   'swift',
-          // ],
+          additionalLanguages: [
+            'csharp',
+            'dart',
+            'http',
+            'java',
+            'kotlin',
+            'php',
+            'ruby',
+            'rust',
+            'swift',
+          ],
         },
       }),
 
