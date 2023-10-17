@@ -206,6 +206,14 @@ const plugins = [
   [
     'docusaurus2-dotenv', {}
   ],
+  [
+    '@docusaurus/plugin-content-pages',
+    {
+      id: 'integrations',
+      path: '/content/integrations',
+      routeBasePath: '/integrations',
+    },
+  ],
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -304,7 +312,7 @@ const config = {
 
 
 
-            {to: 'integrations', label: 'Integrations', position: 'left'},
+            // {to: 'integrations', label: 'Integrations', position: 'left'},
 
 
 
