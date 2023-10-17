@@ -166,14 +166,14 @@ svg {
   display: inline;
 }
 
-.row article .markdown a {
+p > a {
   color: #111827;
   text-decoration: none;
   font-weight: 600;
   border-bottom: 1px solid #4d9cff;
 }
 
-.row article .markdown a:hover {
+p > a:hover {
   border-bottom-width: 2px;
 }
 
