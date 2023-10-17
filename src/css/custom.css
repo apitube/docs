@@ -36,7 +36,7 @@
   --ifm-table-border-color: var(--docs-color-border);
   --code-border-color: var(--docs-color-border);
 
-  --ifm-code-font-size: 92%;
+  /*--ifm-code-font-size: 92%;*/
   --docusaurus-highlighted-code-line-bg: rgba(147, 178, 244, 0.38);
 
   --ifm-breadcrumb-item-background-active: transparent;
@@ -69,7 +69,7 @@ html {
 }
 
 body {
-  font-size: 96%;
+  /*font-size: 96%;*/
   margin: .75rem;
 }
 
@@ -84,6 +84,22 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--ifm-heading-line-height);
   margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
   @apply font-sohne;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
 }
 
 main {
@@ -110,23 +126,6 @@ article {
   .container {
     max-width: var(--ifm-container-width-xl);
   }
-}
-
-h1 {
-  font-size: 32px;
-  color: rgb(17 24 39);
-}
-
-h2 {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 18px;
-}
-
-h4 {
-  font-size: 16px;
 }
 
 .navbar__title {
@@ -181,7 +180,7 @@ p > a:hover {
   background-color: #0050b4;
   color: #ffffff;
   border-radius: 18px;
-  font-size: 92%;
+  /*font-size: 92%;*/
   padding: 0.2rem 1rem!important;
 }
 
@@ -203,7 +202,7 @@ a.menu__link {
   padding: 8px 14px;
   font-weight: 500;
   color: #374151;
-  font-size: 92%;
+  /*font-size: 92%;*/
 }
 
 a.menu__link--active {
