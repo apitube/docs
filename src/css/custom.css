@@ -56,6 +56,7 @@
 
   --ifm-footer-background-color: #dce0e7;
   --ifm-footer-link-color: #312b41;
+  --ifm-footer-link-hover-color: #312b41;
   --ifm-background-color: #dce0e7;
 
   --ifm-navbar-search-input-background-color: var(--ifm-color-emphasis-200);
@@ -199,6 +200,7 @@ a.navbar__link--active {
 }
 
 a.menu__link {
+  padding: 8px 14px;
   font-weight: 500;
   color: #374151;
 }
