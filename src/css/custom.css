@@ -20,7 +20,8 @@
   --ifm-heading-color: #111827;
   --ifm-link-color: #111827;
 
-  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-horizontal: 0.1rem;
+  --ifm-spacing-vertical: 1.8rem;
   --ifm-navbar-padding-horizontal: 0.75rem;
 
   /* Theme colors */
@@ -40,6 +41,7 @@
 
   --ifm-breadcrumb-item-background-active: transparent;
   --ifm-breadcrumb-padding-horizontal: 0;
+  /*--ifm-container-width-xl: 1000px;*/
 
   --ifm-navbar-item-padding-horizontal: 0px;
   --ifm-navbar-item-padding-vertical: 0px;
