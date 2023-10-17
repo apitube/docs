@@ -146,7 +146,7 @@ const config = {
         image: 'img/apitube-social-card.jpg',
         colorMode: {
           defaultMode: 'light',
-          disableSwitch: true,
+          disableSwitch: false,
           respectPrefersColorScheme: false,
         },
         docs: {
@@ -161,13 +161,14 @@ const config = {
             src: 'img/logo.svg',
             width: 84,
             // height: 50,
+            srcDark: 'img/logo.svg',
           },
           items: [
             {
               type: 'docSidebar',
               sidebarId: 'tutorialSidebar',
               position: 'left',
-              label: 'Documentation',
+              label: 'Guide',
             },
             {
               to: 'integrations',
