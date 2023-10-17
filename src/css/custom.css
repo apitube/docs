@@ -41,10 +41,24 @@
   --ifm-breadcrumb-item-background-active: transparent;
   --ifm-breadcrumb-padding-horizontal: 0;
 
-  --ifm-menu-color-background-active: #e5f0ff;
+  --ifm-navbar-item-padding-horizontal: 0px;
+  --ifm-navbar-item-padding-vertical: 0px;
+  --ifm-navbar-link-hover-color: #111827;
+
+  /*--ifm-menu-color: red;*/
+  --ifm-menu-color-active: #111827;
+  --ifm-menu-color-background-active: #eae9eb;
+
+  --ifm-menu-link-padding-horizontal: 4px;
+  --ifm-menu-link-padding-vertical: 8px;
+
   --ifm-footer-background-color: #dce0e7;
   --ifm-footer-link-color: #312b41;
   --ifm-background-color: #dce0e7;
+
+  --ifm-navbar-search-input-background-color: var(--ifm-color-emphasis-200);
+  --ifm-navbar-search-input-color: var(--ifm-color-emphasis-800);
+  --ifm-navbar-search-input-placeholder-color: var(--ifm-color-emphasis-700);
 }
 
 html {
@@ -121,7 +135,7 @@ h4 {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: auto;
   grid-gap: 2rem;
-  padding: 1rem 0rem 3rem;
+  padding: 1rem 0 3rem;
 }
 
 .card {
@@ -161,7 +175,7 @@ svg {
 }
 
 .header-sign-up-link {
-  background-color: #006cfa;
+  background-color: #0050b4;
   color: #ffffff;
   border-radius: 18px;
   font-size: 92%;
@@ -171,4 +185,22 @@ svg {
 .header-sign-up-link:hover {
   opacity: 90%;
   color: #ffffff;
+}
+
+a.navbar__item {
+  border-bottom: 1px solid transparent;
+  margin: 0 8px;
+}
+
+a.navbar__link--active {
+  border-bottom: 1px solid #4d9cff;
+}
+
+a.menu__link {
+  font-weight: 400;
+  color: #374151;
+}
+
+a.menu__link--active {
+  font-weight: 600;
 }

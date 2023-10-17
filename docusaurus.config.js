@@ -192,10 +192,10 @@ const docs = [
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
-  breadcrumbs: true,
+  breadcrumbs: false,
   // editUrl: 'https://github.com/apitube/docs/tree/master/',
   showLastUpdateTime: false,
-  // sidebarCollapsible: true,
+  sidebarCollapsible: false,
   sidebarPath: require.resolve('./sidebars.js'),
 };
 
@@ -274,7 +274,7 @@ const config = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
       ({
-        image: '/img/dyte-docs-card.png',
+        image: 'img/apitube-social-card.jpg',
         colorMode: {
           defaultMode: 'light',
           disableSwitch: true,
@@ -300,6 +300,14 @@ const config = {
               position: 'left',
               label: 'Tutorial',
             },
+
+
+
+
+            {to: 'integrations', label: 'Integrations', position: 'left'},
+
+
+
             {
               position: 'right',
               type: 'search',
