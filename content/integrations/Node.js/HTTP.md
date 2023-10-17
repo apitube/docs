@@ -1,0 +1,34 @@
+---
+slug: '/node_js/HTTP'
+---
+
+# HTTP integration
+
+```javascript
+const http = require("https");
+
+const options = {
+    "method": "GET",
+    "hostname": "apitube.io",
+    "port": null,
+    "path": "/v1/sets/***ID_HERE***?limit=250&offset=0",
+    "headers": {
+        "X-ApiTube-Key": "***KEY***"
+    }
+};
+
+const req = http.request(options, function (res) {
+    const chunks = [];
+
+    res.on("data", function (chunk) {
+        chunks.push(chunk);
+    });
+
+    res.on("end", function () {
+        const body = Buffer.concat(chunks);
+        console.log(body.toString());
+    });
+});
+
+req.end();
+```
