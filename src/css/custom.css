@@ -12,15 +12,41 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #006cfa;
-  --ifm-color-primary-dark: #0260a4;
-  --ifm-color-primary-darker: #024272;
-  --ifm-color-primary-darkest: #01253f;
-  --ifm-color-primary-light: #0260a4;
-  --ifm-color-primary-lighter: #43aefc;
-  --ifm-color-primary-lightest: #75c4fd;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Default values */
+  --docs-color-border: #dadde1;
+
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-navbar-padding-horizontal: 0.75rem;
+
+  --ifm-font-family-base: 'Inter var', system-ui, -apple-system, Segoe UI, Roboto,
+  Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+
+  --ifm-heading-font-family: 'Sohne', system-ui, -apple-system, Segoe UI, Roboto,
+  Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+
+  /* Theme colors */
+  --ifm-color-primary: #2160fd;
+  --ifm-color-primary-dark: #1959fc;
+  --ifm-color-primary-darker: #0f51f8;
+  --ifm-color-primary-darkest: #0042e7;
+  --ifm-color-primary-light: #3d72f8;
+  --ifm-color-primary-lighter: #477af8;
+  --ifm-color-primary-lightest: #6791fc;
+
+  --ifm-table-border-color: var(--docs-color-border);
+  --code-border-color: var(--docs-color-border);
+
+  --ifm-code-font-size: 92%;
+  --docusaurus-highlighted-code-line-bg: rgba(147, 178, 244, 0.38);
+
+  --ifm-breadcrumb-item-background-active: transparent;
+  --ifm-breadcrumb-padding-horizontal: 0;
+
   --ifm-menu-color-background-active: #e5f0ff;
   --ifm-footer-background-color: #dce0e7;
   --ifm-footer-link-color: #312b41;
@@ -29,16 +55,17 @@
 
 html {
   /*background-color: rgb(220 224 231);*/
+  @apply bg-blue-600
 }
 
 body {
-  /*font-size: 90%;*/
+  font-size: 96%;
   margin: .75rem;
 }
 
 #__docusaurus {
   background-color: #ffffff;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33'%3E%3Cpath d='M0 0h2.25Zm0 0v2.25Zm33 33h-2.25Zm0 0v-2.25Zm0-33h-2.25Zm0 0v2.25ZM0 33v-2.25Zm0 0h2.25Z' stroke-opacity='.065' stroke-width='1.1' stroke='%23000'/%3E%3C/svg%3E");
+  /*background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33'%3E%3Cpath d='M0 0h2.25Zm0 0v2.25Zm33 33h-2.25Zm0 0v-2.25Zm0-33h-2.25Zm0 0v2.25ZM0 33v-2.25Zm0 0h2.25Z' stroke-opacity='.065' stroke-width='1.1' stroke='%23000'/%3E%3C/svg%3E");*/
 }
 
 h1, h2, h3, h4, h5, h6 {

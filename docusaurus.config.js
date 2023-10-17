@@ -1,55 +1,219 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const code_themes = {
+  light: require('prism-react-renderer/themes/github'),
+  dark: require('prism-react-renderer/themes/vsDark'),
+};
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+const meta = {
   title: 'APITUBE',
   tagline: 'Worldwide News API for your Products',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
   url: 'https://docs.apitube.pub',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  // organizationName: 'facebook', // Usually your GitHub org/user name.
-  // projectName: 'docusaurus', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
-  // Custom configs
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
   trailingSlash: false,
   markdown: {
     mermaid: true
   },
-
   customFields: {
-    // expose env vars etc here
     environment: process.env.NODE_ENV,
   },
+};
 
-  scripts: [
-    {
-      src: '/js/crisp.js',
-      async: false,
+/** @type {import('@docusaurus/plugin-content-docs').Options[]} */
+const docs = [
+  {
+    id: 'cli',
+    path: 'docs/cli',
+    routeBasePath: '/cli',
+  },
+  {
+    id: 'plugin-sdk',
+    path: 'docs/plugin-sdk',
+    routeBasePath: '/plugin-sdk',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
     },
-  ],
+  },
 
+  // Community packages
+  {
+    id: 'community-packages',
+    path: 'docs/community-packages',
+    routeBasePath: '/community-packages',
+  },
+
+  // Web UI Kits
+  {
+    id: 'ui-kit',
+    path: 'docs/ui-kit',
+    routeBasePath: '/ui-kit',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'react-ui-kit',
+    path: 'docs/react-ui-kit',
+    routeBasePath: '/react-ui-kit',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'angular-ui-kit',
+    path: 'docs/angular-ui-kit',
+    routeBasePath: '/angular-ui-kit',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+
+  // Web Core
+  {
+    id: 'web-core',
+    path: 'docs/web-core',
+    routeBasePath: '/web-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  // React Web Core
+  {
+    id: 'react-web-core',
+    path: 'docs/react-web-core',
+    routeBasePath: '/react-web-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+
+  // Mobile Core
+  {
+    id: 'android-core',
+    path: 'docs/android-core',
+    routeBasePath: '/android-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'flutter-core',
+    path: 'docs/flutter-core',
+    routeBasePath: '/flutter-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'ios-core',
+    path: 'docs/ios-core',
+    routeBasePath: '/ios-core',
+    versions: {
+      current: {
+        label: '1.x.x',
+      },
+    },
+  },
+  {
+    id: 'rn-core',
+    path: 'docs/rn-core',
+    routeBasePath: '/rn-core',
+    versions: {
+      current: {
+        label: '0.5.x',
+      },
+    },
+  },
+
+  // Mobile UI Kits
+  {
+    id: 'android',
+    path: 'docs/android',
+    routeBasePath: '/android',
+    versions: {
+      current: {
+        label: '0.14.x',
+      },
+    },
+  },
+  {
+    id: 'flutter',
+    path: 'docs/flutter',
+    routeBasePath: '/flutter',
+    versions: {
+      current: {
+        label: '0.7.x',
+      },
+    },
+  },
+  {
+    id: 'ios',
+    path: 'docs/ios',
+    routeBasePath: '/ios',
+    versions: {
+      current: {
+        label: '1.33.x',
+      },
+    },
+  },
+  {
+    id: 'react-native',
+    path: 'docs/rn-ui-kit',
+    routeBasePath: '/react-native',
+    versions: {
+      current: {
+        label: '1.4.x',
+      },
+    },
+  },
+];
+
+/** @type {import('@docusaurus/plugin-content-docs').Options} */
+const defaultSettings = {
+  breadcrumbs: true,
+  editUrl: 'https://github.com/dyte-in/docs/tree/main/',
+  showLastUpdateTime: true,
+  sidebarCollapsible: true,
+  sidebarPath: require.resolve('./sidebars.js'),
+};
+
+const tailwindPlugin = require('./src/plugins/tailwind-plugin.cjs');
+
+const plugins = [
+  tailwindPlugin,
+  [
+    'docusaurus2-dotenv', {}
+  ],
+];
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  ...meta,
+  plugins,
+
+  trailingSlash: false,
   themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -73,35 +237,32 @@ const config = {
       }),
     ],
   ],
-
-  plugins: [
-    async function tailwindCssPlugin(context, options) {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          // Appends TailwindCSS and AutoPrefixer.
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
-        },
-      };
+  clientModules: [require.resolve('./src/client/define-ui-kit.js')],
+  scripts: [
+    {
+      src: '/js/crisp.js',
+      async: false,
     },
-    [
-      'docusaurus2-dotenv', {}
-    ],
   ],
 
   presets: [
     [
       '@docusaurus/preset-classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           path: 'content/docs',
           routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          ...defaultSettings,
         },
+        blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve('./src/css/custom.css'),
+          ],
+        },
+        sitemap: {
+          ignorePatterns: ['/tags/**'],
         },
         googleTagManager: {
           containerId: 'G-TERKG9XM4F'
@@ -111,149 +272,199 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/apitube-social-card.jpg',
-      navbar: {
-        logo: {
-          alt: 'APITUBE Worldwide Live News API',
-          src: 'img/logo.svg',
-          width: 84,
-          // height: 50,
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+      ({
+        image: '/img/dyte-docs-card.png',
+        colorMode: {
+          defaultMode: 'light',
+          disableSwitch: true,
+          respectPrefersColorScheme: false,
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
+        docs: {
+          sidebar: {
+            autoCollapseCategories: true,
+            hideable: true,
           },
-          {
-            position: 'right',
-            type: 'search',
+        },
+        navbar: {
+          logo: {
+            alt: 'APITUBE Worldwide Live News API',
+            src: 'img/logo.svg',
+            width: 84,
+            // height: 50,
           },
-          {
-            position: 'right',
-            href: 'https://apitube.pub/sign-up',
-            className: 'header-sign-up-link',
-            label: "Sign Up",
-            'aria-label': 'Sign Up',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'tutorialSidebar',
+              position: 'left',
+              label: 'Tutorial',
+            },
+            {
+              position: 'right',
+              type: 'search',
+            },
+            {
+              position: 'right',
+              href: 'https://apitube.pub/sign-up',
+              className: 'header-sign-up-link',
+              label: "Sign Up",
+              'aria-label': 'Sign Up',
+            },
+          ],
+        },
+        footer: {
+          // style: 'dark',
+          links: [
+            {
+              title: 'APITUBE',
+              items: [
+                {
+                  label: 'Features',
+                  to: 'https://apitube.pub/product/features',
+                },
+                {
+                  label: 'Blog & News',
+                  to: 'https://apitube.pub/blog',
+                },
+                {
+                  label: 'Privacy Policy',
+                  to: 'https://apitube.pub/terms/privacy_policy',
+                },
+                {
+                  label: 'Terms of Service',
+                  to: 'https://apitube.pub/terms/terms_of_service',
+                },
+              ],
+            },
+            {
+              title: 'Integrations',
+              items: [
+                {
+                  label: 'Node.js',
+                  to: 'https://github.com/apitube/integrations/tree/master/Node.js',
+                },
+                {
+                  label: 'Python',
+                  to: 'https://github.com/apitube/integrations/tree/master/Python',
+                },
+                {
+                  label: 'PHP',
+                  to: 'https://github.com/apitube/integrations/tree/master/PHP',
+                },
+                {
+                  label: 'Golang',
+                  to: 'https://github.com/apitube/integrations/tree/master/Go',
+                },
+                {
+                  label: 'All integrations',
+                  to: 'https://github.com/apitube/integrations',
+                },
+              ],
+            },
+            {
+              // title: '',
+              items: [
+                {
+                  label: 'Node.js',
+                  to: 'https://github.com/apitube/integrations/tree/master/Node.js',
+                },
+                {
+                  label: 'Python',
+                  to: 'https://github.com/apitube/integrations/tree/master/Python',
+                },
+                {
+                  label: 'PHP',
+                  to: 'https://github.com/apitube/integrations/tree/master/PHP',
+                },
+                {
+                  label: 'Golang',
+                  to: 'https://github.com/apitube/integrations/tree/master/Go',
+                },
+                {
+                  label: 'All integrations',
+                  to: 'https://github.com/apitube/integrations',
+                },
+              ],
+            },
+            {
+              // title: '',
+              items: [
+                {
+                  label: 'Node.js',
+                  to: 'https://github.com/apitube/integrations/tree/master/Node.js',
+                },
+                {
+                  label: 'Python',
+                  to: 'https://github.com/apitube/integrations/tree/master/Python',
+                },
+                {
+                  label: 'PHP',
+                  to: 'https://github.com/apitube/integrations/tree/master/PHP',
+                },
+                {
+                  label: 'Golang',
+                  to: 'https://github.com/apitube/integrations/tree/master/Go',
+                },
+                {
+                  label: 'All integrations',
+                  to: 'https://github.com/apitube/integrations',
+                },
+              ],
+            }
+          ],
+          copyright: `Worldwide Live News API for your Next project `,
+        },
+        prism: {
+          theme: code_themes.light,
+          darkTheme: code_themes.dark,
+          additionalLanguages: [
+            'dart',
+            'ruby',
+            'groovy',
+            'kotlin',
+            'java',
+            'swift',
+            'objectivec',
+          ],
+          magicComments: [
+            {
+              className: 'theme-code-block-highlighted-line',
+              line: 'highlight-next-line',
+              block: { start: 'highlight-start', end: 'highlight-end' },
+            },
+            {
+              className: 'code-block-error-line',
+              line: 'highlight-next-line-error',
+            },
+          ],
+        },
+        algolia: {
+          appId: 'HL0HSV62RK',
+          apiKey: '72ebf02146698733b7114c7b36da0945',
+          indexName: 'docs',
+          contextualSearch: true,
+          searchParameters: {},
+        },
+      }),
+
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve('swc-loader'),
+      options: {
+        jsc: {
+          parser: {
+            syntax: 'typescript',
+            tsx: true,
           },
-        ],
-      },
-      footer: {
-        // style: 'dark',
-        links: [
-          {
-            title: 'APITUBE',
-            items: [
-              {
-                label: 'Features',
-                to: 'https://apitube.pub/product/features',
-              },
-              {
-                label: 'Blog & News',
-                to: 'https://apitube.pub/blog',
-              },
-              {
-                label: 'Privacy Policy',
-                to: 'https://apitube.pub/terms/privacy_policy',
-              },
-              {
-                label: 'Terms of Service',
-                to: 'https://apitube.pub/terms/terms_of_service',
-              },
-            ],
-          },
-          {
-            title: 'Integrations',
-            items: [
-              {
-                label: 'Node.js',
-                to: 'https://github.com/apitube/integrations/tree/master/Node.js',
-              },
-              {
-                label: 'Python',
-                to: 'https://github.com/apitube/integrations/tree/master/Python',
-              },
-              {
-                label: 'PHP',
-                to: 'https://github.com/apitube/integrations/tree/master/PHP',
-              },
-              {
-                label: 'Golang',
-                to: 'https://github.com/apitube/integrations/tree/master/Go',
-              },
-              {
-                label: 'All integrations',
-                to: 'https://github.com/apitube/integrations',
-              },
-            ],
-          },
-          {
-            // title: '',
-            items: [
-              {
-                label: 'Node.js',
-                to: 'https://github.com/apitube/integrations/tree/master/Node.js',
-              },
-              {
-                label: 'Python',
-                to: 'https://github.com/apitube/integrations/tree/master/Python',
-              },
-              {
-                label: 'PHP',
-                to: 'https://github.com/apitube/integrations/tree/master/PHP',
-              },
-              {
-                label: 'Golang',
-                to: 'https://github.com/apitube/integrations/tree/master/Go',
-              },
-              {
-                label: 'All integrations',
-                to: 'https://github.com/apitube/integrations',
-              },
-            ],
-          },
-          {
-            // title: '',
-            items: [
-              {
-                label: 'Node.js',
-                to: 'https://github.com/apitube/integrations/tree/master/Node.js',
-              },
-              {
-                label: 'Python',
-                to: 'https://github.com/apitube/integrations/tree/master/Python',
-              },
-              {
-                label: 'PHP',
-                to: 'https://github.com/apitube/integrations/tree/master/PHP',
-              },
-              {
-                label: 'Golang',
-                to: 'https://github.com/apitube/integrations/tree/master/Go',
-              },
-              {
-                label: 'All integrations',
-                to: 'https://github.com/apitube/integrations',
-              },
-            ],
-          }
-        ],
-        copyright: `Worldwide Live News API for your Next project `,
-      },
-      colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
-        respectPrefersColorScheme: true,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+          target: 'es2017',
+        },
+        module: {
+          type: isServer ? 'commonjs' : 'es6',
+        },
       },
     }),
+  },
 };
 
 module.exports = config;
