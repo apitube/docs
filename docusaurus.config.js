@@ -193,9 +193,9 @@ const docs = [
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const defaultSettings = {
   breadcrumbs: true,
-  editUrl: 'https://github.com/dyte-in/docs/tree/main/',
-  showLastUpdateTime: true,
-  sidebarCollapsible: true,
+  // editUrl: 'https://github.com/apitube/docs/tree/master/',
+  showLastUpdateTime: false,
+  // sidebarCollapsible: true,
   sidebarPath: require.resolve('./sidebars.js'),
 };
 
