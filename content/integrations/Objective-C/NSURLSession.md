@@ -4,7 +4,7 @@ slug: '/objective_c/NSURLSession'
 
 # NSURLSession integration
 
-```objective_c
+```objective-c
 open Cohttp_lwt_unix
 open Cohttp
 open Lwt
