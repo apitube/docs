@@ -210,7 +210,7 @@ const plugins = [
     '@docusaurus/plugin-content-pages',
     {
       id: 'integrations',
-      path: '/content/integrations',
+      path: 'content/integrations',
       routeBasePath: '/integrations',
     },
   ],
