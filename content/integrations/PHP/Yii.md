@@ -16,7 +16,7 @@ class MyController extends Controller
 {
 	public function actionMakeRequest()
 	{
-		$url = "https://apitube.io/v1/news?limit=250&offset=0";
+		$url = "https://apitube.io/v1/news?limit=250";
 		$apiKey = "***KEY***";
 
 		$httpClient = new Client();

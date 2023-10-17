@@ -8,7 +8,7 @@ slug: '/javascript/jQuery'
 const settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://apitube.io/v1/news?limit=250&offset=0",
+    "url": "https://apitube.io/v1/news?limit=250",
     "method": "GET",
     "headers": {
         "X-ApiTube-Key": "***KEY***"

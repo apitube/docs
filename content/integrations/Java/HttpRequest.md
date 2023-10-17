@@ -6,7 +6,7 @@ slug: '/java/HttpRequest'
 
 ```java
 HttpRequest request = HttpRequest.newBuilder()
-		.uri(URI.create("https://apitube.io/v1/news?limit=250&offset=0"))
+		.uri(URI.create("https://apitube.io/v1/news?limit=250"))
 		.header("X-ApiTube-Key", "***KEY***")
 		.method("GET", HttpRequest.BodyPublishers.noBody())
 		.build();

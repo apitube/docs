@@ -11,7 +11,7 @@ let headers = [
 	"X-ApiTube-Key": "***KEY***"
 ]
 
-let request = NSMutableURLRequest(url: NSURL(string: "https://apitube.io/v1/news?limit=250&offset=0")! as URL,
+let request = NSMutableURLRequest(url: NSURL(string: "https://apitube.io/v1/news?limit=250")! as URL,
                                         cachePolicy: .useProtocolCachePolicy,
                                     timeoutInterval: 10.0)
 request.httpMethod = "GET"

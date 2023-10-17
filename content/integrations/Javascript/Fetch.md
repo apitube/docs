@@ -12,7 +12,7 @@ const options = {
     }
 };
 
-fetch('https://apitube.io/v1/news?limit=250&offset=0', options)
+fetch('https://apitube.io/v1/news?limit=250', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));

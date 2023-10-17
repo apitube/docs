@@ -9,7 +9,7 @@ var client = new HttpClient();
 var request = new HttpRequestMessage
 {
 	Method = HttpMethod.Get,
-	RequestUri = new Uri("https://apitube.io/v1/news?limit=250&offset=0"),
+	RequestUri = new Uri("https://apitube.io/v1/news?limit=250"),
 	Headers =
 	{
 		{ "X-ApiTube-Key", "***KEY***" },

@@ -11,7 +11,6 @@ const req = unirest("GET", "https://apitube.io/v1/news");
 
 req.query({
     "limit": "250",
-    "offset": "0",
 });
 
 req.headers({

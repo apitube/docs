@@ -9,5 +9,5 @@ wget --quiet \
 	--method GET \
 	--header 'X-ApiTube-Key: ***KEY***' \
 	--output-document \
-	- 'https://apitube.io/v1/news?limit=250&offset=0'
+	- 'https://apitube.io/v1/news?limit=250'
 ```

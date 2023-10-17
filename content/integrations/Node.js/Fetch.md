@@ -7,7 +7,7 @@ slug: '/node_js/Fetch'
 ```javascript
 const fetch = require('node-fetch');
 
-const url = 'https://apitube.io/v1/news?limit=250&offset=0';
+const url = 'https://apitube.io/v1/news?limit=250';
 
 const options = {
     method: 'GET',

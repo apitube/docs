@@ -9,7 +9,7 @@ import requests
 
 url = "https://apitube.io/v1/news"
 
-querystring = {"limit":"250", "offset": "0"}
+querystring = {"limit":"250"}
 
 headers = {
 	"X-ApiTube-Key": "***KEY***"

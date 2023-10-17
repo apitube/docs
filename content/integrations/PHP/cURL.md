@@ -10,7 +10,7 @@ slug: '/php/cURL'
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-    CURLOPT_URL => "https://apitube.io/v1/news?limit=250&offset=0",
+    CURLOPT_URL => "https://apitube.io/v1/news?limit=250",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",

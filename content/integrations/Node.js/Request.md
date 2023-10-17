@@ -12,7 +12,6 @@ const options = {
     url: 'https://apitube.io/v1/news',
     qs: {
         limit: '250',
-        offset: '0',
     },
     headers: {
         // 'X-ApiTube-Key': '***KEY***',

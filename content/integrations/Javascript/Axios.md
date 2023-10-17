@@ -11,8 +11,7 @@ const options = {
     method: 'GET',
     url: 'https://apitube.io/v1/news',
     params: {
-        limit: '250',
-        offset: '0'
+        limit: '250'
     },
     headers: {
         'X-ApiTube-Key': '***KEY***'

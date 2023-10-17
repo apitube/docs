@@ -11,7 +11,7 @@ const options = {
     "method": "GET",
     "hostname": "apitube.io",
     "port": null,
-    "path": "/v1/sets/***ID_HERE***?limit=250&offset=0",
+    "path": "/v1/news?limit=250",
     "headers": {
         "X-ApiTube-Key": "***KEY***"
     }
