@@ -1,10 +1,10 @@
 ---
-slug: '/ruby/Unirest'
+slug: '/python/Unirest'
 ---
 
 # Unirest integration
 
-```ruby
+```python
 require 'uri'
 require 'net/http'
 require 'openssl'
