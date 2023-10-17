@@ -15,6 +15,10 @@
 
   /* Default values */
   --docs-color-border: #dadde1;
+  --ifm-font-color-base: #374151;
+
+  --ifm-heading-color: #111827;
+  --ifm-link-color: #111827;
 
   --ifm-spacing-horizontal: 1.5rem;
   --ifm-navbar-padding-horizontal: 0.75rem;
@@ -92,19 +96,20 @@ article {
 }
 
 h1 {
-  /*font-size: 32px;*/
+  font-size: 32px;
+  color: rgb(17 24 39);
 }
 
 h2 {
-  /*font-size: 24px;*/
+  font-size: 24px;
 }
 
 h3 {
-  /*font-size: 18px;*/
+  font-size: 18px;
 }
 
 h4 {
-  /*font-size: 16px;*/
+  font-size: 16px;
 }
 
 .navbar__title {

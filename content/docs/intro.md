@@ -5,7 +5,14 @@ slug: '/'
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+This guide will help you get started with [ElevenLabs](https://elevenlabs.io). We will cover everything, starting with creating an account, and then moving to cloning your first voice and generating your initial voiceover. We will also cover prompting techniques (how to influence the AI's performance) as well as its current limitations and challenges.
+
+We will guide you through the various stages of ElevenLabs, starting with [VoiceLab](https://elevenlabs.io/voice-lab); this is where you can create or clone voices according to your preferences. Once you have set up your desired voices, we will move on to [Speech Synthesis](https://elevenlabs.io/speech-synthesis). Here, you will be able to generate your first audio outputs using the pre-made voices or the ones you've created or cloned.
+
+
+
+
+
 
 ## Getting Started
 
