@@ -1,5 +1,5 @@
 ---
-slug: '/node_js/HTTP'
+slug: '/nodejs/HTTP'
 ---
 
 # HTTP integration

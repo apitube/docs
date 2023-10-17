@@ -1,5 +1,5 @@
 ---
-slug: '/node_js/RapidQL'
+slug: '/nodejs/RapidQL'
 ---
 
 # RapidQL integration

@@ -217,7 +217,7 @@ const config = {
               items: [
                 {
                   label: 'Node.js',
-                  to: 'https://github.com/apitube/integrations/tree/master/Node.js',
+                  to: 'https://docs.apitube.pub/integrations/nodejs/',
                 },
                 {
                   label: 'Python',

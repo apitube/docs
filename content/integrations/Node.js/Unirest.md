@@ -1,5 +1,5 @@
 ---
-slug: '/node_js/Unirest'
+slug: '/nodejs/Unirest'
 ---
 
 # Unirest integration

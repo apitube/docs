@@ -1,5 +1,5 @@
 ---
-slug: '/node_js/Fetch'
+slug: '/nodejs/Fetch'
 ---
 
 # Fetch integration

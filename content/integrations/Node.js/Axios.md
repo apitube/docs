@@ -1,5 +1,5 @@
 ---
-slug: '/node_js/Axios'
+slug: '/nodejs/Axios'
 ---
 
 # Axios integration

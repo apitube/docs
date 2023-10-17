@@ -1,5 +1,5 @@
 ---
-slug: '/node_js/Request'
+slug: '/nodejs/Request'
 ---
 
 # Request integration
