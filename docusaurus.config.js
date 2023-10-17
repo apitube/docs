@@ -28,9 +28,11 @@ const meta = {
 /** @type {import('@docusaurus/plugin-content-docs').Options[]} */
 const docs = [
   {
-    id: 'cli',
+    id: 'integrations',
     path: 'content/integrations',
     routeBasePath: '/integrations',
+    sidebarPath: require.resolve('./sidebars-default.js'),
+    // editUrl: 'htrtrt'
   }
 ];
 
@@ -39,7 +41,7 @@ const defaultSettings = {
   breadcrumbs: false,
   // editUrl: 'https://github.com/apitube/docs/tree/master/',
   showLastUpdateTime: false,
-  sidebarCollapsible: false,
+  sidebarCollapsible: true,
   sidebarPath: require.resolve('./sidebars.js'),
 };
 
@@ -165,16 +167,14 @@ const config = {
               type: 'docSidebar',
               sidebarId: 'tutorialSidebar',
               position: 'left',
-              label: 'Tutorial',
+              label: 'Documentation',
             },
-
-
-
-
-            {to: 'integrations', label: 'Integrations', position: 'left'},
-
-
-
+            {
+              to: 'integrations',
+              sidebarId: 'tutorialSidebar',
+              label: 'Integrations',
+              position: 'left'
+            },
             {
               position: 'right',
               type: 'search',
