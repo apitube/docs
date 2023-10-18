@@ -27,10 +27,12 @@
 
 html[data-theme='light'] {
   --ifm-font-color-base: #222;
+  --ifm-navbar-background-color: #ffffff;
 }
 
 html[data-theme='dark'] {
   --ifm-font-color-base: #ddd;
+  --ifm-navbar-background-color: #262e41;
 }
 
 body {
@@ -38,13 +40,13 @@ body {
   margin: .75rem;
 }
 
-#__docusaurus {
+html[data-theme='light'] #__docusaurus {
   background-color: #ffffff;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33'%3E%3Cpath d='M0 0h2.25Zm0 0v2.25Zm33 33h-2.25Zm0 0v-2.25Zm0-33h-2.25Zm0 0v2.25ZM0 33v-2.25Zm0 0h2.25Z' stroke-opacity='.065' stroke-width='1.1' stroke='%23000'/%3E%3C/svg%3E");
 }
 
 html[data-theme='dark'] #__docusaurus {
-  background-color: inherit;
+  background-color: #161f31;
   background-image: none;
 }
 

@@ -31,8 +31,7 @@ const docs = [
     id: 'integrations',
     path: 'content/integrations',
     routeBasePath: '/integrations',
-    sidebarPath: require.resolve('./sidebars-default.js'),
-    // editUrl: 'htrtrt'
+    sidebarPath: require.resolve('./sidebars')
   }
 ];
 
@@ -120,8 +119,9 @@ const config = {
       /** @type {import('docusaurus-preset-openapi').Options} */
       {
         api: {
+          // path: "./petstore.yaml",
           path: "./petstore.yaml",
-          routeBasePath: "/api",
+          routeBasePath: "/api-reference",
         },
         docs: {
           path: 'content/docs',
@@ -170,19 +170,17 @@ const config = {
           items: [
             {
               type: 'docSidebar',
-              sidebarId: 'generatedSidebar',
+              sidebarId: 'docs',
               position: 'left',
               label: 'Guide',
             },
             {
-              to: 'api',
-              sidebarId: 'generatedSidebar',
+              to: 'api-reference',
               position: 'left',
               label: 'API Reference',
             },
             {
               to: 'integrations',
-              sidebarId: 'generatedSidebar',
               label: 'Integrations',
               position: 'left'
             },
