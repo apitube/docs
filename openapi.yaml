@@ -14,16 +14,19 @@ tags:
   - name: Articles
     description: Discover news articles that align with one or multiple search criteria.
 paths:
-  /news:
+  /news/articles:
     get:
       tags:
         - Articles
       summary: Get articles
       description: 'Discover news articles that align with one or multiple search criteria.'
-      externalDocs:
-        url: "/api-reference/get-latest/updatePet"
-        description: "API documentation for the updatePet operation"
       parameters:
+        - name: API Key
+          in: query
+          description: Your API key from dashboard.
+          required: false
+          schema:
+            type: string
         - name: search_title
           in: query
           description: Find articles by article title.
@@ -202,6 +205,62 @@ paths:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
 
+  /news/article/{id}:
+    get:
+      tags:
+        - Articles
+      summary: Get article by ID
+      description: 'Get specific article by ID.'
+      parameters:
+        - name: API Key
+          in: query
+          description: Your API key from dashboard.
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          description: Article ID.
+          required: false
+          example: 'bd4ddb06-c2e2-4ada-8228-7c952da9ed22'
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticle'
+
+  /news/categories:
+    get:
+      tags:
+        - Articles
+      summary: Get all categories
+      description: 'Get all available categories list.'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsCategories'
+
+  /news/languages:
+    get:
+      tags:
+        - Articles
+      summary: Get all languages
+      description: 'Get all available languages list.'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsLanguages'
+
 components:
   schemas:
     NewsArticles:
@@ -266,6 +325,7 @@ components:
       title: article
       description: Single article
       required:
+        - id
         - href
         - created_at
         - title
@@ -280,6 +340,9 @@ components:
         - resource_source
       type: object
       properties:
+        id:
+          type: string
+          description: 'Article ID.'
         href:
           type: string
           description: 'Direct url.'
@@ -406,3 +469,57 @@ components:
                   type: integer
                   description: 'Longitude.'
                   format: float
+
+    NewsCategories:
+      title: categories
+      description: Get all categories
+      required:
+        - items
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/NewsCategory'
+
+    NewsCategory:
+      title: category
+      description: Single category
+      required:
+        - id
+        - name
+      type: object
+      properties:
+        id:
+          type: string
+          description: 'Category ID.'
+        name:
+          type: string
+          description: 'Category name.'
+
+    NewsLanguages:
+      title: languages
+      description: Get all languages
+      required:
+        - items
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/NewsLanguage'
+
+    NewsLanguage:
+      title: language
+      description: Single language
+      required:
+        - id
+        - name
+      type: object
+      properties:
+        id:
+          type: string
+          description: 'Language ID.'
+        name:
+          type: string
+          description: 'Language name.'
