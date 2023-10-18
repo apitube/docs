@@ -15,11 +15,9 @@ import (
 
 func main() {
 
-	url := "https://apitube.io/v1/news?limit=250"
+	url := "https://apitube.io/v1/news?limit=250&key=YOUR_API_KEY"
 
 	req, _ := http.NewRequest("GET", url, nil)
-
-	req.Header.Add("X-ApiTube-Key", "***YOUR_KEY***")
 
 	res, _ := http.DefaultClient.Do(req)
 

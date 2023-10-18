@@ -13,12 +13,9 @@ $request = new http\Client\Request;
 $request->setRequestUrl('https://apitube.io/v1/news');
 $request->setRequestMethod('GET');
 $request->setQuery(new http\QueryString([
-    'limit' => '250'
+    'limit' => '250',
+    'key' => 'YOUR_API_KEY'
 ]));
-
-$request->setHeaders([
-    'X-ApiTube-Key' => '***YOUR_KEY***'
-]);
 
 $client->enqueue($request)->send();
 $response = $client->getResponse();

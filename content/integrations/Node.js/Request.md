@@ -12,10 +12,7 @@ const options = {
     url: 'https://apitube.io/v1/news',
     qs: {
         limit: '250',
-    },
-    headers: {
-        // 'X-ApiTube-Key': '***YOUR_KEY***',
-        useQueryString: true
+        key: 'YOUR_API_KEY'
     }
 };
 

@@ -10,7 +10,7 @@ slug: '/php/cURL'
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-    CURLOPT_URL => "https://apitube.io/v1/news?limit=250",
+    CURLOPT_URL => "https://apitube.io/v1/news?limit=250&key=YOUR_API_KEY",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_ENCODING => "",
@@ -18,9 +18,6 @@ curl_setopt_array($curl, [
     CURLOPT_TIMEOUT => 30,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "GET",
-    CURLOPT_HTTPHEADER => [
-        "X-ApiTube-Key: ***YOUR_KEY***"
-    ],
 ]);
 
 $response = curl_exec($curl);

@@ -11,10 +11,8 @@ const options = {
     method: 'GET',
     url: 'https://apitube.io/v1/news',
     params: {
-        limit: '250'
-    },
-    headers: {
-        'X-ApiTube-Key': '***YOUR_KEY***'
+        limit: '250',
+        key: 'YOUR_API_KEY'
     }
 };
 

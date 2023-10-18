@@ -5,16 +5,22 @@ slug: '/objective_c/NSURLSession'
 # NSURLSession integration
 
 ```objective-c
-open Cohttp_lwt_unix
-open Cohttp
-open Lwt
+#import <Foundation/Foundation.h>
 
-let uri = Uri.of_string "https://apitube.io/v1/news?limit=250" in
-let headers = Header.add_list (Header.init ()) [
-	("X-ApiTube-Key", "***YOUR_KEY***");
-] in
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://apitube.io/v1/news?limit=250&key=YOUR_API_KEY"]
+                                                       cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                   timeoutInterval:10.0];
+[request setHTTPMethod:@"GET"];
 
-Client.call ~headers `GET uri
->>= fun (res, body_stream) ->
-	(* Do stuff with the result *)
+NSURLSession *session = [NSURLSession sharedSession];
+NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
+                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+	                                            if (error) {
+		                                            NSLog(@"%@", error);
+	                                            } else {
+		                                            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+		                                            NSLog(@"%@", httpResponse);
+	                                            }
+                                            }];
+[dataTask resume];
 ```

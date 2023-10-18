@@ -6,13 +6,10 @@ slug: '/javascript/Fetch'
 
 ```javascript
 const options = {
-    method: 'GET',
-    headers: {
-        'X-ApiTube-Key': '***YOUR_KEY***'
-    }
+    method: 'GET'
 };
 
-fetch('https://apitube.io/v1/news?limit=250', options)
+fetch('https://apitube.io/v1/news?limit=250&key=YOUR_API_KEY', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));

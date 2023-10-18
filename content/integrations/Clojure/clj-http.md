@@ -7,6 +7,5 @@ slug: '/clojure/clj-http'
 ```clojure
 (require '[clj-http.client :as client])
 
-(client/get "https://apitube.io/v1/news" {:headers {:X-ApiTube-Key "***YOUR_KEY***"}
-                                                             :query-params {:limit "250"}})
+(client/get "https://apitube.io/v1/news" {:query-params {:limit "250", :key: "YOUR_API_KEY"}})
 ```

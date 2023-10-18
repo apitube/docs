@@ -9,11 +9,7 @@ import http.client
 
 conn = http.client.HTTPSConnection("apitube.io")
 
-headers = {
-    'X-ApiTube-Key': "***YOUR_KEY***"
-}
-
-conn.request("GET", "/v1/news?limit=250", headers=headers)
+conn.request("GET", "/v1/news?limit=250&key=YOUR_API_KEY")
 
 res = conn.getresponse()
 data = res.read()

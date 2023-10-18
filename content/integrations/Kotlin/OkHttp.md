@@ -8,9 +8,8 @@ slug: '/kotlin/OkHttp'
 val client = OkHttpClient()
 
 val request = Request.Builder()
-	.url("https://apitube.io/v1/news?limit=250")
+	.url("https://apitube.io/v1/news?limit=250&key=YOUR_API_KEY")
 	.get()
-	.addHeader("X-ApiTube-Key", "***YOUR_KEY***")
 	.build()
 
 val response = client.newCall(request).execute()

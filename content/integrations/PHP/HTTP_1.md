@@ -12,11 +12,8 @@ $request->setUrl('https://apitube.io/v1/news');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData([
-    'limit' => '250'
-]);
-
-$request->setHeaders([
-    'X-ApiTube-Key' => '***YOUR_KEY***'
+    'limit' => '250',
+    'key' => 'YOUR_API_KEY'
 ]);
 
 try {

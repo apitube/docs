@@ -11,9 +11,10 @@ url <- "https://apitube.io/v1/news"
 
 queryString <- list(
   limit = "250"
+  key = "YOUR_API_KEY"
 )
 
-response <- VERB("GET", url, add_headers('X-ApiTube-Key' = '***YOUR_KEY***'), query = queryString, content_type("application/octet-stream"))
+response <- VERB("GET", url, query = queryString, content_type("application/octet-stream"))
 
 content(response, "text")
 ```

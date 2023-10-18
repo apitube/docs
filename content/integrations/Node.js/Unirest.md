@@ -11,11 +11,7 @@ const req = unirest("GET", "https://apitube.io/v1/news");
 
 req.query({
     "limit": "250",
-});
-
-req.headers({
-    "X-ApiTube-Key": "***YOUR_KEY***",
-    "useQueryString": true
+    "key": "YOUR_API_KEY"
 });
 
 req.end(function (res) {

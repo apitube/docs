@@ -9,14 +9,9 @@ from django.http import HttpResponse
 import requests
 
 def make_request(request):
-    url = "https://apitube.io/v1/news?limit=250"
-    api_key = "***YOUR_KEY***"
+    url = "https://apitube.io/v1/news?limit=250&key=YOUR_API_KEY"
 
-    headers = {
-        "X-ApiTube-Key": api_key
-    }
-
-    response = requests.get(url, headers=headers)
+    response = requests.get(url)
 
     if response.status_code == 200:
         return HttpResponse(response.text, content_type="application/json")
