@@ -115,6 +115,24 @@ const config = {
   ],
 
   presets: [
+    // [
+    //   "docusaurus-preset-openapi",
+    //   /** @type {import('docusaurus-preset-openapi').Options} */
+    //   {
+    //     api: {
+    //       path: "./petstore.yaml",
+    //       routeBasePath: "/api",
+    //     },
+    //     docs: {
+    //       path: 'content/docs',
+    //       sidebarPath: require.resolve("./sidebars.js"),
+    //       routeBasePath: "/",
+    //     },
+    //     theme: {
+    //       customCss: require.resolve("./src/css/custom.css"),
+    //     },
+    //   },
+    // ],
     [
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */

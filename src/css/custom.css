@@ -48,10 +48,6 @@ html[data-theme='dark'] #__docusaurus {
   background-image: none;
 }
 
-.navbar {
-  font-size: .9rem;
-}
-
 .markdown h1:first-child {
   --ifm-h1-font-size: 2.2rem !important;
 }
