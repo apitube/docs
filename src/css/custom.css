@@ -28,11 +28,13 @@
 html[data-theme='light'] {
   --ifm-font-color-base: #222;
   --ifm-navbar-background-color: #ffffff;
+  --openapi-input-background: #ffffff;
 }
 
 html[data-theme='dark'] {
   --ifm-font-color-base: #ddd;
   --ifm-navbar-background-color: #262e41;
+  --openapi-input-background: #3f4962;
 }
 
 body {

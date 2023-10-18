@@ -119,8 +119,7 @@ const config = {
       /** @type {import('docusaurus-preset-openapi').Options} */
       {
         api: {
-          // path: "./petstore.yaml",
-          path: "./petstore.yaml",
+          path: "./openapi.yaml",
           routeBasePath: "/api-reference",
         },
         docs: {

@@ -1,0 +1,408 @@
+openapi: 3.0.0
+servers:
+  - url: 'https://apitube.pub/v1'
+info:
+  title: API Reference
+  description: >-
+    This is a sample server Petstore server. For this sample, you can use the api key
+    `special-key` to test the authorization filters.
+  version: 1.0.0
+  license:
+    name: Apache-2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: Articles
+    description: Discover news articles that align with one or multiple search criteria.
+paths:
+  /news:
+    get:
+      tags:
+        - Articles
+      summary: Get articles
+      description: 'Discover news articles that align with one or multiple search criteria.'
+      externalDocs:
+        url: "/api-reference/get-latest/updatePet"
+        description: "API documentation for the updatePet operation"
+      parameters:
+        - name: search_title
+          in: query
+          description: Find articles by article title.
+          required: false
+          example: 'Apple'
+          schema:
+            type: string
+        - name: resource_type
+          in: query
+          description: Find articles in the specified resource type(s).
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - news
+                - blog/company
+                - blog/personal
+              default: available
+        - name: resource_language
+          in: query
+          description: Find articles in the specified language(s).
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - english
+              default: english
+        - name: resource_category
+          in: query
+          description: Find articles in the specified categories(s).
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - design/digital
+        - name: resource_source
+          in: query
+          description: Find articles in the specified resource type(s).
+          required: false
+          style: form
+          explode: false
+          example: 'techcrunch.com'
+          schema:
+            type: array
+            items:
+              type: string
+        - name: date_start
+          in: query
+          description: The starting date on or after the articles of interest were published.
+          required: false
+          example: '2019-12-31T23:59:59Z'
+          schema:
+            type: string
+            format: 'string in RFC 3339 format'
+        - name: date_end
+          in: query
+          description: The last date on which the articles of interest were published.
+          required: false
+          example: '2019-12-31T23:59:59Z'
+          schema:
+            type: string
+            format: 'string in RFC 3339 format'
+        - name: resource_rank_min
+          in: query
+          description: The lowest boundary of the rank of a news website to filter by.
+          required: false
+          example: '45'
+          schema:
+            type: integer
+            format: int
+            minimum: 1
+            maximum: 99
+        - name: resource_rank_max
+          in: query
+          description: The upper boundary of the rank of a news website to filter by.
+          required: false
+          example: '99'
+          schema:
+            type: integer
+            format: int
+            minimum: 1
+            maximum: 99
+        - name: min_sentiment
+          in: query
+          description: The minimum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
+          required: false
+          example: '0'
+          schema:
+            type: integer
+            format: int
+            minimum: -1
+            maximum: 1
+        - name: max_sentiment
+          in: query
+          description: The maximum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
+          required: false
+          example: '0'
+          schema:
+            type: integer
+            format: int
+            minimum: -1
+            maximum: 1
+        - name: location_name
+          in: query
+          description: Find articles in a specific location. Country or city.
+          required: false
+          example: 'Barcelona'
+          schema:
+            type: string
+        - name: location_latitude
+          in: query
+          description: Latitude of the location where search news articles.
+          required: false
+          example: '41.3894271'
+          schema:
+            type: integer
+            format: float
+        - name: location_longitude
+          in: query
+          description: Longitude of the location where search news articles
+          required: false
+          example: '2.1013918'
+          schema:
+            type: integer
+            format: float
+        - name: sort_by
+          in: query
+          description: Choose the criteria for sorting the news articles.
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            items:
+              type: string
+              enum:
+                - date
+                - sentiment
+              default: date
+        - name: sort_direction
+          in: query
+          description: Choose the criteria for sorting the news articles.
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            items:
+              type: string
+              enum:
+                - desc
+                - asc
+              default: desc
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticles'
+
+components:
+  schemas:
+    NewsArticles:
+      title: articles
+      description: Latest articles
+      required:
+        - categories
+        - languages
+        - items_count
+        - total_items_count
+        - updated_at
+        - path
+        - limit
+        - next_path
+        - previous_path
+        - export_formats
+      type: object
+      properties:
+        categories:
+          type: string
+          description: 'Search query category(s).'
+          format: array
+        languages:
+          type: string
+          description: 'Search query language(s).'
+          format: array
+        items_count:
+          type: integer
+          description: 'Count all founded articles.'
+          format: int
+        total_items_count:
+          type: integer
+          description: 'Count all articles.'
+          format: int
+        updated_at:
+          type: string
+          description: 'Latest updated date.'
+          format: 'string in RFC 3339 format'
+        limit:
+          type: integer
+          description: 'Articles per page.'
+          format: int
+        path:
+          type: string
+          description: 'Current request href.'
+          format: string
+        next_path:
+          type: string
+          description: 'Next page href.'
+          format: string
+        previous_path:
+          type: string
+          description: 'Previous page href.'
+          format: string
+        export_formats:
+          type: array
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/NewsArticle'
+    NewsArticle:
+      title: article
+      description: Single article
+      required:
+        - href
+        - created_at
+        - title
+        - description
+        - content
+        - summary
+        - text_plain
+        - resource_language
+        - resource_category
+        - resource_type
+        - resource_rank
+        - resource_source
+      type: object
+      properties:
+        href:
+          type: string
+          description: 'Direct url.'
+        created_at:
+          type: string
+          description: 'Latest updated date.'
+          format: 'string in RFC 3339 format'
+        title:
+          type: string
+          description: 'Title.'
+          format: string
+        description:
+          type: string
+          format: string
+        content:
+          type: string
+          description: 'Article with html tags.'
+          format: string
+        text_plain:
+          type: string
+          description: 'Article without html tags.'
+          format: string
+        summary:
+          type: string
+          description: 'Short article summary.'
+          format: string
+        image:
+          type: string
+          description: 'First image in article.'
+          format: string
+        author:
+          type: string
+          format: string
+        resource_language:
+          type: string
+          description: 'Resource language.'
+          format: string
+        resource_category:
+          type: string
+          description: 'Resource category.'
+          format: string
+        resource_type:
+          type: string
+          description: 'Resource type.'
+          format: string
+        resource_rank:
+          type: integer
+          description: 'Resource rank.'
+          format: int
+        resource_source:
+          type: string
+          description: 'Resource source.'
+          format: string
+        sentiment_content:
+          type: object
+          required:
+            - negative
+            - neutral
+            - positive
+            - compound
+          format: float
+          items:
+            type: object
+            items:
+              properties:
+                negative:
+                  type: integer
+                  description: 'Total negative sentiment.'
+                  format: float
+                neutral:
+                  type: integer
+                  description: 'Total neutral sentiment.'
+                  format: float
+                positive:
+                  type: integer
+                  description: 'Total positive sentiment.'
+                  format: float
+                compound:
+                  type: integer
+                  description: 'Total sentiment.'
+                  format: float
+        location:
+          type: array
+          items:
+            $ref: '#/components/schemas/NewsArticleLocation'
+
+    NewsArticleLocation:
+      title: location
+      description: Article detected location
+      required:
+        - country_code
+        - country_name
+        - city_name
+        - coordinates
+      type: array
+      properties:
+        country_code:
+          type: string
+          description: 'Country code.'
+          format: string
+        country_name:
+          type: string
+          description: 'Country name.'
+          format: string
+        city_name:
+          type: string
+          description: 'City name.'
+          format: string
+        coordinates:
+          type: object
+          required:
+            - latitude
+            - longitude
+          format: float
+          items:
+            type: object
+            items:
+              properties:
+                latitude:
+                  type: integer
+                  description: 'Latitude.'
+                  format: float
+                longitude:
+                  type: integer
+                  description: 'Longitude.'
+                  format: float
