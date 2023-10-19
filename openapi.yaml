@@ -363,9 +363,8 @@ components:
         - created_at
         - title
         - description
-        - content
+        - body
         - summary
-        - text_plain
         - resource_language
         - resource_category
         - resource_type
@@ -385,18 +384,15 @@ components:
           format: 'string in RFC 3339 format'
         title:
           type: string
-          description: 'Title.'
+          description: 'Title of article.'
           format: string
         description:
           type: string
+          description: 'Short description.'
           format: string
-        content:
+        body:
           type: string
-          description: 'Article with html tags.'
-          format: string
-        text_plain:
-          type: string
-          description: 'Article without html tags.'
+          description: 'Article full body.'
           format: string
         summary:
           type: string
