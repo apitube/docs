@@ -204,6 +204,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
+        '422':
+          description: operation failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticleFailedValidation'
 
   /news/article/{id}:
     get:
@@ -316,9 +322,11 @@ components:
           description: 'Previous page href.'
           format: string
         export_formats:
-          type: array
+          type: object
+          items:
+            $ref: '#/components/schemas/NewsArticleExportFormats'
         items:
-          type: array
+          type: object
           items:
             $ref: '#/components/schemas/NewsArticle'
     NewsArticle:
@@ -523,3 +531,63 @@ components:
         name:
           type: string
           description: 'Language name.'
+
+    NewsArticleFailedValidation:
+      title: Request failed
+      description: Failed request
+      required:
+        - status
+        - message
+        - errors
+      type: object
+      properties:
+        status:
+          type: integer
+          description: 'Status code.'
+          format: int
+        message:
+          type: string
+          description: 'Error message.'
+          format: string
+        errors:
+          type: array
+          description: 'Fields with invalid validation.'
+
+    NewsArticleExportFormats:
+      title: Exporting article formats
+      description: Exporting article formats
+      required:
+        - json
+        - xml
+        - rss
+        - html
+        - csv
+        - tsv
+        - xls
+        - xlsx
+      type: object
+      properties:
+        json:
+          type: string
+          format: string
+        xml:
+          type: string
+          format: string
+        rss:
+          type: string
+          format: string
+        html:
+          type: string
+          format: string
+        csv:
+          type: string
+          format: string
+        tsv:
+          type: string
+          format: string
+        xls:
+          type: string
+          format: string
+        xlsx:
+          type: string
+          format: string
