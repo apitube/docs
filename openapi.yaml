@@ -89,7 +89,7 @@ paths:
               type: string
         - name: date_start
           in: query
-          description: The starting date on or after the articles of interest were published.
+          description: The starting date on or after the articles of interest were published or created. The date should be in the RFC 3339 format.
           required: false
           example: '2019-12-31T23:59:59Z'
           schema:
@@ -97,7 +97,7 @@ paths:
             format: 'string in RFC 3339 format'
         - name: date_end
           in: query
-          description: The last date on which the articles of interest were published.
+          description: The last date on or after the articles of interest were published or created. The date should be in the RFC 3339 format.
           required: false
           example: '2019-12-31T23:59:59Z'
           schema:
@@ -231,17 +231,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
         '400':
-          description: failed validation
+          description: validation error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleFailedValidation'
+                $ref: '#/components/schemas/NewsArticleValidationError'
         '401':
           description: user's limit reached by key
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleFailedValidation'
+                $ref: '#/components/schemas/NewsArticleValidationError'
 
   /news/article/{id}:
     get:
@@ -275,13 +275,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleFailedValidation'
+                $ref: '#/components/schemas/NewsArticleValidationError'
         '401':
           description: user's limit reached by key
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleFailedValidation'
+                $ref: '#/components/schemas/NewsArticleValidationError'
 
   /news/categories:
     get:
@@ -399,7 +399,7 @@ components:
           description: 'Direct url.'
         created_at:
           type: string
-          description: 'Latest updated date.'
+          description: 'The date and time that the article was published or created, in UTC (+000).'
           format: 'string in RFC 3339 format'
         title:
           type: string
@@ -572,26 +572,30 @@ components:
           type: string
           description: 'Language name.'
 
-    NewsArticleFailedValidation:
+    NewsArticleValidationError:
       title: Request failed
       description: Failed request
       required:
         - status
+        - error_code
         - message
-        - errors
       type: object
       properties:
         status:
-          type: integer
-          description: 'Status code.'
-          format: int
+          type: string
+          description: 'Success or error status'
+          format: string
+          enum:
+            - ok
+            - error
+        error_code:
+          type: string
+          description: 'Error code.'
+          format: string
         message:
           type: string
           description: 'Error message.'
           format: string
-        errors:
-          type: array
-          description: 'Fields with invalid validation.'
 
     NewsArticleNotFound:
       title: Request failed
