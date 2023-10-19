@@ -9,10 +9,10 @@ This guide will help you get started with [ElevenLabs](https://elevenlabs.io). W
 
 We will guide you through the various stages of ElevenLabs, starting with [VoiceLab](https://elevenlabs.io/voice-lab); this is where you can create or clone voices according to your preferences. Once you have set up your desired voices, we will move on to [Speech Synthesis](https://elevenlabs.io/speech-synthesis). Here, you will be able to generate your first audio outputs using the pre-made voices or the ones you've created or cloned.
 
+import ExampleRequest from '@site/src/components/ExampleRequest'
 
-
-
-
+<ExampleRequest url="https://apitube.io/v1/news?limit=2"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news?limit=2"></ExampleRequest>
 
 ## Getting Started
 

@@ -312,7 +312,7 @@ const config = {
           copyright: `Worldwide Live News API for your Next project `,
         },
         prism: {
-          theme: require('prism-react-renderer/themes/oceanicNext'),
+          theme: require('prism-react-renderer/themes/palenight'),
           additionalLanguages: [
             'csharp',
             'dart',
