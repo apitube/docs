@@ -1,5 +1,5 @@
 ---
-slug: '/examples'
+slug: '/examples2'
 ---
 
 # Examples

@@ -1,11 +1,10 @@
 openapi: 3.0.0
 servers:
-  - url: 'https://apitube.pub/v1'
+  - url: 'https://apitube.io/v1'
 info:
   title: API Reference
   description: >-
-    This is a sample server Petstore server. For this sample, you can use the api key
-    `special-key` to test the authorization filters.
+    Here you have detailed documentation of all available API functions. To get started, you can make the sample request for each endpoint or [integrate into your application](/integrations).
   version: 1.0.0
   license:
     name: Apache-2.0
@@ -19,7 +18,7 @@ paths:
       tags:
         - Articles
       summary: Get articles
-      description: 'Discover news articles that align with one or multiple search criteria.'
+      description: 'The most recent news endpoint offers access to the most up-to-date and significant news stories.'
       parameters:
         - name: API Key
           in: query
@@ -162,6 +161,14 @@ paths:
         - name: location_longitude
           in: query
           description: Longitude of the location where search news articles
+          required: false
+          example: '2.1013918'
+          schema:
+            type: integer
+            format: float
+        - name: location_radius
+          in: query
+          description: Find articles in a specific radius from location
           required: false
           example: '2.1013918'
           schema:

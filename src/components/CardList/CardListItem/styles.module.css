@@ -10,10 +10,11 @@
   --ifm-link-hover-color: var(--ifm-color-emphasis-700);
   --ifm-link-hover-decoration: none;
 
-  box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
-  border: 1px solid var(--ifm-color-emphasis-200);
+  /*box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);*/
+  border: 1px solid var(--ifm-color-emphasis-400);
   transition: all var(--ifm-transition-fast) ease;
   transition-property: border, box-shadow;
+  padding: 1.2rem 1.6rem;
 }
 
 .cardContainer:hover {
@@ -26,13 +27,16 @@
 }
 
 .cardTitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .cardIcon {
   width: 24px;
   height: 24px;
   margin-right: 8px;
+  margin-bottom: 1rem;
+  display: block;
 }

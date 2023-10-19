@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
+import { Icon } from '@iconify/react'
 
 export interface CardItem {
   title?: ReactNode;
@@ -17,11 +18,11 @@ interface CardListItemProps {
 export default function CardListItem({ item }: CardListItemProps): JSX.Element {
   const cardContent = (
     <>
+      {item.icon && (
+          <Icon width={32} icon={item.icon} className={clsx(styles.cardIcon)} />
+      )}
       {item.title && (
         <h2 className={clsx("text--truncate", styles.cardTitle)}>
-          {item.icon && (
-            <img src={item.icon} className={styles.cardIcon} />
-          )}
           <span>{item.title}</span>
         </h2>
       )}
@@ -33,7 +34,7 @@ export default function CardListItem({ item }: CardListItemProps): JSX.Element {
     </>
   );
 
-  const rootClassName = clsx("card padding--lg", styles.cardContainer);
+  const rootClassName = clsx("card", styles.cardContainer);
 
   if (item.href) {
     return (

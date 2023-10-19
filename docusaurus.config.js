@@ -32,6 +32,12 @@ const docs = [
     path: 'content/integrations',
     routeBasePath: '/integrations',
     sidebarPath: require.resolve('./sidebars')
+  },
+  {
+    id: 'examples',
+    path: 'content/examples',
+    routeBasePath: '/examples',
+    sidebarPath: require.resolve('./sidebars')
   }
 ];
 
@@ -181,6 +187,11 @@ const config = {
             {
               to: 'integrations',
               label: 'Integrations',
+              position: 'left'
+            },
+            {
+              to: 'examples',
+              label: 'Examples',
               position: 'left'
             },
             {

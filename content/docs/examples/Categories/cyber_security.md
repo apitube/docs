@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: '/examples/categories/cyber_security'
+slug: '/examples2/categories/cyber_security'
 ---
 
 # Cyber Security

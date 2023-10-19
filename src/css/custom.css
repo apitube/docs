@@ -22,12 +22,13 @@
 }
 
 html[data-theme='light'] {
-  --ifm-font-color-base: #222;
+  --ifm-font-color-base: #1f2937;
   --ifm-navbar-background-color: #ffffff;
   --openapi-input-background: #ffffff;
   --ifm-footer-background-color: #dce0e7;
   --ifm-footer-link-color: #312b41;
   --ifm-footer-link-hover-color: #312b41;
+  --ifm-heading-color: #1f2937;
 }
 
 html[data-theme='dark'] {
@@ -94,4 +95,22 @@ blockquote {
 .header-sign-up-link:hover {
   opacity: 90%;
   color: #ffffff;
+}
+
+html[data-theme='light'] .pagination-nav__link {
+  background: #fff;
+  border: 1px solid var(--ifm-color-emphasis-400);
+}
+
+html[data-theme='dark'] .pagination-nav__link {
+  background: #242526;
+  border: 1px solid var(--ifm-color-emphasis-400);
+}
+
+html[data-theme='light'] .pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+html[data-theme='dark'] .pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
 }
