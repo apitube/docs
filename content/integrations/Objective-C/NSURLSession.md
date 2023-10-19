@@ -7,7 +7,7 @@ slug: '/objective_c/NSURLSession'
 ```objective-c
 #import <Foundation/Foundation.h>
 
-NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://apitube.io/v1/articles?limit=250&key=YOUR_API_KEY"]
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://apitube.io/v1/articles?limit=250&api_key=YOUR_API_KEY"]
                                                        cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                    timeoutInterval:10.0];
 [request setHTTPMethod:@"GET"];

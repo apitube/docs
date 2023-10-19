@@ -11,7 +11,7 @@ const req = unirest("GET", "https://apitube.io/v1/articles");
 
 req.query({
     "limit": "250",
-    "key": "YOUR_API_KEY"
+    "api_key": "YOUR_API_KEY"
 });
 
 req.end(function (res) {

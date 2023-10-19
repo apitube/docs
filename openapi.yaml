@@ -20,7 +20,7 @@ paths:
       summary: Get articles
       description: 'The most recent news endpoint offers access to the most up-to-date and significant news stories.'
       parameters:
-        - name: API Key
+        - name: api_key
           in: query
           description: Your API key from dashboard.
           required: false
@@ -250,7 +250,7 @@ paths:
       summary: Get article by ID
       description: 'Get specific article by ID.'
       parameters:
-        - name: API Key
+        - name: api_key
           in: query
           description: Your API key from dashboard.
           required: false

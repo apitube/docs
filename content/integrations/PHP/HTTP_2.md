@@ -14,7 +14,7 @@ $request->setRequestUrl('https://apitube.io/v1/articles');
 $request->setRequestMethod('GET');
 $request->setQuery(new http\QueryString([
     'limit' => '250',
-    'key' => 'YOUR_API_KEY'
+    'api_key' => 'YOUR_API_KEY'
 ]));
 
 $client->enqueue($request)->send();

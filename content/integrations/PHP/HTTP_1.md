@@ -13,7 +13,7 @@ $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData([
     'limit' => '250',
-    'key' => 'YOUR_API_KEY'
+    'api_key' => 'YOUR_API_KEY'
 ]);
 
 try {

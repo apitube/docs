@@ -11,7 +11,7 @@ const options = {
     "method": "GET",
     "hostname": "apitube.io",
     "port": null,
-    "path": "/v1/news?limit=250&key=YOUR_API_KEY"
+    "path": "/v1/news?limit=250&api_key=YOUR_API_KEY"
 };
 
 const req = http.request(options, function (res) {

@@ -12,7 +12,7 @@ const options = {
     url: 'https://apitube.io/v1/articles',
     params: {
         limit: '250',
-        key: 'YOUR_API_KEY'
+        api_key: 'YOUR_API_KEY'
     }
 };
 

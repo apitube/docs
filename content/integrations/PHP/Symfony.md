@@ -16,7 +16,7 @@ class MyController
 {
 	public function makeRequest(): Response
 	{
-		$url = "https://apitube.io/v1/articles?limit=250&key=YOUR_API_KEY";
+		$url = "https://apitube.io/v1/articles?limit=250&api_key=YOUR_API_KEY";
 
 		$httpClient = HttpClient::create();
 		$response = $httpClient->request('GET', $url);

@@ -6,5 +6,5 @@ slug: '/shell/cURL'
 
 ```shell
 curl --request GET \
-	--url 'https://apitube.io/v1/articles?limit=250'
+	--url 'https://apitube.io/v1/articles?limit=250&api_key=YOUR_API_KEY'
 ```
