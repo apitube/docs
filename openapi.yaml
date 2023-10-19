@@ -230,8 +230,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
-        '422':
-          description: operation failed
+        '400':
+          description: failed validation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticleFailedValidation'
+        '401':
+          description: user's limit reached by key
           content:
             application/json:
               schema:
@@ -264,12 +270,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticle'
-        '404':
-          description: not found
+        '400':
+          description: failed validation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleNotFound'
+                $ref: '#/components/schemas/NewsArticleFailedValidation'
+        '401':
+          description: user's limit reached by key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticleFailedValidation'
 
   /news/categories:
     get:
