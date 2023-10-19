@@ -238,12 +238,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticle'
+        '404':
+          description: not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticleNotFound'
 
   /news/categories:
     get:
       tags:
         - Articles
-      summary: Get all categories
+      summary: Get categories
       description: 'Get all available categories list.'
       responses:
         '200':
@@ -257,7 +263,7 @@ paths:
     get:
       tags:
         - Articles
-      summary: Get all languages
+      summary: Get languages
       description: 'Get all available languages list.'
       responses:
         '200':
@@ -552,6 +558,23 @@ components:
         errors:
           type: array
           description: 'Fields with invalid validation.'
+
+    NewsArticleNotFound:
+      title: Request failed
+      description: Failed request
+      required:
+        - status
+        - message
+      type: object
+      properties:
+        status:
+          type: integer
+          description: 'Status code.'
+          format: int
+        message:
+          type: string
+          description: 'Error message.'
+          format: string
 
     NewsArticleExportFormats:
       title: Exporting article formats
