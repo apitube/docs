@@ -5,7 +5,7 @@ slug: '/examples/categories/cyber_security'
 
 # Cyber Security
 
-### Request
+#### Request
 
 **url**: `https://apitube.io/v1/news?limit=2`
 
@@ -13,7 +13,7 @@ slug: '/examples/categories/cyber_security'
 
 ---
 
-### Response:
+#### Response:
 
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
