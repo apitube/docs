@@ -597,23 +597,6 @@ components:
           description: 'Error message.'
           format: string
 
-    NewsArticleNotFound:
-      title: Request failed
-      description: Failed request
-      required:
-        - status
-        - message
-      type: object
-      properties:
-        status:
-          type: integer
-          description: 'Status code.'
-          format: int
-        message:
-          type: string
-          description: 'Error message.'
-          format: string
-
     NewsArticleExportFormats:
       title: Exporting article formats
       description: Exporting article formats
