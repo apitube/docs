@@ -10,7 +10,7 @@ slug: '/php/http_2'
 $client = new http\Client;
 $request = new http\Client\Request;
 
-$request->setRequestUrl('https://apitube.io/v1/news');
+$request->setRequestUrl('https://apitube.io/v1/articles');
 $request->setRequestMethod('GET');
 $request->setQuery(new http\QueryString([
     'limit' => '250',

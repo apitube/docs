@@ -7,7 +7,7 @@ slug: '/R/httr'
 ```rlang
 library(httr)
 
-url <- "https://apitube.io/v1/news"
+url <- "https://apitube.io/v1/articles"
 
 queryString <- list(
   limit = "250"

@@ -13,7 +13,7 @@ let rql = new RapidQL({
 
 rql.query(`{
   Http.get(
-    url:"https://apitube.io/v1/news?limit=250&key=YOUR_API_KEY"
+    url:"https://apitube.io/v1/articles?limit=250&key=YOUR_API_KEY"
     body : undefined
   ) {
 

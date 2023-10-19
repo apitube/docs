@@ -8,5 +8,5 @@ slug: '/shell/Wget'
 wget --quiet \
 	--method GET \
 	--output-document \
-	- 'https://apitube.io/v1/news?limit=250&key=YOUR_API_KEY'
+	- 'https://apitube.io/v1/articles?limit=250&key=YOUR_API_KEY'
 ```
