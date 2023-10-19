@@ -124,7 +124,7 @@ paths:
             format: int
             minimum: 1
             maximum: 99
-        - name: min_sentiment
+        - name: sentiment_min
           in: query
           description: The minimum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
           required: false
@@ -134,7 +134,7 @@ paths:
             format: int
             minimum: -1
             maximum: 1
-        - name: max_sentiment
+        - name: sentiment_max
           in: query
           description: The maximum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
           required: false
