@@ -14,7 +14,7 @@ Sort articles by field
 |--------|----------------------------------------------------------------------------|
 | GET    | `https://apitube.io/v1/news/articles?sort_by=sentiment&sort_direction=asc` |
 
-### Response
+#### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
 <ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
@@ -27,5 +27,5 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 |--------|---------------------------------------------------------|
 | GET    | `https://apitube.io/v1/news/articles?sort_by=sentiment` |
 
-### Response
+#### Response
 <ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
