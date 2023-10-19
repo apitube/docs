@@ -7,7 +7,7 @@ slug: '/nodejs/Unirest'
 ```javascript
 const unirest = require("unirest");
 
-const req = unirest("GET", "https://apitube.io/v1/articles");
+const req = unirest("GET", "https://apitube.io/v1/news/articles");
 
 req.query({
     "limit": "250",

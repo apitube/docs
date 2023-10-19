@@ -6,5 +6,5 @@ slug: '/powershell/Invoke-WebRequest'
 
 ```powershell
 $headers=@{}
-$response = Invoke-WebRequest -Uri 'https://apitube.io/v1/articles?limit=250&api_key=YOUR_API_KEY' -Method GET -Headers $headers
+$response = Invoke-WebRequest -Uri 'https://apitube.io/v1/news/articles?limit=250&api_key=YOUR_API_KEY' -Method GET -Headers $headers
 ```

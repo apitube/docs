@@ -1,0 +1,20 @@
+---
+slug: '/filtering/location'
+---
+
+# By location
+
+Find articles in a specific radius from location
+
+[More filter options see in API Reference](/api-reference/get-articles)
+
+## Get news from Barcelona with radius 200km
+
+| Method | URL                                                                               |
+|--------|-----------------------------------------------------------------------------------|
+| GET    | `https://apitube.io/v1/news/articles?location_name=Barcelona&location_radius=200` |
+
+### Response
+import ExampleRequest from '@site/src/components/ExampleRequest'
+
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>

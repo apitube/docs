@@ -9,7 +9,7 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 
-url = URI("https://apitube.io/v1/articles?limit=250&api_key=YOUR_API_KEY")
+url = URI("https://apitube.io/v1/news/articles?limit=250&api_key=YOUR_API_KEY")
 
 http = Net::HTTP.new(url.host, url.port)
 http.use_ssl = true

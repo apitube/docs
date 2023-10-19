@@ -180,18 +180,18 @@ const config = {
               label: 'Guide',
             },
             {
-              to: 'api-reference',
-              position: 'left',
-              label: 'API Reference',
-            },
-            {
               to: 'integrations',
               label: 'Integrations',
               position: 'left'
             },
             {
+              to: 'api-reference',
+              position: 'left',
+              label: 'API Reference',
+            },
+            {
               to: 'examples',
-              label: 'Examples',
+              label: 'Example Use Cases',
               position: 'left'
             },
             {
