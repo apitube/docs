@@ -167,6 +167,25 @@ paths:
           schema:
             type: integer
             format: float
+        - name: format
+          in: query
+          description: Export format.
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - json
+              - xml
+              - rss
+              - html
+              - csv
+              - tsv
+              - xls
+              - xlsx
+            default: json
         - name: sort_by
           in: query
           description: Choose the criteria for sorting the news articles.
