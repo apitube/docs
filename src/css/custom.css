@@ -32,10 +32,10 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --ifm-font-color-base: #ddd;
-  --ifm-navbar-background-color: #262e41;
-  --openapi-input-background: #3f4962;
-  --ifm-footer-background-color: #262e41;
+  --ifm-font-color-base: #f5f6f7;
+  --ifm-navbar-background-color: #353a48;
+  --openapi-input-background: #282a36;
+  --ifm-footer-background-color: #2e3440;
   --ifm-footer-link-color: #ddd;
   --ifm-footer-link-hover-color: #ddd;
 }
@@ -51,7 +51,7 @@ html[data-theme='light'] #__docusaurus {
 }
 
 html[data-theme='dark'] #__docusaurus {
-  background-color: #161f31;
+  background-color: #2e3440;
   background-image: none;
 }
 
