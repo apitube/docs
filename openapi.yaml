@@ -383,6 +383,7 @@ components:
         - title
         - description
         - body
+        - text
         - summary
         - resource_language
         - resource_category
@@ -411,7 +412,11 @@ components:
           format: string
         body:
           type: string
-          description: 'Article full body.'
+          description: 'Article full body with html tags.'
+          format: string
+        text:
+          type: string
+          description: 'Article full body without html tags.'
           format: string
         summary:
           type: string
