@@ -202,12 +202,10 @@ paths:
           deprecated: false
           schema:
             type: string
-            items:
-              type: string
-              enum:
-                - date
-                - sentiment
-              default: date
+            enum:
+              - date
+              - sentiment
+            default: date
         - name: sort_direction
           in: query
           description: Choose the criteria for sorting the news articles.
@@ -367,6 +365,7 @@ components:
           format: string
         export_formats:
           type: object
+          description: Export to format.
           items:
             $ref: '#/components/schemas/NewsArticleExportFormats'
         items:
@@ -404,7 +403,7 @@ components:
           format: 'string in RFC 3339 format'
         title:
           type: string
-          description: 'Title of article.'
+          description: 'Title.'
           format: string
         description:
           type: string
@@ -412,15 +411,15 @@ components:
           format: string
         body:
           type: string
-          description: 'Article full body with html tags.'
+          description: 'Full body with html tags.'
           format: string
         text:
           type: string
-          description: 'Article full body without html tags.'
+          description: 'Full body without html tags.'
           format: string
         summary:
           type: string
-          description: 'Short article summary.'
+          description: 'Short summary.'
           format: string
         image:
           type: string
@@ -618,25 +617,33 @@ components:
       properties:
         json:
           type: string
+          description: Export to JSON format.
           format: string
         xml:
           type: string
+          description: Export to XML format.
           format: string
         rss:
           type: string
+          description: Export to RSS format.
           format: string
         html:
           type: string
+          description: Export to HTML format.
           format: string
         csv:
           type: string
+          description: Export to CSV format.
           format: string
         tsv:
           type: string
+          description: Export to TSV format.
           format: string
         xls:
           type: string
+          description: Export to XLS format.
           format: string
         xlsx:
           type: string
+          description: Export to XLSX format.
           format: string
