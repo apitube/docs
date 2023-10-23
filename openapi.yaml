@@ -35,58 +35,50 @@ paths:
             type: string
         - name: resource_type
           in: query
-          description: Find articles in the specified resource type(s).
+          description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
           required: false
           style: form
           explode: false
           deprecated: false
           schema:
-            type: array
-            items:
-              type: string
-              enum:
-                - news
-                - blog/company
-                - blog/personal
-              default: available
+            type: string
+            enum:
+              - news
+              - blog/company
+              - blog/personal
+            default: available
         - name: resource_language
           in: query
-          description: Find articles in the specified language(s).
+          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `english,french`.'
           required: false
           style: form
           explode: false
           deprecated: false
           schema:
-            type: array
-            items:
-              type: string
-              enum:
-                - english
-              default: english
+            type: string
+            enum:
+              - english
+            default: english
         - name: resource_category
           in: query
-          description: Find articles in the specified categories(s).
+          description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`.'
           required: false
           style: form
           explode: false
           deprecated: false
           schema:
-            type: array
-            items:
-              type: string
-              enum:
-                - design/digital
+            type: string
+            enum:
+              - design/digital
         - name: resource_source
           in: query
-          description: Find articles in the specified resource type(s).
+          description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
           required: false
           style: form
           explode: false
           example: 'techcrunch.com'
           schema:
-            type: array
-            items:
-              type: string
+            type: string
         - name: date_start
           in: query
           description: The starting date on or after the articles of interest were published or created. The date should be in the RFC 3339 format.
@@ -215,12 +207,10 @@ paths:
           deprecated: false
           schema:
             type: string
-            items:
-              type: string
-              enum:
-                - desc
-                - asc
-              default: desc
+            enum:
+              - desc
+              - asc
+            default: desc
       responses:
         '200':
           description: successful operation
