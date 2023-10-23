@@ -81,20 +81,63 @@ paths:
             type: string
         - name: date_start
           in: query
-          description: The starting date on or after the articles of interest were published or created. The date should be in the RFC 3339 format.
+          description: 'The starting date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
           required: false
-          example: '2019-12-31T23:59:59Z'
+          examples:
+            1:
+              value: '2023-10-09'
+            2:
+              value: '2023-08-10 00:00:00'
+            3:
+              value: '2023-10-09T00:00:00'
+            4:
+              value: '2023-10-09T00:00:00+00:00'
+            5:
+              value: '2023-10-09T00:00:00+0000'
+            6:
+              value: '2023-10-09T00:00:00.000Z'
+            7:
+              value: '1698064154'
           schema:
             type: string
-            format: 'string in RFC 3339 format'
+            enum:
+              - 'RFC850'
+              - 'RFC1036'
+              - 'RFC1123'
+              - 'RFC2822'
+              - 'RFC3339'
+              - 'ISO8601'
+              - 'timestamp(as integer)'
         - name: date_end
           in: query
-          description: The last date on or after the articles of interest were published or created. The date should be in the RFC 3339 format.
+          description: 'The last date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
           required: false
-          example: '2019-12-31T23:59:59Z'
+          examples:
+            1:
+              value: '2023-10-09'
+            2:
+              value: '2023-08-10 00:00:00'
+            3:
+              value: '2023-10-09T00:00:00'
+            4:
+              value: '2023-10-09T00:00:00+00:00'
+            5:
+              value: '2023-10-09T00:00:00+0000'
+            6:
+              value: '2023-10-09T00:00:00.000Z'
+            7:
+              value: '1698064154'
           schema:
             type: string
-            format: 'string in RFC 3339 format'
+            example: 3232323
+            enum:
+              - 'RFC850'
+              - 'RFC1036'
+              - 'RFC1123'
+              - 'RFC2822'
+              - 'RFC3339'
+              - 'ISO8601'
+              - 'timestamp(as integer)'
         - name: resource_rank_min
           in: query
           description: The lowest boundary of the rank of a news website to filter by.
