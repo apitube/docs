@@ -195,7 +195,7 @@ paths:
             format: float
         - name: location_longitude
           in: query
-          description: Longitude of the location where search news articles
+          description: Longitude of the location where search news articles.
           required: false
           example: '2.1013918'
           schema:
@@ -203,15 +203,15 @@ paths:
             format: float
         - name: location_radius
           in: query
-          description: Find articles in a specific radius from location
+          description: Find articles in a specific radius from location.
           required: false
           example: '2.1013918'
           schema:
             type: integer
             format: float
-        - name: format
+        - name: export_format
           in: query
-          description: Export format.
+          description: Export formatted data in many formats.
           required: false
           style: form
           explode: false
