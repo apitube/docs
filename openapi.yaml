@@ -294,6 +294,25 @@ paths:
           example: 'bd4ddb06-c2e2-4ada-8228-7c952da9ed22'
           schema:
             type: string
+        - name: export_format
+          in: query
+          description: Export formatted data in many formats.
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - json
+              - xml
+              - rss
+              - html
+              - csv
+              - tsv
+              - xls
+              - xlsx
+            default: json
       responses:
         '200':
           description: successful operation
