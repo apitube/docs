@@ -2,7 +2,7 @@
 slug: '/filtering/location'
 ---
 
-# By location
+# Search by locations
 
 Find articles in a specific radius from location
 
