@@ -31,14 +31,3 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 <ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
 
 ---
-
-## Get news articles from Barcelona with radius 200km
-
-| Method | URL                                                                               |
-|--------|-----------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?location_name=Barcelona&location_radius=200` |
-
-#### Response
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
-
----
