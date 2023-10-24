@@ -256,19 +256,19 @@ paths:
             default: desc
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
         '400':
-          description: validation error
+          description: Validation error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticleValidationError'
         '401':
-          description: user's limit reached by key
+          description: User's limit reached by key
           content:
             application/json:
               schema:
@@ -315,19 +315,19 @@ paths:
             default: json
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticle'
         '400':
-          description: failed validation
+          description: Failed validation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticleValidationError'
         '401':
-          description: user's limit reached by key
+          description: User's limit reached by key
           content:
             application/json:
               schema:
@@ -341,7 +341,7 @@ paths:
       description: 'Get all available categories list.'
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -355,7 +355,7 @@ paths:
       description: 'Get all available languages list.'
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
