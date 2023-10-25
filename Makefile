@@ -4,4 +4,6 @@ update:
 	@- git pull
 	@- npm i
 	@- npm run build
-	@- mv build public
+	@- rm -rf public
+	@- mkdir public
+	@- cp -r build/* public

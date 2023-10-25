@@ -8,7 +8,7 @@ const meta = {
   title: 'APITUBE',
   tagline: 'Worldwide News API for your Products',
   favicon: 'img/favicon.ico',
-  url: 'https://docs.apitube.pub',
+  url: 'https://docs_dev.apitube.pub',
   baseUrl: '/',
   i18n: {
     defaultLocale: 'en',
