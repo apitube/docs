@@ -319,7 +319,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticle'
+                $ref: '#/components/schemas/NewsArticles'
         '400':
           description: Failed validation
           content:
@@ -367,18 +367,23 @@ components:
       title: articles
       description: Latest articles
       required:
+        - status
         - categories
         - languages
-        - items_count
-        - total_items_count
+        - items_total
         - updated_at
         - path
         - limit
-        - next_path
-        - previous_path
+        - next_page
+        - previous_page
+        - pages
         - export_formats
       type: object
       properties:
+        status:
+          type: string
+          description: 'If all goes smoothly, it will return `ok`. In the event of an error, it will return `error` along with two additional attributes for error identification: `error_code` and `message`.'
+          format: string
         categories:
           type: string
           description: 'Search query category(s).'
@@ -387,13 +392,9 @@ components:
           type: string
           description: 'Search query language(s).'
           format: array
-        items_count:
+        items_total:
           type: integer
           description: 'Count all founded articles.'
-          format: int
-        total_items_count:
-          type: integer
-          description: 'Count all articles.'
           format: int
         updated_at:
           type: string
@@ -407,14 +408,18 @@ components:
           type: string
           description: 'Current request href.'
           format: string
-        next_path:
+        next_page:
           type: string
           description: 'Next page href.'
           format: string
-        previous_path:
+        previous_page:
           type: string
           description: 'Previous page href.'
           format: string
+        pages:
+          type: integer
+          description: 'Count total pages.'
+          format: int
         export_formats:
           type: object
           description: Export to format.
