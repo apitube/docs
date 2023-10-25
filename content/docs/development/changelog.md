@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
-slug: '/changelog'
-title: 'Whats new'
+sidebar_position: 10
+slug: '/development/changelog'
+title: 'Changelog'
 ---
 
 # Changelog
