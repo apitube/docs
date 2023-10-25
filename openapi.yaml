@@ -49,7 +49,7 @@ paths:
             default: available
         - name: resource_language
           in: query
-          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `english,french`.'
+          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `english,french`. For a full list of available languages, see the [languages](/api-reference/get-languages) endpoint.'
           required: false
           style: form
           explode: false
@@ -61,7 +61,7 @@ paths:
             default: english
         - name: resource_category
           in: query
-          description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`.'
+          description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. For a full list of available categories, see the [categories](/api-reference/get-categories) endpoint.'
           required: false
           style: form
           explode: false
@@ -612,13 +612,13 @@ components:
       description: Single category
       required:
         - id
-        - name
+        - label
       type: object
       properties:
         id:
           type: string
           description: 'Category ID.'
-        name:
+        label:
           type: string
           description: 'Category name.'
 
@@ -639,7 +639,7 @@ components:
       description: Single language
       required:
         - id
-        - name
+        - label
       type: object
       properties:
         id:
