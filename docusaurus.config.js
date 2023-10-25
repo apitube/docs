@@ -3,6 +3,10 @@ const code_themes = {
   dark: require('prism-react-renderer/themes/vsDark'),
 };
 
+require('dotenv').config();
+
+console.log(process.env)
+
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
   title: 'APITUBE',
