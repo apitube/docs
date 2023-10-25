@@ -5,14 +5,12 @@ const code_themes = {
 
 require('dotenv').config();
 
-console.log(process.env)
-
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
   title: 'APITUBE',
   tagline: 'Worldwide News API for your Products',
   favicon: 'img/favicon.ico',
-  url: 'https://docs_dev.apitube.pub',
+  url: process.env.URL,
   baseUrl: '/',
   i18n: {
     defaultLocale: 'en',
