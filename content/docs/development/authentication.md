@@ -5,8 +5,8 @@ slug: '/development/authentication'
 
 # Authentication
 
-During the development process, closely examine the `input` key object, which provides access to all your parameters. If any errors occur or if certain characters were not accurately parsed due to URL encoding, you will be able to identify them.
+To use the API, you'll require an **API key**. Obtaining a complimentary API key is a straightforward process; you can easily acquire one by signing up at this location.
 
-import ExampleRequest from '@site/src/components/ExampleRequest'
+Once you have your API key, insert it into the request URL for each query, like this: **?api_key=YOUR_API_KEY**.
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&search_title=Elon Musk&export_format=json"></ExampleRequest>
+**Please note:** The initial query parameter is introduced with a **?** (question mark), while all subsequent parameters are introduced with a **&** (ampersand). This is standard URL syntax and not specific to our API. For instance, here's a complete example with two parameters, "api_key" and "search_title": `https://apitube.io/v1/news/articles?search_title=Elon Musk&api_key=YOUR_API_KEY`.
