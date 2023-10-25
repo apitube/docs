@@ -30,12 +30,13 @@ paths:
           in: query
           description: Find articles by article title.
           required: false
-          example: 'Apple'
+          example: 'search_title=Apple'
           schema:
             type: string
         - name: resource_type
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
+          example: 'resource_type=news,blog/company'
           required: false
           style: form
           explode: false
@@ -49,7 +50,8 @@ paths:
             default: available
         - name: resource_language
           in: query
-          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `english,french`. For a full list of available languages, see the [languages](/api-reference/get-languages) endpoint.'
+          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/development/get-articles/categories).'
+          example: 'resource_language=en,fr'
           required: false
           style: form
           explode: false
@@ -62,6 +64,7 @@ paths:
         - name: resource_category
           in: query
           description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. For a full list of available categories, see the [categories](/api-reference/get-categories) endpoint.'
+          example: 'resource_category=design/digital,design/web'
           required: false
           style: form
           explode: false
@@ -73,15 +76,16 @@ paths:
         - name: resource_source
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
+          example: 'resource_source=techcrunch.com,theverge.com'
           required: false
           style: form
           explode: false
-          example: 'techcrunch.com'
           schema:
             type: string
         - name: date_start
           in: query
           description: 'The starting date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
+          example: 'date_start=2023-10-09'
           required: false
           examples:
             1:
@@ -111,6 +115,7 @@ paths:
         - name: date_end
           in: query
           description: 'The last date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
+          example: 'date_end=2023-10-09'
           required: false
           examples:
             1:
@@ -142,7 +147,7 @@ paths:
           in: query
           description: The lowest boundary of the rank of a news website to filter by.
           required: false
-          example: '45'
+          example: 'resource_rank_min=45'
           schema:
             type: integer
             format: int
@@ -152,7 +157,7 @@ paths:
           in: query
           description: The upper boundary of the rank of a news website to filter by.
           required: false
-          example: '99'
+          example: 'resource_rank_max=45'
           schema:
             type: integer
             format: int
@@ -162,7 +167,7 @@ paths:
           in: query
           description: The minimum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
           required: false
-          example: '0'
+          example: 'sentiment_min=0'
           schema:
             type: integer
             format: int
@@ -172,7 +177,7 @@ paths:
           in: query
           description: The maximum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
           required: false
-          example: '0'
+          example: 'sentiment_max=0'
           schema:
             type: integer
             format: int
@@ -182,36 +187,13 @@ paths:
           in: query
           description: Find articles in a specific location. Country or city.
           required: false
-          example: 'Barcelona'
+          example: 'location_name=Barcelona'
           schema:
             type: string
-        - name: location_latitude
-          in: query
-          description: Latitude of the location where search news articles.
-          required: false
-          example: '41.3894271'
-          schema:
-            type: integer
-            format: float
-        - name: location_longitude
-          in: query
-          description: Longitude of the location where search news articles.
-          required: false
-          example: '2.1013918'
-          schema:
-            type: integer
-            format: float
-        - name: location_radius
-          in: query
-          description: Find articles in a specific radius from location.
-          required: false
-          example: '2.1013918'
-          schema:
-            type: integer
-            format: float
         - name: export_format
           in: query
           description: Export formatted data in many formats.
+          example: 'export_format=json'
           required: false
           style: form
           explode: false
@@ -231,6 +213,7 @@ paths:
         - name: sort_by
           in: query
           description: Choose the criteria for sorting the news articles.
+          example: 'sort_by=date'
           required: false
           style: form
           explode: false
@@ -238,12 +221,14 @@ paths:
           schema:
             type: string
             enum:
-              - date
+              - published
+              - created
               - sentiment
-            default: date
+            default: created
         - name: sort_direction
           in: query
           description: Choose the criteria for sorting the news articles.
+          example: 'sort_direction=desc'
           required: false
           style: form
           explode: false
@@ -346,20 +331,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsCategories'
-
-  /news/languages:
-    get:
-      tags:
-        - Articles
-      summary: Get languages
-      description: 'Get all available languages list.'
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NewsLanguages'
 
 components:
   schemas:
