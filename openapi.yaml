@@ -355,22 +355,10 @@ components:
           type: string
           description: 'If all goes smoothly, it will return `ok`. In the event of an error, it will return `error` along with two additional attributes for error identification: `error_code` and `message`.'
           format: string
-        categories:
-          type: string
-          description: 'Search query category(s).'
-          format: array
-        languages:
-          type: string
-          description: 'Search query language(s).'
-          format: array
         items_total:
           type: integer
           description: 'Count all founded articles.'
           format: int
-        updated_at:
-          type: string
-          description: 'Latest updated date.'
-          format: 'string in RFC 3339 format'
         limit:
           type: integer
           description: 'Articles per page.'
@@ -391,11 +379,19 @@ components:
           type: integer
           description: 'Count total pages.'
           format: int
+        user_input:
+          type: object
+          description: 'Current request parameters.'
+          format: int
         export_formats:
           type: object
           description: Export to format.
           items:
             $ref: '#/components/schemas/NewsArticleExportFormats'
+        updated_at:
+          type: string
+          description: 'Latest updated date.'
+          format: 'string in RFC 3339 format'
         items:
           type: object
           items:
@@ -406,18 +402,18 @@ components:
       required:
         - id
         - href
-        - created_at
+        - published_at
         - title
         - description
         - body
         - text
         - summary
-        - resource_language
-        - resource_category
-        - resource_type
-        - resource_rank
-        - resource_source
-        - sentiment_content
+        - image
+        - authors
+        - language
+        - categories
+        - resource
+        - sentiment
         - locations
       type: object
       properties:
@@ -427,7 +423,7 @@ components:
         href:
           type: string
           description: 'Direct url.'
-        created_at:
+        published_at:
           type: string
           description: 'The date and time that the article was published or created, in UTC (+000).'
           format: 'string in RFC 3339 format'
@@ -439,13 +435,13 @@ components:
           type: string
           description: 'Short description.'
           format: string
-        body:
-          type: string
-          description: 'Full body with html tags.'
-          format: string
         text:
           type: string
           description: 'Full body without html tags.'
+          format: string
+        body:
+          type: string
+          description: 'Full body with html tags.'
           format: string
         summary:
           type: string
@@ -466,6 +462,10 @@ components:
           items:
             type: object
             items:
+              required:
+                - id
+                - name
+                - type
               properties:
                 id:
                   type: string
@@ -479,27 +479,54 @@ components:
                   type: string
                   description: 'Author type.'
                   format: string
-        resource_language:
+        language:
           type: string
-          description: 'Resource language.'
+          description: 'Article language.'
           format: string
-        resource_category:
-          type: string
-          description: 'Resource category.'
-          format: string
-        resource_type:
-          type: string
-          description: 'Resource type.'
-          format: string
-        resource_rank:
-          type: integer
-          description: 'Resource rank.'
-          format: int
-        resource_source:
-          type: string
-          description: 'Resource source.'
-          format: string
-        sentiment_content:
+        categories:
+          type: object
+          description: 'Article categories.'
+          required:
+            - id
+            - name
+          format: object
+          items:
+            type: object
+            items:
+              required:
+                - id
+                - name
+              properties:
+                id:
+                  type: string
+                  description: 'Category ID.'
+                  format: string
+                name:
+                  type: string
+                  description: 'Category name.'
+                  format: string
+        resource:
+          type: array
+          description: 'Information about resource.'
+          required:
+            - id
+            - type
+            - rank
+          format: object
+          properties:
+            id:
+              type: string
+              description: 'Resource ID.'
+              format: string
+            type:
+              type: string
+              description: 'Resource type.'
+              format: string
+            rank:
+              type: string
+              description: 'Resource rank.'
+              format: string
+        sentiment:
           type: object
           required:
             - negative
@@ -529,7 +556,7 @@ components:
             $ref: '#/components/schemas/NewsArticleLocation'
 
     NewsArticleLocation:
-      title: location
+      title: locations
       description: Article detected location
       required:
         - country_code
@@ -583,13 +610,13 @@ components:
       description: Single category
       required:
         - id
-        - label
+        - name
       type: object
       properties:
         id:
           type: string
           description: 'Category ID.'
-        label:
+        name:
           type: string
           description: 'Category name.'
 
@@ -631,7 +658,7 @@ components:
       properties:
         status:
           type: string
-          description: 'Success or error status'
+          description: 'Error status'
           format: string
           enum:
             - ok

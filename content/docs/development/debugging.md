@@ -5,7 +5,7 @@ slug: '/development/debugging'
 
 # Debugging
 
-During the development process, closely examine the `input` key object, which provides access to all your parameters. If any errors occur or if certain characters were not accurately parsed due to URL encoding, you will be able to identify them.
+During the development process, closely examine the `user_input` key object, which provides access to all your parameters. If any errors occur or if certain characters were not accurately parsed due to URL encoding, you will be able to identify them.
 
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
