@@ -69,10 +69,6 @@ paths:
           style: form
           explode: false
           deprecated: false
-          schema:
-            type: string
-            enum:
-              - design/digital
         - name: resource_source
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
