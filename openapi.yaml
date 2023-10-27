@@ -337,7 +337,7 @@ components:
         - status
         - categories
         - languages
-        - items_total
+        - total_results
         - updated_at
         - path
         - limit
@@ -351,7 +351,7 @@ components:
           type: string
           description: 'If all goes smoothly, it will return `ok`. In the event of an error, it will return `error` along with two additional attributes for error identification: `error_code` and `message`.'
           format: string
-        items_total:
+        total_results:
           type: integer
           description: 'Count all founded articles.'
           format: int
@@ -388,7 +388,7 @@ components:
           type: string
           description: 'Latest updated date.'
           format: 'string in RFC 3339 format'
-        items:
+        results:
           type: object
           items:
             $ref: '#/components/schemas/NewsArticle'
@@ -593,10 +593,10 @@ components:
       title: categories
       description: Get all categories
       required:
-        - items
+        - results
       type: object
       properties:
-        items:
+        results:
           type: array
           items:
             $ref: '#/components/schemas/NewsCategory'
@@ -620,10 +620,10 @@ components:
       title: languages
       description: Get all languages
       required:
-        - items
+        - results
       type: object
       properties:
-        items:
+        results:
           type: array
           items:
             $ref: '#/components/schemas/NewsLanguage'
