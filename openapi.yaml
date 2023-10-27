@@ -418,7 +418,7 @@ components:
         - image
         - authors
         - language
-        - categories
+        - category
         - resource
         - sentiment
         - locations
@@ -490,28 +490,10 @@ components:
           type: string
           description: 'Article language.'
           format: string
-        categories:
-          type: object
-          description: 'Article categories.'
-          required:
-            - id
-            - name
-          format: object
-          items:
-            type: object
-            items:
-              required:
-                - id
-                - name
-              properties:
-                id:
-                  type: string
-                  description: 'Category ID.'
-                  format: string
-                name:
-                  type: string
-                  description: 'Category name.'
-                  format: string
+        category:
+          type: string
+          description: 'Article category.'
+          format: string
         resource:
           type: array
           description: 'Information about resource.'
@@ -600,17 +582,17 @@ components:
               description: 'Longitude.'
               format: float
 
-    NewsCategories:
-      title: categories
-      description: Get all categories
-      required:
-        - results
-      type: object
-      properties:
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/NewsCategory'
+#    NewsCategories:
+#      title: categories
+#      description: Get all categories
+#      required:
+#        - results
+#      type: object
+#      properties:
+#        results:
+#          type: array
+#          items:
+#            $ref: '#/components/schemas/NewsCategory'
 
     NewsCategory:
       title: category
