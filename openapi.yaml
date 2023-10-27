@@ -63,7 +63,7 @@ paths:
             default: english
         - name: resource_category
           in: query
-          description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. For a full list of available categories, see the [categories](/api-reference/get-categories) endpoint.'
+          description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/development/get-articles/categories).'
           example: 'resource_category=design/digital,design/web'
           required: false
           style: form
@@ -325,19 +325,19 @@ paths:
               schema:
                 $ref: '#/components/schemas/NewsArticleValidationError'
 
-  /news/categories:
-    get:
-      tags:
-        - Articles
-      summary: Get categories
-      description: 'Get all available categories list.'
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NewsCategories'
+#  /news/categories:
+#    get:
+#      tags:
+#        - Articles
+#      summary: Get categories
+#      description: 'Get all available categories list.'
+#      responses:
+#        '200':
+#          description: Successful operation
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/NewsCategories'
 
 components:
   schemas:
