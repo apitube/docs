@@ -114,3 +114,7 @@ html[data-theme='light'] .pagination-nav__link:hover {
 html[data-theme='dark'] .pagination-nav__link:hover {
   border-color: var(--ifm-color-primary);
 }
+
+.menu__link {
+  font-size: 94%;
+}
