@@ -83,7 +83,7 @@ paths:
               - news/Arts_and_Entertainment
         - name: topic
           in: query
-          description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/development/get-articles/topics).'
+          description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/development/get-articles/topics).'
           example: 'topic=design/digital,design/web'
           required: false
           style: form
