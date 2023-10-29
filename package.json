@@ -9,7 +9,8 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
+    "dev:serve": "docusaurus serve --host docs_dev.apitube.pub --port 3020",
+    "prod:serve": "docusaurus serve --host docs.apitube.pub --port 3021",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
   },
