@@ -1,10 +1,11 @@
 ---
-slug: '/filtering/location'
+slug: '/articles/filtering/location'
+sidebar_position: 15
 ---
 
 # Search by locations
 
-Find articles in a specific radius from location
+Find articles in a specific radius from location.
 
 [More filter options see in API Reference](/api-reference/get-articles)
 

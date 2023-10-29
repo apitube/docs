@@ -9,4 +9,4 @@ During the development process, closely examine the `input` key object, which pr
 
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&search_title=Elon Musk&export_format=json"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&export_format=json"></ExampleRequest>

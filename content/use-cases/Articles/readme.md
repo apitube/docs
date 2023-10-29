@@ -1,12 +1,7 @@
 ---
-sidebar_position: 1
-slug: '/'
+title: Searching articles
+slug: '/articles'
 ---
-
-# Example Use Cases
-
-Browse the examples to get the first impression of how to use the APITUBE API. You can find more examples in the [API Reference](/api-reference).
-
 
 import CardList from '@site/src/components/CardList'
 

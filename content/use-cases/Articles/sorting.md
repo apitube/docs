@@ -1,14 +1,14 @@
 ---
-slug: '/sorting/sort'
+slug: '/articles/sorting'
 ---
 
-# Sorting examples
+# Sorting
 
 Sort articles by field
 
 [More filter options see in API Reference](/api-reference/get-articles)
 
-## Sort with direction
+## Get news articles sorted by sentiment
 
 | Method | URL                                                                        |
 |--------|----------------------------------------------------------------------------|
@@ -21,7 +21,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 ---
 
-## Sort without direction
+## Get news articles sorting without direction
 
 | Method | URL                                                     |
 |--------|---------------------------------------------------------|
@@ -29,3 +29,27 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 <ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
+
+---
+
+## Get news articles where title contains "Elon Musk" and sorted by sentiment
+
+| Method | URL                                                                                        |
+|--------|--------------------------------------------------------------------------------------------|
+| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&sort_by=sentiment&sort_direction=asc` |
+
+#### Response
+
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&sort_by=sentiment&sort_direction=asc"></ExampleRequest>
+
+---
+
+## Get news articles where title contains "Elon Musk" and sorted by sentiment
+
+| Method | URL                                                                                         |
+|--------|---------------------------------------------------------------------------------------------|
+| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&sort_by=sentiment&sort_direction=desc` |
+
+#### Response
+
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&sort_by=sentiment&sort_direction=desc"></ExampleRequest>

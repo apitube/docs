@@ -26,11 +26,11 @@ paths:
           required: false
           schema:
             type: string
-        - name: search_title
+        - name: title
           in: query
           description: Find articles by article title.
           required: false
-          example: 'search_title=Apple'
+          example: 'title=Apple'
           schema:
             type: string
         - name: type
