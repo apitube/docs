@@ -431,7 +431,6 @@ components:
         - text
         - summary
         - image
-        - authors
         - language
         - category
         - resource
@@ -473,34 +472,6 @@ components:
           type: string
           description: 'First image in article.'
           format: string
-        authors:
-          type: object
-          description: 'Article authors.'
-          required:
-            - id
-            - name
-            - type
-          format: float
-          items:
-            type: object
-            items:
-              required:
-                - id
-                - name
-                - type
-              properties:
-                id:
-                  type: string
-                  description: 'Author ID.'
-                  format: string
-                name:
-                  type: string
-                  description: 'Author name.'
-                  format: string
-                type:
-                  type: string
-                  description: 'Author type.'
-                  format: string
         language:
           type: string
           description: 'Article language.'
