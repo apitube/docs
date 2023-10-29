@@ -36,9 +36,9 @@ const docs = [
     sidebarPath: require.resolve('./sidebars')
   },
   {
-    id: 'examples',
-    path: 'content/examples',
-    routeBasePath: '/examples',
+    id: 'use-cases',
+    path: 'content/use-cases',
+    routeBasePath: '/use-cases',
     sidebarPath: require.resolve('./sidebars')
   }
 ];
@@ -192,7 +192,7 @@ const config = {
               label: 'API Reference',
             },
             {
-              to: 'examples',
+              to: 'use-cases',
               label: 'Example Use Cases',
               position: 'left'
             },

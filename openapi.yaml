@@ -33,10 +33,10 @@ paths:
           example: 'search_title=Apple'
           schema:
             type: string
-        - name: resource_type
+        - name: type
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
-          example: 'resource_type=news,blog/company'
+          example: 'type=news,blog/company'
           required: false
           style: form
           explode: false
@@ -48,10 +48,10 @@ paths:
               - blog/company
               - blog/personal
             default: available
-        - name: resource_language
+        - name: language
           in: query
           description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/development/get-articles/categories).'
-          example: 'resource_language=en,fr'
+          example: 'language=en,fr'
           required: false
           style: form
           explode: false
@@ -61,10 +61,10 @@ paths:
             enum:
               - english
             default: english
-        - name: resource_category
+        - name: category
           in: query
           description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/development/get-articles/categories).'
-          example: 'resource_category=design/digital,design/web'
+          example: 'category=design/digital,design/web'
           required: false
           style: form
           explode: false
@@ -72,6 +72,7 @@ paths:
           schema:
             type: string
             enum:
+              - news/World
               - news/Business
               - news/Politics
               - news/Technology
@@ -80,10 +81,24 @@ paths:
               - news/Science
               - news/Sports
               - news/Arts_and_Entertainment
-        - name: resource_source
+        - name: topic
+          in: query
+          description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/development/get-articles/topics).'
+          example: 'topic=design/digital,design/web'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - crypto_news
+              - financial_news
+              - video_games_news
+        - name: source
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
-          example: 'resource_source=techcrunch.com,theverge.com'
+          example: 'source=techcrunch.com,theverge.com'
           required: false
           style: form
           explode: false
@@ -150,21 +165,21 @@ paths:
               - 'RFC3339'
               - 'ISO8601'
               - 'timestamp(as integer)'
-        - name: resource_rank_min
+        - name: rank_min
           in: query
           description: The lowest boundary of the rank of a news website to filter by.
           required: false
-          example: 'resource_rank_min=45'
+          example: 'rank_min=45'
           schema:
             type: integer
             format: int
             minimum: 1
             maximum: 99
-        - name: resource_rank_max
+        - name: rank_max
           in: query
           description: The upper boundary of the rank of a news website to filter by.
           required: false
-          example: 'resource_rank_max=45'
+          example: 'rank_max=45'
           schema:
             type: integer
             format: int
@@ -493,6 +508,10 @@ components:
         category:
           type: string
           description: 'Article category.'
+          format: string
+        topic:
+          type: string
+          description: 'Article topic.'
           format: string
         resource:
           type: array

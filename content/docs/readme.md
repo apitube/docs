@@ -40,7 +40,7 @@ description: "Learn how to integrate into your application."
 },
 {
 icon: "mdi:api",
-href: "/examples",
+href: "/use-cases",
 title: "Example Use Cases",
 description: "See how it works in practice and get inspired!"
 }
