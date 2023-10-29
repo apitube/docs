@@ -18,7 +18,7 @@ const meta = {
   },
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  trailingSlash: false,
+  trailingSlash: true,
   markdown: {
     mermaid: true
   },
