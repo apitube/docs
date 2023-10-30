@@ -18,7 +18,7 @@ Find articles in a specific radius from location.
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?location_name=Italy"></ExampleRequest>
 
 ---
 
@@ -29,6 +29,6 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 | GET    | `https://apitube.io/v1/news/articles?location_name=Paris` |
 
 #### Response
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?location_name=Paris"></ExampleRequest>
 
 ---
