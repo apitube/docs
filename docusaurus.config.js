@@ -193,7 +193,7 @@ const config = {
             },
             {
               to: 'use-cases',
-              label: 'Example Use Cases',
+              label: 'Use cases',
               position: 'left'
             },
             {
