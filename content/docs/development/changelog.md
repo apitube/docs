@@ -6,6 +6,13 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.2
+
+### Features
+
+- `[Articles]` Add new integrations: **Dart**, **Elixir**, **Haskell**, **Lua**, **Scala**, **Rust**.
+
+
 ## 1.0.1
 
 ### Features
