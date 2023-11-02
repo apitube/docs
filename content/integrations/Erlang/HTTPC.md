@@ -1,5 +1,5 @@
 ---
-slug: '/elixir/HTTPC'
+slug: '/erlang/HTTPC'
 ---
 
 # HTTPC integration
