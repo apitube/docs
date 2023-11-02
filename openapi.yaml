@@ -427,8 +427,8 @@ components:
         - published_at
         - title
         - description
-        - content_body
-        - content_text
+        - content_raw
+        - content
         - summary
         - image
         - language
@@ -456,11 +456,11 @@ components:
           type: string
           description: 'Short description.'
           format: string
-        content_text:
+        content:
           type: string
           description: 'Full body without html tags.'
           format: string
-        content_body:
+        content_raw:
           type: string
           description: 'Full body with html tags.'
           format: string
