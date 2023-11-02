@@ -427,7 +427,7 @@ components:
         - published_at
         - title
         - description
-        - content_raw
+#        - content_raw
         - content
         - summary
         - image
@@ -460,10 +460,10 @@ components:
           type: string
           description: 'Full body without html tags.'
           format: string
-        content_raw:
-          type: string
-          description: 'Full body with html tags.'
-          format: string
+#        content_raw:
+#          type: string
+#          description: 'Full body with html tags.'
+#          format: string
         summary:
           type: string
           description: 'Short summary.'
