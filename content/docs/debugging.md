@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-slug: '/development/debugging'
+sidebar_position: 4
+slug: '/debugging'
 ---
 
 # Debugging

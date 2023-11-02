@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-slug: '/development/authentication'
+sidebar_position: 2
+slug: '/authentication'
 ---
 
 # Authentication

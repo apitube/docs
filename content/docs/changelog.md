@@ -1,6 +1,6 @@
 ---
-sidebar_position: 10
-slug: '/development/changelog'
+sidebar_position: 5
+slug: '/changelog'
 title: 'Changelog'
 ---
 

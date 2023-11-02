@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-slug: '/development/quotas'
+sidebar_position: 3
+slug: '/quotas'
 ---
 
 # Quotas
