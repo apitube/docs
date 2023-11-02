@@ -91,7 +91,7 @@ paths:
         - name: topic
           in: query
           description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/development/get-articles/topics).'
-          example: 'topic=design/digital,design/web'
+          example: 'topic=crypto_news'
           required: false
           style: form
           explode: false
@@ -102,6 +102,7 @@ paths:
               - crypto_news
               - financial_news
               - video_games_news
+              - ai_news
         - name: source
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
