@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
-slug: '/development/quotas'
+slug: '/development/quota'
 ---
 
-# Rate Limiting & Quotas
+# Quotas
 
-During the development process, closely examine the `input` key object, which provides access to all your parameters. If any errors occur or if certain characters were not accurately parsed due to URL encoding, you will be able to identify them.
+Each API plan is accompanied by a daily allocation of points. Every API call you make incurs a specific number of points. Typically, each request costs `1 point` if results available(if not it will cost `0 points`). At the top of each endpoint description, you'll discover details regarding the points required for that particular endpoint.
 
-import ExampleRequest from '@site/src/components/ExampleRequest'
+When you register you get free `3000 points`.
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&export_format=json"></ExampleRequest>
+You can manage your quota entirely by monitoring your console dashboard.

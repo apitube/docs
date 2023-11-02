@@ -18,7 +18,7 @@ paths:
       tags:
         - Articles
       summary: Get articles
-      description: 'The most recent news endpoint offers access to the most up-to-date and significant news stories.'
+      description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/>Calling this endpoint requires `1 point`"
       parameters:
         - name: api_key
           in: query
@@ -31,6 +31,13 @@ paths:
           description: Find articles by article title.
           required: false
           example: 'title=Apple'
+          schema:
+            type: string
+        - name: content
+          in: query
+          description: Find articles by article content.
+          required: false
+          example: 'content=Macbook'
           schema:
             type: string
         - name: type
