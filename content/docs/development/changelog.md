@@ -11,7 +11,7 @@ title: 'Changelog'
 ### Features
 
 - `[Articles]` Add new integrations: **Dart**, **Elixir**, **Haskell**, **Lua**, **Scala**, **Rust**.
-
+- `[Articles]` Add new topic: **ai_news**.
 
 ## 1.0.1
 
