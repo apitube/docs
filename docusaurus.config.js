@@ -7,7 +7,7 @@ require('dotenv').config();
 
 /** @type {import('@docusaurus/types').Config} */
 const meta = {
-  title: 'APITUBE',
+  title: 'APITUBE Docs',
   tagline: 'Worldwide News API for your Products',
   favicon: 'img/favicon.ico',
   url: process.env.URL,
