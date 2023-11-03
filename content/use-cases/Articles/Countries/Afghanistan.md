@@ -1,0 +1,42 @@
+---
+title: Afghanistan
+slug: '/country/afghanistan'
+---
+
+# Afghanistan news
+
+Are you interested in accessing news/blog content that originates from sources based in Afghanistan?
+
+- [List supported languages](/get-articles/languages)
+- [List supported categories](/get-articles/categories)
+
+## Example of JSON response
+
+import ExampleRequest from '@site/src/components/ExampleRequest'
+
+### Entertainment news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business&language=af"></ExampleRequest>
+
+### Business news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business&language=af"></ExampleRequest>
+
+### Environment news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Environment&language=af"></ExampleRequest>
+
+### Health news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Health&language=af"></ExampleRequest>
+
+### Politics news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Politics&language=af"></ExampleRequest>
+
+### Science news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Science&language=af"></ExampleRequest>
+
+### Sports news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Sports&language=af"></ExampleRequest>
+
+### Technology news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Technology&language=af"></ExampleRequest>
+
+### World news
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/World&language=af"></ExampleRequest>
