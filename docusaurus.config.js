@@ -39,13 +39,8 @@ const docs = [
     id: 'use-cases',
     path: 'content/use-cases',
     routeBasePath: '/use-cases',
-    sidebarPath: require.resolve('./sidebars')
-  },
-  {
-    id: 'catalog',
-    path: 'content/catalog',
-    routeBasePath: '/catalog',
-    sidebarPath: require.resolve('./sidebars')
+    sidebarPath: require.resolve('./sidebars'),
+    sidebarCollapsible: false,
   }
 ];
 
@@ -200,11 +195,6 @@ const config = {
             {
               to: 'use-cases',
               label: 'Use cases',
-              position: 'left'
-            },
-            {
-              to: 'catalog',
-              label: 'Catalog',
               position: 'left'
             },
             {

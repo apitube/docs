@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: '/development/get-articles/topics'
+slug: '/get-articles/topics'
 ---
 
 # Topics list

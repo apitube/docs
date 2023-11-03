@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: '/development/get-articles/languages'
+slug: '/get-articles/languages'
 ---
 
 # Languages list

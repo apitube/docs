@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: '/development/get-articles/categories'
+slug: '/get-articles/categories'
 ---
 
 # Categories list
