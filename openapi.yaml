@@ -285,17 +285,23 @@ paths:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
         '400':
-          description: Validation error
+          description: Parameter missing or invalid
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleValidationError'
-        '401':
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '429':
           description: User's limit reached by key
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleValidationError'
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
 
   /news/article/{id}:
     get:
@@ -344,17 +350,23 @@ paths:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
         '400':
-          description: Failed validation
+          description: Parameter missing or invalid
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleValidationError'
-        '401':
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '429':
           description: User's limit reached by key
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticleValidationError'
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
 
 #  /news/categories:
 #    get:
@@ -644,7 +656,7 @@ components:
           type: string
           description: 'Language name.'
 
-    NewsArticleValidationError:
+    ValidationInputParamsError:
       title: Request failed
       description: Failed request
       required:
@@ -655,18 +667,18 @@ components:
       properties:
         status:
           type: string
-          description: 'Error status'
+          description: 'Error status.'
           format: string
           enum:
             - ok
             - error
         error_code:
           type: string
-          description: 'Error code.'
+          description: 'Error code. [List HTTP Response codes](/http_response_codes)'
           format: string
         message:
           type: string
-          description: 'Error message.'
+          description: 'Error message description. [List HTTP Response codes description](/http_response_codes)'
           format: string
 
     NewsArticleExportFormats:
