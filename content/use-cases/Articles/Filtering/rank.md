@@ -18,7 +18,7 @@ Find articles by news source rank.
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?rank_min=70&rank_max=100"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&rank_min=70&rank_max=100"></ExampleRequest>
 
 ---
 
@@ -30,7 +30,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?rank_min=50"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&rank_min=50"></ExampleRequest>
 
 ---
 
@@ -42,7 +42,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?rank_max=50"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&rank_max=50"></ExampleRequest>
 
 ---
 
@@ -54,4 +54,4 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?title=Elon Musk&rank_min=50"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&rank_min=50"></ExampleRequest>

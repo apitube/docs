@@ -18,7 +18,7 @@ Find articles by category.
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?category=news/Business"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business"></ExampleRequest>
 
 ---
 
@@ -30,7 +30,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?category=news/Business,news/Technology"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology"></ExampleRequest>
 
 ---
 
@@ -42,7 +42,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?category=news/Business,news/Technology&title=Elon Musk"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology&title=Elon Musk"></ExampleRequest>
 
 ---
 
@@ -54,4 +54,4 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?category=news/Business,news/Technology&title=Elon Musk&location=Italy"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology&title=Elon Musk&location=Italy"></ExampleRequest>

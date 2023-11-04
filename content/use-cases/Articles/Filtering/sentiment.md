@@ -18,7 +18,7 @@ Find articles by sentiment.
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?sentiment=positive"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment=positive"></ExampleRequest>
 
 ---
 
@@ -30,7 +30,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?sentiment=negative"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment=negative"></ExampleRequest>
 
 ---
 
@@ -42,7 +42,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?sentiment=neutral"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment=neutral"></ExampleRequest>
 
 ---
 
@@ -54,7 +54,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?sentiment_min=0.5"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment_min=0.5"></ExampleRequest>
 
 ---
 
@@ -66,7 +66,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?sentiment_max=0.5"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment_max=0.5"></ExampleRequest>
 
 ---
 
@@ -77,7 +77,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?sentiment_min=0.5&sentiment_max=0.8"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment_min=0.5&sentiment_max=0.8"></ExampleRequest>
 
 ---
 
@@ -89,4 +89,4 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?sentiment_min=0.5&sentiment_max=0.8&title=Elon Musk"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment_min=0.5&sentiment_max=0.8&title=Elon Musk"></ExampleRequest>

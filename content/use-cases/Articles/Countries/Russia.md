@@ -14,7 +14,7 @@ Are you interested in accessing news/blog content that originates from sources b
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
 ### Entertainment news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business&language=ru"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Arts_and_Entertainment&language=ru"></ExampleRequest>
 
 ### Business news
 <ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business&language=ru"></ExampleRequest>

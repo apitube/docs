@@ -11,14 +11,14 @@ Find articles by news type.
 
 ## Get news articles where type is "news"
 
-| Method | URL                                                      |
-|--------|----------------------------------------------------------|
+| Method | URL                                             |
+|--------|-------------------------------------------------|
 | GET    | `https://apitube.io/v1/news/articles?type=news` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?type=news"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&type=news"></ExampleRequest>
 
 ---
 
@@ -30,7 +30,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?type=blog/company"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&type=blog/company"></ExampleRequest>
 
 ---
 
@@ -42,16 +42,16 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?type=blog/personal"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&type=blog/personal"></ExampleRequest>
 
 ---
 
 ## Get news articles where title contains "Elon Musk" and type is "news"
 
-| Method | URL                                                                      |
-|--------|--------------------------------------------------------------------------|
+| Method | URL                                                             |
+|--------|-----------------------------------------------------------------|
 | GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&type=news` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?title=Elon Musk&type=news"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&type=news"></ExampleRequest>

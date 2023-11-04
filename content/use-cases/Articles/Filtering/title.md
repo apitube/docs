@@ -55,8 +55,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 ## Get news articles where title contains "Elon Musk" and "Tesla" and "SpaceX" and location is "Italy"
 
-| Method | URL                                                                                   |
-|--------|---------------------------------------------------------------------------------------|
+| Method | URL                                                                                    |
+|--------|----------------------------------------------------------------------------------------|
 | GET    | `https://apitube.io/v1/news/articles?title=Elon Musk,Tesla,SpaceX&location_name=Italy` |
 
 #### Response

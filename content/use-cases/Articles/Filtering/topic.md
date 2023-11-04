@@ -18,7 +18,7 @@ Find articles by topic.
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?topic=financial_news"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&topic=financial_news"></ExampleRequest>
 
 ---
 
@@ -30,7 +30,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?topic=financial_news&location_name=Italy"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&topic=financial_news&location_name=Italy"></ExampleRequest>
 
 ---
 
@@ -42,7 +42,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?title=Elon Musk&topic=financial_news"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&topic=financial_news"></ExampleRequest>
 
 ---
 
@@ -54,4 +54,4 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?title=Elon Musk&topic=financial_news&location_name=Italy"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&topic=financial_news&location_name=Italy"></ExampleRequest>

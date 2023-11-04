@@ -74,6 +74,7 @@ function create_doc_plugin({
 }
 
 const tailwindPlugin = require('./src/plugins/tailwind-plugin.cjs');
+// const variablesPlugin = require('./src/plugins/variables-plugin.cjs');
 const docs_plugins = docs.map((doc) => create_doc_plugin(doc));
 // console.log(docs_plugins)
 

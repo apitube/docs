@@ -13,8 +13,8 @@ href: "/use-cases/articles/filtering/title",
 title: "Search by title"
 },
 {
-href: "/use-cases/articles/filtering/language",
-title: "Search by language"
+href: "/use-cases/articles/filtering/country",
+title: "Search by country"
 },
 {
 href: "/use-cases/articles/filtering/category",
