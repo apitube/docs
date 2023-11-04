@@ -55,22 +55,30 @@ paths:
               - blog/company
               - blog/personal
             default: available
-        - name: language
+        - name: country
           in: query
-          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/development/get-articles/categories).'
-          example: 'language=en,fr'
+          description: 'Find articles in the specified country(s). Multiple options can be specified by separating them with a comma, for example: `us,fr`. [Full list of available countries](/get-articles/countries).'
+          example: 'country=us,gb'
           required: false
           style: form
           explode: false
           deprecated: false
-          schema:
-            type: string
-            enum:
-              - english
-            default: english
+#        - name: language
+#          in: query
+#          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/get-articles/categories).'
+#          example: 'language=en,fr'
+#          required: false
+#          style: form
+#          explode: false
+#          deprecated: false
+#          schema:
+#            type: string
+#            enum:
+#              - english
+#            default: english
         - name: category
           in: query
-          description: 'Find articles in the specified categories(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/development/get-articles/categories).'
+          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/get-articles/categories).'
           example: 'category=design/digital,design/web'
           required: false
           style: form
@@ -90,7 +98,7 @@ paths:
               - news/Arts_and_Entertainment
         - name: topic
           in: query
-          description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/development/get-articles/topics).'
+          description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/get-articles/topics).'
           example: 'topic=crypto_news'
           required: false
           style: form
@@ -369,8 +377,6 @@ components:
       description: Latest articles
       required:
         - status
-        - categories
-        - languages
         - total_results
         - updated_at
         - path
@@ -439,7 +445,7 @@ components:
         - content
         - summary
         - image
-        - language
+        - country
         - category
         - resource
         - sentiment
@@ -480,17 +486,21 @@ components:
           type: string
           description: 'First image in article.'
           format: string
-        language:
+        country:
           type: string
-          description: 'Article language.'
+          description: 'Article country code.'
           format: string
+#        language:
+#          type: string
+#          description: 'Article language code.'
+#          format: string
         category:
           type: string
-          description: 'Article category.'
+          description: 'Article category code.'
           format: string
         topic:
           type: string
-          description: 'Article topic.'
+          description: 'Article topic id.'
           format: string
         resource:
           type: array

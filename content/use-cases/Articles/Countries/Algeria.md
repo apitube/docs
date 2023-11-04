@@ -7,8 +7,7 @@ slug: '/country/algeria'
 
 Are you interested in accessing news/blog content that originates from sources based in Algeria?
 
-- [List supported languages](/get-articles/languages)
-- [List supported categories](/get-articles/categories)
+- [List supported countries](/get-articles/countries)
 
 ## Example of JSON response
 
