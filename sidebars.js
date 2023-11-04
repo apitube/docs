@@ -24,15 +24,15 @@ const sidebars = {
       },
     }
   ],
-  useCases: [
-    // 'intro',
-    // 'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['Javascript/XMLHttpRequest'],
-    },
-  ],
+  // useCases: [
+  //   // 'intro',
+  //   // 'hello',
+  //   {
+  //     type: 'category',
+  //     label: 'Tutorial',
+  //     items: ['Javascript/XMLHttpRequest'],
+  //   },
+  // ],
 
   // But you can create a sidebar manually
   /*
