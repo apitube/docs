@@ -14,28 +14,28 @@ Are you interested in accessing news/blog content that originates from sources b
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
 ### Entertainment news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Arts_and_Entertainment&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Arts_and_Entertainment&country=ec"></ExampleRequest>
 
 ### Business news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business&country=ec"></ExampleRequest>
 
 ### Environment news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Environment&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Environment&country=ec"></ExampleRequest>
 
 ### Health news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Health&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Health&country=ec"></ExampleRequest>
 
 ### Politics news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Politics&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Politics&country=ec"></ExampleRequest>
 
 ### Science news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Science&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Science&country=ec"></ExampleRequest>
 
 ### Sports news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Sports&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Sports&country=ec"></ExampleRequest>
 
 ### Technology news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Technology&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Technology&country=ec"></ExampleRequest>
 
 ### World news
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/World&language=ec"></ExampleRequest>
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/World&country=ec"></ExampleRequest>
