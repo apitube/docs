@@ -205,7 +205,7 @@ paths:
           in: query
           description: The minimum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
           required: false
-          example: 'sentiment_min=0'
+          example: 'sentiment_min=0.02'
           schema:
             type: integer
             format: int
@@ -215,7 +215,7 @@ paths:
           in: query
           description: The maximum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
           required: false
-          example: 'sentiment_max=0'
+          example: 'sentiment_max=0.01'
           schema:
             type: integer
             format: int
@@ -536,29 +536,9 @@ components:
               description: 'Resource rank.'
               format: string
         sentiment:
-          type: object
-          required:
-            - negative
-            - neutral
-            - positive
-            - compound
-          properties:
-            negative:
-              type: integer
-              description: 'Total negative sentiment.'
-              format: float
-            neutral:
-              type: integer
-              description: 'Total neutral sentiment.'
-              format: float
-            positive:
-              type: integer
-              description: 'Total positive sentiment.'
-              format: float
-            compound:
-              type: integer
-              description: 'Total sentiment.'
-              format: float
+          type: integer
+          format: float
+          description: Valid value is any floating number between -1 (very negative) to 1 (very positive).
         locations:
           type: array
           items:
