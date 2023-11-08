@@ -5,7 +5,7 @@ info:
   title: API Reference
   description: >-
     Here you have detailed documentation of all available API functions. To get started, you can make the sample request for each endpoint or [integrate into your application](/integrations).
-  version: 1.0.0
+  version: 1.0.3
   license:
     name: Apache-2.0
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'

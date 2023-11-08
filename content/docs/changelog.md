@@ -6,6 +6,12 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.3
+
+### Features
+
+- `[Articles]` Added language definition to the news article.
+
 ## 1.0.2
 
 ### Features
