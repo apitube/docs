@@ -453,10 +453,10 @@ components:
         - published_at
         - title
         - description
-#        - content_raw
         - content
         - image
         - country
+        - language
         - category
         - resource
         - sentiment
@@ -485,10 +485,6 @@ components:
           type: string
           description: 'Full body without html tags.'
           format: string
-#        content_raw:
-#          type: string
-#          description: 'Full body with html tags.'
-#          format: string
         image:
           type: string
           description: 'First image in article.'
@@ -497,10 +493,10 @@ components:
           type: string
           description: 'Article country code.'
           format: string
-#        language:
-#          type: string
-#          description: 'Article language code.'
-#          format: string
+        language:
+          type: string
+          description: 'Article language code.'
+          format: string
         category:
           type: string
           description: 'Article category code.'

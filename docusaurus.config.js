@@ -181,7 +181,7 @@ const config = {
               type: 'docSidebar',
               sidebarId: 'docs',
               position: 'left',
-              label: 'Guide',
+              label: 'Overview',
             },
             {
               to: 'integrations',
