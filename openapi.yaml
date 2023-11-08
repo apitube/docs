@@ -455,7 +455,6 @@ components:
         - description
 #        - content_raw
         - content
-        - summary
         - image
         - country
         - category
@@ -490,10 +489,6 @@ components:
 #          type: string
 #          description: 'Full body with html tags.'
 #          format: string
-        summary:
-          type: string
-          description: 'Short summary.'
-          format: string
         image:
           type: string
           description: 'First image in article.'

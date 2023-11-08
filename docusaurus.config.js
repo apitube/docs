@@ -196,7 +196,7 @@ const config = {
             {
               to: 'use-cases',
               // sidebarId: 'useCases',
-              label: 'Use cases',
+              label: 'Examples',
               position: 'left'
             },
             {
