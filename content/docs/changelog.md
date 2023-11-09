@@ -11,6 +11,7 @@ title: 'Changelog'
 ### Features
 
 - `[Articles]` Added language definition to the news article.
+- `[Sentiment]` [Added new feature](/api-reference/sentiment).
 
 ## 1.0.2
 
