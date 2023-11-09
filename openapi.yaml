@@ -5,7 +5,7 @@ info:
   title: API Reference
   description: >-
     Here you have detailed documentation of all available API functions. To get started, you can make the sample request for each endpoint or [integrate into your application](/integrations).
-  version: 1.0.3
+  version: 1.1.0
   license:
     name: Apache-2.0
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
@@ -284,6 +284,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
+        '204':
+          description: No content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
         '400':
           description: Parameter missing or invalid
           content:
@@ -349,6 +355,62 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
+        '400':
+          description: Parameter missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '429':
+          description: User's limit reached by key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+
+  /news/sentiment:
+    post:
+      tags:
+        - Text Analytics
+      summary: Sentiment
+      description: Detect text sentiment by sentences.<br/>Calling this endpoint requires `0.05 points`
+      parameters:
+        - name: api_key
+          in: query
+          description: Your API key from dashboard.
+          required: false
+          schema:
+            type: string
+        - name: text
+          in: query
+          description: The content that will be utilized to compute sentiment. [List of supported languages](/text-analytics/languages).
+          required: false
+          example: 'text=hello world'
+          schema:
+            type: string
+            format: string
+            minimum: 6
+            maximum: 75000
+            description: Max value of string is `75000 length`
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sentiment'
+        '204':
+          description: No content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
         '400':
           description: Parameter missing or invalid
           content:
@@ -698,3 +760,22 @@ components:
           type: string
           description: Export to XLSX format.
           format: string
+
+    Sentiment:
+      title: language
+      description: Single language
+      required:
+        - sentiments
+        - average
+        - sentences
+      type: object
+      properties:
+        sentiments:
+          type: array
+          description: 'Array of sentiment score for each sentence.'
+        average:
+          type: string
+          description: 'Average sentiment score.'
+        sentences:
+          type: array
+          description: 'Array of sentences.'
