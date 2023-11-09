@@ -7,7 +7,7 @@ sidebar_position: 2
 
 Find articles by country.
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/articles)
 
 ## Get news articles in USA
 

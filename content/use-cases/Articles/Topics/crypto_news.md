@@ -7,7 +7,7 @@ slug: '/topic/crypto_news'
 
 Are you interested in accessing content related to crypto news? Utilize the provided code to obtain JSON responses, as showcased at the bottom of the page.
 
-- [List supported topics](/get-articles/topics)
+- [List supported topics](/articles/topics)
 
 ## Example of JSON response
 

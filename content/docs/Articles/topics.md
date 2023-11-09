@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: '/get-articles/topics'
+slug: '/articles/topics'
 ---
 
 # Topics list

@@ -7,7 +7,7 @@ sidebar_position: 8
 
 Find articles by date.
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/articles)
 
 ## Get news articles published in 2023-10-01 - 2023-10-02
 

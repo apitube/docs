@@ -7,7 +7,7 @@ sidebar_position: 1
 
 Find articles by title or content.
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/articles)
 
 ## Get news articles where title contains "Elon Musk"
 

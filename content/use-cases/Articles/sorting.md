@@ -6,7 +6,7 @@ slug: '/articles/sorting'
 
 Sort articles by field
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/articles)
 
 ## Get news articles sorted by sentiment
 

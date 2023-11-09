@@ -7,7 +7,7 @@ slug: '/country/pakistan'
 
 Are you interested in accessing news/blog content that originates from sources based in Pakistan?
 
-- [List supported countries](/get-articles/countries)
+- [List supported countries](/articles/countries)
 
 ## Example of JSON response
 

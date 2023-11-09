@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-slug: '/get-articles/countries'
+slug: '/articles/countries'
 ---
 
 # Countries list

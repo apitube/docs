@@ -7,7 +7,7 @@ sidebar_position: 5
 
 Find articles by news source.
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/articles)
 
 ## Get news articles from techcrunch.com
 
