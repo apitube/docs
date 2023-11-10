@@ -16,7 +16,7 @@ columnSize={3}
 items={[
 {
 icon: "mdi:account",
-href: "https://apitube.pub/sign-up",
+href: "https://apitube.pub#sign-up",
 title: "Create account",
 description: "Sign up is free and unlock more and cool features!"
 },

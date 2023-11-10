@@ -201,7 +201,7 @@ const config = {
             },
             {
               position: 'right',
-              href: 'https://apitube.pub/sign-up',
+              href: 'https://apitube.pub#sign-up',
               className: 'header-sign-up-link',
               label: "Sign Up",
               'aria-label': 'Sign Up',
