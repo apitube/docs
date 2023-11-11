@@ -7,7 +7,7 @@ sidebar_position: 15
 
 Find articles in a specific radius from location.
 
-[More filter options see in API Reference](/api-reference/articles)
+[More filter options see in API Reference](/api-reference/get-articles)
 
 ## Get news articles from Italy(country)
 

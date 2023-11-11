@@ -7,7 +7,7 @@ sidebar_position: 10
 
 Find articles by sentiment.
 
-[More filter options see in API Reference](/api-reference/articles)
+[More filter options see in API Reference](/api-reference/get-articles)
 
 ## Get news articles with positive sentiment
 
