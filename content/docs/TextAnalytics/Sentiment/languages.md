@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: '/text-analytics/languages'
+slug: '/text-analytics/sentiment/languages'
 ---
 
 # Languages list
