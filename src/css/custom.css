@@ -87,9 +87,9 @@ blockquote {
 .header-sign-up-link {
   background-color: var(--ifm-color-primary);
   color: #ffffff;
-  border-radius: 18px;
+  border-radius: 4px;
   font-size: 92%;
-  padding: 0.2rem 1rem!important;
+  /*padding: 0.2rem 1rem!important;*/
 }
 
 .header-sign-up-link:hover {
