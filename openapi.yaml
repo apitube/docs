@@ -18,7 +18,7 @@ paths:
       tags:
         - Articles
       summary: Get articles
-      description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/>Calling this endpoint requires `1 point`"
+      description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/><br/>Calling this endpoint requires `1 point`"
       parameters:
         - name: api_key
           in: query
@@ -296,6 +296,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationInputParamsError'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '402':
+          description: Payment required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
         '429':
           description: User's limit reached by key
           content:
@@ -314,7 +332,7 @@ paths:
       tags:
         - Articles
       summary: Get article by ID
-      description: 'Get specific article by ID.'
+      description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`'
       parameters:
         - name: api_key
           in: query
@@ -374,12 +392,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/ValidationInputParamsError'
 
-  /news/sentiment:
+  /sentiment:
     post:
       tags:
         - Text Analytics
       summary: Sentiment
-      description: Detect text sentiment by sentences.<br/>Calling this endpoint requires `0.05 points`
+      description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint requires `0.1 points`
       parameters:
         - name: api_key
           in: query
@@ -413,6 +431,24 @@ paths:
                 $ref: '#/components/schemas/ValidationInputParamsError'
         '400':
           description: Parameter missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '402':
+          description: Payment required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '404':
+          description: Not found
           content:
             application/json:
               schema:

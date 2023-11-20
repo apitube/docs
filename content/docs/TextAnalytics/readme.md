@@ -5,6 +5,15 @@ slug: '/text-analytics'
 
 # Text Analytics
 
+Access real-time breaking news worldwide with the APITUBE API. Utilize various filters to refine and obtain the specific results you're looking for.
+
+### Features
+
+- [Detect text sentiment](/text-analytics/sentiment)
+- *More coming soon*
+
+---
+
 import CardList from '@site/src/components/CardList'
 
 <CardList

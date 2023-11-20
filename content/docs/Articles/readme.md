@@ -3,17 +3,25 @@ sidebar_position: 8
 slug: '/get-articles'
 ---
 
-# Articles
+# News Articles
 
-### Find news articles corresponding to one or multiple search criteria.
+Access real-time breaking news worldwide with the APITUBE API. Utilize various filters to refine and obtain the specific results you're looking for.
 
-- [Supported countries list](/get-articles/countries)
-- [Supported languages list](/get-articles/languages)
-- [Supported categories list](/get-articles/categories)
-- [Supported topics list](/get-articles/topics)
-- [API Reference](/api-reference/get-articles)
-- [Example Use Cases](/use-cases/get-articles)
-- [Integrations](/integrations/get-articles)
+### Features
+
+- Real-time news articles
+- 50000+ news sources
+- Export datasets in many formats: JSON, Excel, CSV, TSV and HTML.
+- Search for pure text matches, phrases. Semantic search and text filtering combined. Filters by language, date, category, domain etc.
+- Export data via: Node.js, Java, Python, PHP, R, Ruby, Golang etc.
+- View articles history by date and location.
+- Our API is very user-friendly—you can start using it within minutes, so you can get everything up and running quickly.
+- Free for Development.
+- Employ diverse text analytics models to examine news data and extract valuable insights, enabling data-driven decision-making through our news API.
+- Export datasets in many formats: JSON, Excel, CSV, TSV and HTML.
+- 150+ countries
+- 80+ languages
+- Topics
 
 ---
 

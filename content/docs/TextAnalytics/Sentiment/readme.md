@@ -5,6 +5,8 @@ slug: '/text-analytics/sentiment'
 
 # Detect sentiment
 
+Determine the sentiment conveyed in the text.
+
 - [Supported languages list](/text-analytics/sentiment/languages)
 - [API Reference](/api-reference/sentiment)
 
