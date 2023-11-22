@@ -6,6 +6,12 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.4
+
+### Features
+
+- `[Articles]` Add filter 'search' to search find articles by title or content match.
+
 ## 1.0.3
 
 ### Features

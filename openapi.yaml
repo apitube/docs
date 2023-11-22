@@ -40,6 +40,13 @@ paths:
           example: 'content=Macbook'
           schema:
             type: string
+        - name: search
+          in: query
+          description: Find articles by article title or article content match.
+          required: false
+          example: 'search=Macbook Pro'
+          schema:
+            type: string
         - name: type
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
