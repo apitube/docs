@@ -1,5 +1,5 @@
 :root {
-  --ifm-color-primary: #056dff;
+  --ifm-color-primary: #c84a27;
   --ifm-color-primary-dark: #b44323;
   --ifm-color-primary-darker: #aa3f21;
   --ifm-color-primary-darkest: #8c341b;
@@ -87,9 +87,9 @@ blockquote {
 .header-sign-up-link {
   background-color: var(--ifm-color-primary);
   color: #ffffff;
-  border-radius: 4px;
+  border-radius: 18px;
   font-size: 92%;
-  /*padding: 0.2rem 1rem!important;*/
+  padding: 0.2rem 1rem!important;
 }
 
 .header-sign-up-link:hover {
@@ -113,10 +113,6 @@ html[data-theme='light'] .pagination-nav__link:hover {
 
 html[data-theme='dark'] .pagination-nav__link:hover {
   border-color: var(--ifm-color-primary);
-}
-
-html[data-theme='light'] .theme-doc-sidebar-container {
-  background-color: #fff;
 }
 
 .menu__link {
