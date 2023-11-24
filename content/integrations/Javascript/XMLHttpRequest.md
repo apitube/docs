@@ -16,7 +16,7 @@ xhr.addEventListener("readystatechange", function () {
     }
 });
 
-xhr.open("GET", "https://apitube.io/v1/news/articles?limit=250&api_key=YOUR_API_KEY");
+xhr.open("GET", "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY");
 
 xhr.send(data);
 ```

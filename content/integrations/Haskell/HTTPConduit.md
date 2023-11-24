@@ -12,7 +12,7 @@ import qualified Data.ByteString.Lazy.Char8 as LBS
 
 makeRequest :: IO ()
 makeRequest = do
-  let url = "https://apitube.io/v1/news/articles?limit=250&api_key=YOUR_API_KEY"
+  let url = "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY"
 
   manager <- newManager tlsManagerSettings
   request <- parseRequest url

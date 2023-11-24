@@ -514,8 +514,9 @@ components:
           format: int
         limit:
           type: integer
-          description: 'Articles per page.'
+          description: 'Articles per page. By default is 250. For paid plans limit reached to 5000 articles per page.'
           format: int
+          default: 250
         path:
           type: string
           description: 'Current request href.'

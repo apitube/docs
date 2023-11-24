@@ -7,7 +7,7 @@ slug: '/elixir/HTTP'
 ```php
 defmodule MyController do
   def make_request do
-    url = "https://apitube.io/v1/news/articles?limit=250&api_key=YOUR_API_KEY"
+    url = "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY"
 
     case HTTPoison.get(url) do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->

@@ -12,7 +12,7 @@ $request->setUrl('https://apitube.io/v1/news/articles');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData([
-    'limit' => '250',
+    'limit' => '50',
     'api_key' => 'YOUR_API_KEY'
 ]);
 

@@ -13,7 +13,7 @@ $request = new http\Client\Request;
 $request->setRequestUrl('https://apitube.io/v1/news/articles');
 $request->setRequestMethod('GET');
 $request->setQuery(new http\QueryString([
-    'limit' => '250',
+    'limit' => '50',
     'api_key' => 'YOUR_API_KEY'
 ]));
 

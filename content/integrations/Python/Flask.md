@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def make_request():
-    url = "https://apitube.io/v1/news/articles?limit=250&api_key=YOUR_API_KEY"
+    url = "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY"
 
     response = requests.get(url)
 

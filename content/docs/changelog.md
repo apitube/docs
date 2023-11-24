@@ -11,6 +11,7 @@ title: 'Changelog'
 ### Features
 
 - `[Articles]` Add filter 'search' to search find articles by title or content match.
+- `[Articles]` Limit of articles per page for a paid user reached 5000 items per page.
 
 ## 1.0.3
 

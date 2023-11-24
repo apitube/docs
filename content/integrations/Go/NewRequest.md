@@ -15,7 +15,7 @@ import (
 
 func main() {
 
-	url := "https://apitube.io/v1/news/articles?limit=250&api_key=YOUR_API_KEY"
+	url := "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY"
 
 	req, _ := http.NewRequest("GET", url, nil)
 

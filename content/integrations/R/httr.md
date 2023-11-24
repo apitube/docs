@@ -10,7 +10,7 @@ library(httr)
 url <- "https://apitube.io/v1/news/articles"
 
 queryString <- list(
-  limit = "250"
+  limit = "50"
   api_key = "YOUR_API_KEY"
 )
 

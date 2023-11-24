@@ -18,7 +18,7 @@ object MyController {
     implicit val materializer = ActorMaterializer()
     implicit val executionContext = system.dispatcher
 
-    val request = HttpRequest(uri = "https://apitube.io/v1/news/articles?limit=250&api_key=YOUR_API_KEY")
+    val request = HttpRequest(uri = "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY")
 
     val responseFuture: Future[HttpResponse] = Http().singleRequest(request)
 
