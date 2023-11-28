@@ -6,6 +6,12 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.5
+
+### Features
+
+- `[Articles]` Add 'opinion' resource type.
+
 ## 1.0.4
 
 ### Features

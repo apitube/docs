@@ -22,6 +22,18 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 ---
 
+## Get news articles where type is "news/opinion"
+
+| Method | URL                                                     |
+|--------|---------------------------------------------------------|
+| GET    | `https://apitube.io/v1/news/articles?type=news/opinion` |
+
+#### Response
+
+<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&type=opinion"></ExampleRequest>
+
+---
+
 ## Get news articles where type is "blog/company"
 
 | Method | URL                                                     |
