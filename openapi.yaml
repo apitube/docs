@@ -414,7 +414,7 @@ paths:
             type: string
         - name: text
           in: query
-          description: The content that will be utilized to compute sentiment. [List of supported languages](/text-analytics/languages).
+          description: The content that will be utilized to compute sentiment. [List of supported languages](/text-analytics/sentiment/languages).
           required: false
           example: 'text=hello world'
           schema:
