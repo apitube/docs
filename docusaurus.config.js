@@ -218,10 +218,10 @@ const config = {
             {
               title: 'APITUBE',
               items: [
-                {
-                  label: 'Features',
-                  to: 'https://apitube.pub/product/features',
-                },
+                // {
+                //   label: 'Features',
+                //   to: 'https://apitube.pub/product/features',
+                // },
                 {
                   label: 'Blog & News',
                   to: 'https://apitube.pub/blog',
