@@ -7,7 +7,7 @@ slug: '/topic/video_games_news'
 
 Are you interested in accessing content related to video games news? Utilize the provided code to obtain JSON responses, as showcased at the bottom of the page.
 
-- [List supported topics](/articles/topics)
+- [List supported topics](/get-articles/topics)
 
 ## Example of JSON response
 

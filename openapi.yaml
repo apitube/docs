@@ -64,7 +64,7 @@ paths:
             default: available
         - name: country
           in: query
-          description: 'Find articles in the specified country(s). Multiple options can be specified by separating them with a comma, for example: `us,fr`. [Full list of available countries](/articles/countries).'
+          description: 'Find articles in the specified country(s). Multiple options can be specified by separating them with a comma, for example: `us,fr`. [Full list of available countries](/get-articles/countries).'
           example: 'country=us,gb'
           required: false
           style: form
@@ -72,7 +72,7 @@ paths:
           deprecated: false
 #        - name: language
 #          in: query
-#          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/articles/categories).'
+#          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/get-articles/categories).'
 #          example: 'language=en,fr'
 #          required: false
 #          style: form
@@ -85,7 +85,7 @@ paths:
 #            default: english
         - name: category
           in: query
-          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/articles/categories).'
+          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/get-articles/categories).'
           example: 'category=design/digital,design/web'
           required: false
           style: form
@@ -105,7 +105,7 @@ paths:
               - news/Arts_and_Entertainment
         - name: topic
           in: query
-          description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/articles/topics).'
+          description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/get-articles/topics).'
           example: 'topic=crypto_news'
           required: false
           style: form
