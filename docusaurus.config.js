@@ -201,18 +201,18 @@ const config = {
             },
             {
               position: 'right',
+              href: 'https://apitube.pub',
+              // className: 'header-sign-up-link',
+              label: "Back to website",
+              'aria-label': 'Sign Up',
+            },
+            {
+              position: 'right',
               href: 'https://apitube.pub#sign-up',
               className: 'header-sign-up-link',
               label: "Sign Up",
               'aria-label': 'Sign Up',
             },
-            // {
-            //   position: 'right',
-            //   href: 'https://apitube.pub#sign-up',
-            //   className: 'header-sign-up-link',
-            //   label: "Back to website",
-            //   'aria-label': 'Sign Up',
-            // },
             {
               position: 'right',
               type: 'search',
@@ -229,6 +229,10 @@ const config = {
                 //   label: 'Features',
                 //   to: 'https://apitube.pub/product/features',
                 // },
+                {
+                  label: 'API Status',
+                  to: 'https://status.apitube.pub',
+                },
                 {
                   label: 'Blog & News',
                   to: 'https://apitube.pub/blog',
