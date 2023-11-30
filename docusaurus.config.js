@@ -206,6 +206,13 @@ const config = {
               label: "Sign Up",
               'aria-label': 'Sign Up',
             },
+            // {
+            //   position: 'right',
+            //   href: 'https://apitube.pub#sign-up',
+            //   className: 'header-sign-up-link',
+            //   label: "Back to website",
+            //   'aria-label': 'Sign Up',
+            // },
             {
               position: 'right',
               type: 'search',

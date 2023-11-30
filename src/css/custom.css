@@ -93,7 +93,7 @@ blockquote {
 }
 
 .header-sign-up-link:hover {
-  opacity: 90%;
+  background-color: var(--ifm-color-primary);
   color: #ffffff;
 }
 
