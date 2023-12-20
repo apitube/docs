@@ -10,3 +10,12 @@ slug: '/text-analytics/sentiment/languages'
 | English       | en            |
 | French        | fr            |
 | Spanish       | es            |
+| German        | de            |
+| Italian       | it            |
+| Portuguese    | pt            |
+| Chinese       | zh-CN         |
+| Japanese      | ja            |
+| Arabic        | ar            |
+| Korean        | ko            |
+| Hindi         | hi            |
+| Thai          | th            |
