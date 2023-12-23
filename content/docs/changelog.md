@@ -6,17 +6,23 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.6
+
+### Features
+
+- `[Articles]` Add 'links' and 'videos' as property to the article resource. Links are a list of links to related articles.
+
 ## 1.0.5
 
 ### Features
 
-- `[Articles]` Add 'opinion' resource type.
+- `[Articles]` Add 'opinion' resource type. Opinion articles are articles that are written by a person that expresses an opinion or point of view. Opinion articles are not news articles.
 
 ## 1.0.4
 
 ### Features
 
-- `[Articles]` Add filter 'search' to search find articles by title or content match.
+- `[Articles]` Add filter 'search' to search find articles by title or content match. Example: `https://apitube.io/v1/news/articles?search=bitcoin`.
 - `[Articles]` Limit of articles per page for a paid user reached 5000 items per page.
 
 ## 1.0.3

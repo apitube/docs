@@ -554,6 +554,8 @@ components:
         - description
         - content
         - image
+        - links
+        - videos
         - country
         - language
         - category
@@ -587,6 +589,14 @@ components:
         image:
           type: string
           description: 'First image in article.'
+          format: string
+        links:
+          type: array
+          description: 'Links from article.'
+          format: string
+        videos:
+          type: array
+          description: 'Videos from article.'
           format: string
         country:
           type: string
