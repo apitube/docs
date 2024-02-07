@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://docs.apitube.io/sitemap.xml
