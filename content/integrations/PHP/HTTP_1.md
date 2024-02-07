@@ -8,7 +8,7 @@ slug: '/php/http_1'
 <?php
 
 $request = new HttpRequest();
-$request->setUrl('https://apitube.io/v1/news/articles');
+$request->setUrl('https://api.apitube.io/v1/news/articles');
 $request->setMethod(HTTP_METH_GET);
 
 $request->setQueryData([

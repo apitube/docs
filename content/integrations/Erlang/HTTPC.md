@@ -9,7 +9,7 @@ slug: '/erlang/HTTPC'
 -export([make_request/0]).
 
 make_request() ->
-    Url = "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY",
+    Url = "https://api.apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY",
     Options = [],
     {ok, {_, _, Response}} = httpc:request(get, {Url, Options}, [], []),
     handle_response(Response).

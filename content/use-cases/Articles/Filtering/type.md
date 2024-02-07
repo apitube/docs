@@ -13,12 +13,12 @@ Find articles by news type.
 
 | Method | URL                                             |
 |--------|-------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?type=news` |
+| GET    | `https://api.apitube.io/v1/news/articles?type=news` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&type=news"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&type=news"></ExampleRequest>
 
 ---
 
@@ -26,11 +26,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                     |
 |--------|---------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?type=news/opinion` |
+| GET    | `https://api.apitube.io/v1/news/articles?type=news/opinion` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&type=opinion"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&type=opinion"></ExampleRequest>
 
 ---
 
@@ -38,11 +38,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                     |
 |--------|---------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?type=blog/company` |
+| GET    | `https://api.apitube.io/v1/news/articles?type=blog/company` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&type=blog/company"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&type=blog/company"></ExampleRequest>
 
 ---
 
@@ -50,11 +50,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                      |
 |--------|----------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?type=blog/personal` |
+| GET    | `https://api.apitube.io/v1/news/articles?type=blog/personal` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&type=blog/personal"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&type=blog/personal"></ExampleRequest>
 
 ---
 
@@ -62,8 +62,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                             |
 |--------|-----------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&type=news` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk&type=news` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&type=news"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk&type=news"></ExampleRequest>

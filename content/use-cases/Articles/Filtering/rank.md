@@ -13,12 +13,12 @@ Find articles by news source rank.
 
 | Method | URL                                                            |
 |--------|----------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?rank_min=70&rank_max=100` |
+| GET    | `https://api.apitube.io/v1/news/articles?rank_min=70&rank_max=100` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&rank_min=70&rank_max=100"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&rank_min=70&rank_max=100"></ExampleRequest>
 
 ---
 
@@ -26,11 +26,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                               |
 |--------|---------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?rank_min=50` |
+| GET    | `https://api.apitube.io/v1/news/articles?rank_min=50` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&rank_min=50"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&rank_min=50"></ExampleRequest>
 
 ---
 
@@ -38,11 +38,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                               |
 |--------|---------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?rank_max=50` |
+| GET    | `https://api.apitube.io/v1/news/articles?rank_max=50` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&rank_max=50"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&rank_max=50"></ExampleRequest>
 
 ---
 
@@ -50,8 +50,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                               |
 |--------|-------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&rank_min=50` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk&rank_min=50` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&rank_min=50"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk&rank_min=50"></ExampleRequest>

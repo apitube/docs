@@ -13,4 +13,4 @@ Are you interested in accessing content related to crypto news? Utilize the prov
 
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&topic=crypto_news"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&topic=crypto_news"></ExampleRequest>

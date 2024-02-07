@@ -13,12 +13,12 @@ Find articles by sentiment.
 
 | Method | URL                                                      |
 |--------|----------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?sentiment=positive` |
+| GET    | `https://api.apitube.io/v1/news/articles?sentiment=positive` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment=positive"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&sentiment=positive"></ExampleRequest>
 
 ---
 
@@ -26,11 +26,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                      |
 |--------|----------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?sentiment=negative` |
+| GET    | `https://api.apitube.io/v1/news/articles?sentiment=negative` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment=negative"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&sentiment=negative"></ExampleRequest>
 
 ---
 
@@ -38,11 +38,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                      |
 |--------|----------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?sentiment=neutral`  |
+| GET    | `https://api.apitube.io/v1/news/articles?sentiment=neutral`  |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment=neutral"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&sentiment=neutral"></ExampleRequest>
 
 ---
 
@@ -50,11 +50,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                          |
 |--------|------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?sentiment_min=0.5`                      |
+| GET    | `https://api.apitube.io/v1/news/articles?sentiment_min=0.5`                      |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment_min=0.5"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&sentiment_min=0.5"></ExampleRequest>
 
 ---
 
@@ -62,11 +62,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                          |
 |--------|------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?sentiment_max=0.5`                      |
+| GET    | `https://api.apitube.io/v1/news/articles?sentiment_max=0.5`                      |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment_max=0.5"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&sentiment_max=0.5"></ExampleRequest>
 
 ---
 
@@ -77,7 +77,7 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment_min=0.5&sentiment_max=0.8"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&sentiment_min=0.5&sentiment_max=0.8"></ExampleRequest>
 
 ---
 
@@ -85,8 +85,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                                       |
 |--------|-------------------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?sentiment_min=0.5&sentiment_max=0.8&title=Elon Musk` |
+| GET    | `https://api.apitube.io/v1/news/articles?sentiment_min=0.5&sentiment_max=0.8&title=Elon Musk` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&sentiment_min=0.5&sentiment_max=0.8&title=Elon Musk"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&sentiment_min=0.5&sentiment_max=0.8&title=Elon Musk"></ExampleRequest>

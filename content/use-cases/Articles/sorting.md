@@ -12,12 +12,12 @@ Sort articles by field
 
 | Method | URL                                                                        |
 |--------|----------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?sort_by=sentiment&sort_direction=asc` |
+| GET    | `https://api.apitube.io/v1/news/articles?sort_by=sentiment&sort_direction=asc` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2"></ExampleRequest>
 
 ---
 
@@ -25,10 +25,10 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                     |
 |--------|---------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?sort_by=sentiment` |
+| GET    | `https://api.apitube.io/v1/news/articles?sort_by=sentiment` |
 
 #### Response
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2"></ExampleRequest>
 
 ---
 
@@ -36,11 +36,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                                        |
 |--------|--------------------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&sort_by=sentiment&sort_direction=asc` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk&sort_by=sentiment&sort_direction=asc` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&sort_by=sentiment&sort_direction=asc"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk&sort_by=sentiment&sort_direction=asc"></ExampleRequest>
 
 ---
 
@@ -48,8 +48,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                                         |
 |--------|---------------------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&sort_by=sentiment&sort_direction=desc` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk&sort_by=sentiment&sort_direction=desc` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&sort_by=sentiment&sort_direction=desc"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk&sort_by=sentiment&sort_direction=desc"></ExampleRequest>

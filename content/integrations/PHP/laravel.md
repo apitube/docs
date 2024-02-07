@@ -16,7 +16,7 @@ class MyController extends Controller
 {
 	public function makeRequest(Request $request)
 	{
-		$url = "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY";
+		$url = "https://api.apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY";
 
 		$response = Http::get($url);
 

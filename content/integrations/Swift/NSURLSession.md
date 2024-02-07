@@ -7,7 +7,7 @@ slug: '/swift/NSURLSession'
 ```swift
 import Foundation
 
-let request = NSMutableURLRequest(url: NSURL(string: "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY")! as URL,
+let request = NSMutableURLRequest(url: NSURL(string: "https://api.apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY")! as URL,
                                         cachePolicy: .useProtocolCachePolicy,
                                     timeoutInterval: 10.0)
 request.httpMethod = "GET"

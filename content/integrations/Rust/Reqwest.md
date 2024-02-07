@@ -19,7 +19,7 @@ async fn main() -> Result<(), reqwest::Error> {
 }
 
 async fn make_request() -> Result<(), reqwest::Error> {
-    let url = "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY";
+    let url = "https://api.apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY";
 
     let response = reqwest::get(url).await?;
 

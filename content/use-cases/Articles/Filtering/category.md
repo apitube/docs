@@ -13,12 +13,12 @@ Find articles by category.
 
 | Method | URL                                                          |
 |--------|--------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?category=news/Business` |
+| GET    | `https://api.apitube.io/v1/news/articles?category=news/Business` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Business"></ExampleRequest>
 
 ---
 
@@ -26,11 +26,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                          |
 |--------|------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?category=news/Business,news/Technology` |
+| GET    | `https://api.apitube.io/v1/news/articles?category=news/Business,news/Technology` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology"></ExampleRequest>
 
 ---
 
@@ -38,11 +38,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                                          |
 |--------|----------------------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?category=news/Business,news/Technology&title=Elon Musk` |
+| GET    | `https://api.apitube.io/v1/news/articles?category=news/Business,news/Technology&title=Elon Musk` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology&title=Elon Musk"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology&title=Elon Musk"></ExampleRequest>
 
 ---
 
@@ -50,8 +50,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                                                              |
 |--------|------------------------------------------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?category=news/Business,news/Technology&title=Elon Musk&location_name=Italy` |
+| GET    | `https://api.apitube.io/v1/news/articles?category=news/Business,news/Technology&title=Elon Musk&location_name=Italy` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology&title=Elon Musk&location=Italy"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Business,news/Technology&title=Elon Musk&location=Italy"></ExampleRequest>

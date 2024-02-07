@@ -9,7 +9,7 @@ import axios from "axios";
 
 const options = {
     method: 'GET',
-    url: 'https://apitube.io/v1/news/articles',
+    url: 'https://api.apitube.io/v1/news/articles',
     params: {
         limit: '50',
         api_key: 'YOUR_API_KEY'

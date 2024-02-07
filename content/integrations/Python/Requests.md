@@ -7,7 +7,7 @@ slug: '/python/Requests'
 ```python
 import requests
 
-url = "https://apitube.io/v1/news/articles"
+url = "https://api.apitube.io/v1/news/articles"
 
 querystring = {"limit":"50", "api_key":"YOUR_API_KEY"}
 

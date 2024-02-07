@@ -13,12 +13,12 @@ Find articles by title or content.
 
 | Method | URL                                                   |
 |--------|-------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk"></ExampleRequest>
 
 ---
 
@@ -26,10 +26,10 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                         |
 |--------|-------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk,Tesla` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk,Tesla` |
 
 #### Response
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk,Tesla"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk,Tesla"></ExampleRequest>
 
 ---
 
@@ -37,19 +37,19 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                 |
 |--------|---------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&content=Tesla` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk&content=Tesla` |
 
 #### Response
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&content=Tesla"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk&content=Tesla"></ExampleRequest>
 
 ## Get news articles where title contains "Elon Musk" and "Tesla" and "SpaceX"
 
 | Method | URL                                                                |
 |--------|--------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk,Tesla,SpaceX` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk,Tesla,SpaceX` |
 
 #### Response
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk,Tesla,SpaceX"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk,Tesla,SpaceX"></ExampleRequest>
 
 ---
 
@@ -57,8 +57,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                                    |
 |--------|----------------------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk,Tesla,SpaceX&location_name=Italy` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk,Tesla,SpaceX&location_name=Italy` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk,Tesla,SpaceX&location_name=Italy"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk,Tesla,SpaceX&location_name=Italy"></ExampleRequest>

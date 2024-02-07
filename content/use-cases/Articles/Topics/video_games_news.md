@@ -13,4 +13,4 @@ Are you interested in accessing content related to video games news? Utilize the
 
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&topic=video_games_news"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&topic=video_games_news"></ExampleRequest>

@@ -13,12 +13,12 @@ Find articles by news source.
 
 | Method | URL                                                         |
 |--------|-------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?source=techcrunch.com` |
+| GET    | `https://api.apitube.io/v1/news/articles?source=techcrunch.com` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&source=techcrunch.com"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&source=techcrunch.com"></ExampleRequest>
 
 ---
 
@@ -26,11 +26,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                      |
 |--------|--------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?source=techcrunch.com,theverge.com` |
+| GET    | `https://api.apitube.io/v1/news/articles?source=techcrunch.com,theverge.com` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&source=techcrunch.com,theverge.com"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&source=techcrunch.com,theverge.com"></ExampleRequest>
 
 ---
 
@@ -38,8 +38,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                         |
 |--------|-----------------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?title=Elon Musk&source=techcrunch.com` |
+| GET    | `https://api.apitube.io/v1/news/articles?title=Elon Musk&source=techcrunch.com` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&title=Elon Musk&source=techcrunch.com"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk&source=techcrunch.com"></ExampleRequest>

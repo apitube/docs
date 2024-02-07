@@ -9,7 +9,7 @@ local http = require("socket.http")
 local ltn12 = require("ltn12")
 
 function makeRequest()
-    local url = "https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY"
+    local url = "https://api.apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY"
     
     local response_body = {}
     local res, status, response_header = http.request{

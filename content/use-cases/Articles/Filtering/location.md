@@ -13,12 +13,12 @@ Find articles in a specific radius from location.
 
 | Method | URL                                                       |
 |--------|-----------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?location_name=Italy` |
+| GET    | `https://api.apitube.io/v1/news/articles?location_name=Italy` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&location_name=Italy"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&location_name=Italy"></ExampleRequest>
 
 ---
 
@@ -26,9 +26,9 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                       |
 |--------|-----------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?location_name=Paris` |
+| GET    | `https://api.apitube.io/v1/news/articles?location_name=Paris` |
 
 #### Response
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&location_name=Paris"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&location_name=Paris"></ExampleRequest>
 
 ---

@@ -13,12 +13,12 @@ Find articles by country.
 
 | Method | URL                                              |
 |--------|--------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?country=us` |
+| GET    | `https://api.apitube.io/v1/news/articles?country=us` |
 
 #### Response
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?country=us"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?country=us"></ExampleRequest>
 
 ---
 
@@ -26,11 +26,11 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                 |
 |--------|-----------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?country=en,it` |
+| GET    | `https://api.apitube.io/v1/news/articles?country=en,it` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&country=us,it"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&country=us,it"></ExampleRequest>
 
 ---
 
@@ -38,8 +38,8 @@ import ExampleRequest from '@site/src/components/ExampleRequest'
 
 | Method | URL                                                                 |
 |--------|---------------------------------------------------------------------|
-| GET    | `https://apitube.io/v1/news/articles?country=en,it&title=Elon Musk` |
+| GET    | `https://api.apitube.io/v1/news/articles?country=en,it&title=Elon Musk` |
 
 #### Response
 
-<ExampleRequest url="https://apitube.io/v1/news/articles?limit=2&country=us,it&title=Elon Musk"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&country=us,it&title=Elon Musk"></ExampleRequest>

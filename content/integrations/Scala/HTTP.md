@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 
 class MyController {
   Future<void> makeRequest() async {
-    var url = Uri.parse('https://apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY');
+    var url = Uri.parse('https://api.apitube.io/v1/news/articles?limit=50&api_key=YOUR_API_KEY');
 
     var response = await http.get(url);
 
