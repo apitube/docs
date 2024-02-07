@@ -38,7 +38,7 @@ description: "Dig into the details of using the Get Articles API."
 },
 {
 icon: "mdi:account",
-href: "https://apitube.pub#sign-up",
+href: "https://apitube.io#sign-up",
 title: "Create account",
 description: "Sign up is free and unlock more and cool features!"
 },
