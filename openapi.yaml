@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-  - url: 'https://apitube.io/v1'
+  - url: 'https://api.apitube.io/v1'
 info:
   title: API Reference
   description: >-
