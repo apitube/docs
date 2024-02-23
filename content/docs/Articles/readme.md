@@ -20,7 +20,6 @@ Access real-time breaking news worldwide with the APITUBE API. Utilize various f
 - Employ diverse text analytics models to examine news data and extract valuable insights, enabling data-driven decision-making through our news API.
 - Export datasets in many formats: JSON, Excel, CSV, TSV and HTML.
 - 150+ countries
-- 80+ languages
 - Topics
 
 ---

@@ -6,6 +6,15 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.8
+
+### Features
+
+- `[Articles]` Add new countries: **Indonesia**, **Malaysia**, **Norway**, **Romania**, **Sweden**, **Vietnam**.
+- `[Articles]` Add new languages: **Indonesian**, **Malay**, **Norwegian**, **Romanian**, **Swedish**, **Vietnamese**.
+- `[Sentiment]` Add new countries: **Indonesia**, **Malaysia**, **Norway**, **Romania**, **Sweden**, **Vietnam**.
+- `[Sentiment]` Add new languages: **Indonesian**, **Malay**, **Norwegian**, **Romanian**, **Swedish**, **Vietnamese**.
+
 ## 1.0.7
 
 ### Features

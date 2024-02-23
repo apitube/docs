@@ -11,9 +11,14 @@ slug: '/get-articles/countries'
 | Germany        | de           |
 | Finland        | fi           |
 | Greece         | gr           |
+| Indonesia      | id           |
 | Netherlands    | nl           |
+| Norway         | no           |
 | Poland         | pl           |
+| Romania        | ro           |
 | Spain          | es           |
+| Sweden         | se           |
 | Thailand       | th           |
+| Vietnam        | vn           |
 | United Kingdom | gb           |
 | United States  | us           |

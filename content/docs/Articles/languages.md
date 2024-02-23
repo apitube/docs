@@ -12,8 +12,14 @@ slug: '/get-articles/languages'
 | German        | de            |
 | Finnish       | fi            |
 | Greek         | el            |
-| Netherlands   | nl            |
+| Dutch         | nl            |
+| Indonesian    | id            |
+| Malay         | ms            |
+| Norwegian     | no            |
 | Polish        | pl            |
+| Romanian      | ro            |
 | English       | en            |
 | Spanish       | es            |
+| Swedish       | sv            |
 | Thai          | th            |
+| Vietnamese    | vi            |
