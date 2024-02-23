@@ -7,6 +7,13 @@ slug: '/get-articles/languages'
 
 | Language name | Language code |
 |---------------|---------------|
-| English       | en            |
+| Czech         | cs            |
 | French        | fr            |
+| German        | de            |
+| Finnish       | fi            |
+| Greek         | el            |
+| Netherlands   | nl            |
+| Polish        | pl            |
+| English       | en            |
 | Spanish       | es            |
+| Thai          | th            |

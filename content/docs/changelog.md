@@ -6,6 +6,15 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.7
+
+### Features
+
+- `[Articles]` Add new countries: **Czech**, **Germany**, **Finland**, **Greece**, **Netherlands**, **Poland**.
+- `[Articles]` Add new languages: **Czech**, **French**, **German**, **Finnish**, **Greek**, **Netherlands**, **Polish**.
+- `[Sentiment]` Add new countries: **Czech**, **Germany**, **Finland**, **Greece**, **Netherlands**, **Poland**.
+- `[Sentiment]` Add new languages: **Czech**, **French**, **German**, **Finnish**, **Greek**, **Netherlands**, **Polish**.
+
 ## 1.0.6
 
 ### Features
