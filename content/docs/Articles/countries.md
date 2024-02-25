@@ -3,7 +3,7 @@ sidebar_position: 0
 slug: '/get-articles/countries'
 ---
 
-# Countries list
+# Supported countries
 
 | Country name   | Country code |
 |----------------|--------------|
