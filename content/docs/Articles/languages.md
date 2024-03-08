@@ -1,66 +1,100 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 slug: '/get-articles/languages'
 ---
 
 # Supported languages
 
-| Language name         | Language code |
-|-----------------------|---------------|
-| Amharic               | am            |
-| Arabic                | ar            |
-| Basque                | eu            |
-| Bengali               | bn            |
-| English (UK)          | en-GB         |
-| Portuguese (Brazil)   | pt-BR         |
-| Bulgarian             | bg            |
-| Catalan               | ca            |
-| Cherokee              | chr           |
-| Croatian              | hr            |
-| Czech                 | cs            |
-| Danish                | da            |
-| Dutch                 | nl            |
-| English (US)          | en            |
-| Estonian              | et            |
-| Filipino              | fil           |
-| Finnish               | fi            |
-| French                | fr            |
-| German                | de            |
-| Greek                 | el            |
-| Gujarati              | gu            |
-| Hebrew                | iw            |
-| Hindi                 | hi            |
-| Hungarian             | hu            |
-| Icelandic             | is            |
-| Indonesian            | id            |
-| Italian               | it            |
-| Japanese              | ja            |
-| Kannada               | kn            |
-| Korean                | ko            |
-| Latvian               | lv            |
-| Lithuanian            | lt            |
-| Malay                 | ms            |
-| Malayalam             | ml            |
-| Marathi               | mr            |
-| Norwegian             | no            |
-| Polish                | pl            |
-| Portuguese (Portugal) | pt-PT         |
-| Romanian              | ro            |
-| Russian               | ru            |
-| Serbian               | sr            |
-| Chinese (PRC)         | zh-CN         |
-| Slovak                | sk            |
-| Slovenian             | sl            |
-| Spanish               | es            |
-| Swahili               | sw            |
-| Swedish               | sv            |
-| Tamil                 | ta            |
-| Telugu                | te            |
-| Thai                  | th            |
-| Chinese (Taiwan)      | zh-TW         |
-| Turkish               | tr            |
-| Urdu                  | ur            |
-| Ukrainian             | uk            |
-| Vietnamese            | vi            |
-| Welsh                 | cy            |
-
+| Language name      | Language code |
+|--------------------|---------------|
+| Afrikaans          | af            |
+| Albanian           | sq            |
+| Amharic            | am            |
+| Arabic             | ar            |
+| Armenian           | hy            |
+| Azerbaijani        | az            |
+| Basque             | eu            |
+| Bashkir            | ba            |
+| Belarusian         | be            |
+| Bengali            | bn            |
+| Bosnian            | bs            |
+| Bulgarian          | bg            |
+| Burmese            | my            |
+| Catalan            | ca            |
+| Cebuano            | ceb           |
+| Croatian           | hr            |
+| Czech              | cs            |
+| Danish             | da            |
+| Dutch              | nl            |
+| English            | en            |
+| Esperanto          | eo            |
+| Estonian           | et            |
+| Finnish            | fi            |
+| French             | fr            |
+| Galician           | gl            |
+| Georgian           | ka            |
+| German             | de            |
+| Greek              | el            |
+| Gujarati           | gu            |
+| Haitian (Creole)   | ht            |
+| Hebrew             | he            |
+| Hindi              | hi            |
+| Hill Mari          | mrj           |
+| Hungarian          | hu            |
+| Icelandic          | is            |
+| Indonesian         | id            |
+| Irish              | ga            |
+| Italian            | it            |
+| Japanese           | ja            |
+| Javanese           | jv            |
+| Kazakh             | kk            |
+| Khmer              | km            |
+| Korean             | ko            |
+| Kurdish            | ku            |
+| Kyrgyz             | ky            |
+| Laotian            | lo            |
+| Latin              | la            |
+| Latvian            | lv            |
+| Lithuanian         | lt            |
+| Luxembourgish      | lb            |
+| Macedonian         | mk            |
+| Malay              | ms            |
+| Malayalam          | ml            |
+| Maltese            | mt            |
+| Maori              | mi            |
+| Marathi            | mr            |
+| Mari               | mhr           |
+| Mongolian          | mn            |
+| Nepali             | ne            |
+| Norwegian          | no            |
+| Papiamento         | pap           |
+| Persian            | fa            |
+| Polish             | pl            |
+| Portuguese         | pt            |
+| Punjabi            | pa            |
+| Romanian           | ro            |
+| Russian            | ru            |
+| Scottish Gaelic    | gd            |
+| Serbian            | sr            |
+| Sinhalese          | si            |
+| Slovak             | sk            |
+| Slovenian          | sl            |
+| Spanish            | es            |
+| Sundanese          | su            |
+| Swahili            | sw            |
+| Swedish            | sv            |
+| Tagalog            | tl            |
+| Tajik              | tg            |
+| Tamil              | ta            |
+| Tatar              | tt            |
+| Telugu             | te            |
+| Thai               | th            |
+| Turkish            | tr            |
+| Udmurt             | udm           |
+| Ukrainian          | uk            |
+| Urdu               | ur            |
+| Uzbek              | uz            |
+| Vietnamese         | vi            |
+| Xhosa              | xh            |
+| Yiddish            | yi            |
+| Tagalog (Filipino) | tl            |

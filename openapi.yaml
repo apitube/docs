@@ -400,79 +400,79 @@ paths:
               schema:
                 $ref: '#/components/schemas/ValidationInputParamsError'
 
-  /sentiment:
-    post:
-      tags:
-        - Text Analytics
-      summary: Sentiment
-      description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint requires `0.1 points`
-      parameters:
-        - name: api_key
-          in: query
-          description: Your API key from dashboard.
-          required: false
-          schema:
-            type: string
-        - name: text
-          in: query
-          description: The content that will be utilized to compute sentiment. [List of supported languages](/text-analytics/sentiment/languages).
-          required: false
-          example: 'text=hello world'
-          schema:
-            type: string
-            format: string
-            minimum: 6
-            maximum: 75000
-            description: Max value of string is `75000 length`
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Sentiment'
-        '204':
-          description: No content
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
-        '400':
-          description: Parameter missing or invalid
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
-        '402':
-          description: Payment required
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
-        '429':
-          description: User's limit reached by key
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+#  /sentiment:
+#    post:
+#      tags:
+#        - Text Analytics
+#      summary: Sentiment
+#      description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint requires `0.1 points`
+#      parameters:
+#        - name: api_key
+#          in: query
+#          description: Your API key from dashboard.
+#          required: false
+#          schema:
+#            type: string
+#        - name: text
+#          in: query
+#          description: The content that will be utilized to compute sentiment. [List of supported languages](/text-analytics/sentiment/languages).
+#          required: false
+#          example: 'text=hello world'
+#          schema:
+#            type: string
+#            format: string
+#            minimum: 6
+#            maximum: 75000
+#            description: Max value of string is `75000 length`
+#      responses:
+#        '200':
+#          description: Successful operation
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/Sentiment'
+#        '204':
+#          description: No content
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/ValidationInputParamsError'
+#        '400':
+#          description: Parameter missing or invalid
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/ValidationInputParamsError'
+#        '401':
+#          description: Unauthorized
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/ValidationInputParamsError'
+#        '402':
+#          description: Payment required
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/ValidationInputParamsError'
+#        '404':
+#          description: Not found
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/ValidationInputParamsError'
+#        '429':
+#          description: User's limit reached by key
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/ValidationInputParamsError'
+#        '500':
+#          description: Internal server error
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/ValidationInputParamsError'
 
 #  /news/categories:
 #    get:
