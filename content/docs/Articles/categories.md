@@ -16,3 +16,4 @@ slug: '/get-articles/categories'
 | news/Science                | Science                |
 | news/Sports                 | Sports                 |
 | news/Arts_and_Entertainment | Arts and Entertainment |
+| news/Opinion                | Opinion                |

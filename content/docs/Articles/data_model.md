@@ -7,6 +7,21 @@ slug: '/get-articles/data-model'
 
 The article data model is a JSON object that represents the structure of an article. The following table lists the properties of the article data model.
 
+```json
+{
+//    hello
+  "id": "string",
+  "title": "string",
+  "description": "string",
+  "url": "string",
+  "publishedAt": "string",
+  "source": {
+    "id": "string",
+    "name": "string"
+  }
+}
+```
+
 | Property name | Type   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | id            | string | The unique identifier of the article.                                       |
