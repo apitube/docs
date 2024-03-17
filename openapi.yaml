@@ -339,7 +339,7 @@ paths:
     get:
       tags:
         - Worldwide News API
-      summary: Get article by ID
+      summary: Get single article by ID
       description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`'
       parameters:
         - name: api_key
@@ -351,6 +351,71 @@ paths:
         - name: id
           in: query
           description: Article ID.
+          required: false
+          example: 'bd4ddb06-c2e2-4ada-8228-7c952da9ed22'
+          schema:
+            type: string
+        - name: export_format
+          in: query
+          description: Export formatted data in many formats.
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - json
+              - xml
+              - rss
+              - html
+              - csv
+              - tsv
+              - xls
+              - xlsx
+            default: json
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticles'
+        '400':
+          description: Parameter missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '429':
+          description: User's limit reached by key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationInputParamsError'
+
+  /news/story/{id}:
+    get:
+      tags:
+        - Worldwide News API
+      summary: Get article story by ID
+      description: "Get specific article story by ID.<br/><br/>Calling this endpoint requires `0.1 points`"
+      parameters:
+        - name: api_key
+          in: query
+          description: Your API key from dashboard.
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          description: Article story ID.
           required: false
           example: 'bd4ddb06-c2e2-4ada-8228-7c952da9ed22'
           schema:
@@ -511,7 +576,7 @@ components:
           format: string
         limit:
           type: integer
-          description: 'Articles per page. By default is 250. For paid plans limit reached to 1000 articles per page.'
+          description: 'Articles per page. By default is 15. For paid plans limit reached to 1000 articles per page.'
           format: int
           default: 250
         path:
