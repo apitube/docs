@@ -17,3 +17,4 @@ slug: '/get-articles/categories'
 | news/Sports                 | Sports                 |
 | news/Arts_and_Entertainment | Arts and Entertainment |
 | news/Opinion                | Opinion                |
+| uncategorized               | Uncategorized          |
