@@ -6,6 +6,12 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.9
+
+### Features
+
+- `[Articles]` Add 'story_id' as property to the article resource. Story ID is a unique identifier for the story.
+
 ## 1.0.8
 
 ### Features
