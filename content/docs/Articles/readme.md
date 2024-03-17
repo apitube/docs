@@ -11,16 +11,14 @@ Access real-time breaking news worldwide with the APITUBE API. Utilize various f
 
 - Real-time news articles
 - 80.000+ news sources
-- Export datasets in many formats: JSON, Excel, CSV, TSV and HTML.
+- Export datasets in many formats: JSON, XML, XLS, XLSX, CSV, TSV, HTML and RSS.
 - Search for pure text matches, phrases. Semantic search and text filtering combined. Filters by language, date, category, domain etc.
-- Export data via: Node.js, Java, Python, PHP, R, Ruby, Golang etc.
-- View articles history by date and location.
+- Export data via: Node.js, Java, Python, PHP, R, Ruby, Golang etc. View more at [Integrations](/integrations).
+- View articles history.
 - Our API is very user-friendly—you can start using it within minutes, so you can get everything up and running quickly.
 - Free for Development.
 - Employ diverse text analytics models to examine news data and extract valuable insights, enabling data-driven decision-making through our news API.
-- Export datasets in many formats: JSON, Excel, CSV, TSV and HTML.
-- 150+ countries
-- Topics
+- 105+ countries and 95 languages supported.
 
 ---
 
