@@ -511,7 +511,7 @@ components:
           format: string
         limit:
           type: integer
-          description: 'Articles per page. By default is 250. For paid plans limit reached to 5000 articles per page.'
+          description: 'Articles per page. By default is 250. For paid plans limit reached to 1000 articles per page.'
           format: int
           default: 250
         path:
@@ -614,6 +614,10 @@ components:
           type: string
           description: 'Article topic id.'
           format: string
+        story_id:
+          type: string
+          description: 'Story ID.'
+          format: string
         resource:
           type: array
           description: 'Information about resource.'
@@ -639,6 +643,10 @@ components:
           type: integer
           format: float
           description: Valid value is any floating number between -1 (very negative) to 1 (very positive).
+        summary:
+          type: array
+          items:
+            $ref: '#/components/schemas/NewsArticleSummary'
         locations:
           type: array
           items:
@@ -681,6 +689,22 @@ components:
               type: integer
               description: 'Longitude.'
               format: float
+
+    NewsArticleSummary:
+      title: sentiments
+      description: Article detected location
+      type: array
+      properties:
+        text:
+          type: string
+          description: 'Sentence.'
+          format: string
+          required: true
+        sentiment:
+          type: integer
+          description: 'Sentence sentiment score.'
+          format: float
+          required: true
 
 #    NewsCategories:
 #      title: categories

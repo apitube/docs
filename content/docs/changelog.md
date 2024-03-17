@@ -41,7 +41,7 @@ title: 'Changelog'
 ### Features
 
 - `[Articles]` Add filter 'search' to search find articles by title or content match. Example: `https://api.apitube.io/v1/news/articles?search=bitcoin`.
-- `[Articles]` Limit of articles per page for a paid user reached 5000 items per page.
+- `[Articles]` Limit of articles per page for a paid user reached 1000 items per page.
 
 ## 1.0.3
 
