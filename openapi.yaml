@@ -683,9 +683,9 @@ components:
           type: string
           description: 'Story ID.'
           format: string
-        resource:
+        source:
           type: array
-          description: 'Information about resource.'
+          description: 'Information about source.'
           required:
             - id
             - type
@@ -694,16 +694,16 @@ components:
           properties:
             id:
               type: string
-              description: 'Resource ID.'
+              description: 'Source ID.'
               format: string
             type:
               type: string
-              description: 'Resource type.'
+              description: 'Source type.'
               format: string
             rank:
-              type: string
-              description: 'Resource rank.'
-              format: string
+              type: integer
+              description: 'Source rank.'
+              format: int
         sentiment:
           type: integer
           format: float
