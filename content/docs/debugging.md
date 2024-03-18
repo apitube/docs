@@ -9,6 +9,8 @@ During the development process, closely examine the `user_input` key object, whi
 
 To check the `user_input` object, you can use the `user_input` parameter. When set to `1`, the `user_input` object will be included in the response.
 
+Worked only in the `json` and `xml` export format.
+
 ```shell
 curl -X GET "https://api.apitube.io/v1/news/articles?limit=2&title=Elon Musk&export_format=json&user_input=1"
 ```
