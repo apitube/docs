@@ -58,8 +58,12 @@ The article data model is a JSON object that represents the structure of an arti
     // article's locations
     "locations": {
         "countries": [ // array of countries
-            "United Kingdom",
-            "United States"
+            [
+                "country_name": "United Kingdom",
+                "country_code": "London",
+                "continent_code": "EU",
+                "capital_name": "London"
+            ]
         ]
     },
     // article's story id (string)

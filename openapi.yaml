@@ -721,39 +721,34 @@ components:
       title: locations
       description: Article detected location
       required:
-        - country_code
-        - country_name
-        - city_name
-        - coordinates
+        - countries
       type: array
       properties:
-        country_code:
-          type: string
-          description: 'Country code.'
-          format: string
-        country_name:
-          type: string
-          description: 'Country name.'
-          format: string
-        city_name:
-          type: string
-          description: 'City name.'
-          format: string
-        coordinates:
-          type: object
+        countries:
+          type: array
           required:
-            - latitude
-            - longitude
-          format: object
+            - country_name
+            - country_code
+            - continent_code
+            - capital_name
+          format: array
           properties:
-            latitude:
-              type: integer
-              description: 'Latitude.'
-              format: float
-            longitude:
-              type: integer
-              description: 'Longitude.'
-              format: float
+            country_name:
+              type: string
+              description: 'Country name.'
+              format: string
+            country_code:
+              type: string
+              description: 'Country code.'
+              format: string
+            continent_code:
+              type: string
+              description: 'Continent code.'
+              format: string
+            capital_name:
+              type: string
+              description: 'City name.'
+              format: string
 
     NewsArticleSummary:
       title: sentiments
