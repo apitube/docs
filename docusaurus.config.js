@@ -314,6 +314,10 @@ const config = {
               title: 'Other integrations',
               items: [
                 {
+                  label: 'Postman Collection',
+                  to: 'https://www.postman.com/apitube/workspace/apitube-worldwide-news-api-for-your-products/overview',
+                },
+                {
                   label: 'Golang',
                   to: '/integrations/go/NewRequest',
                 },
@@ -321,14 +325,14 @@ const config = {
                   label: 'Ruby',
                   to: '/integrations/ruby/Unirest',
                 },
-                {
-                  label: 'R',
-                  to: '/integrations/r/httr',
-                },
-                {
-                  label: 'Swift',
-                  to: '/integrations/swift/NSURLSession',
-                },
+                // {
+                //   label: 'R',
+                //   to: '/integrations/r/httr',
+                // },
+                // {
+                //   label: 'Swift',
+                //   to: '/integrations/swift/NSURLSession',
+                // },
                 {
                   label: 'All integrations',
                   to: '/integrations',
