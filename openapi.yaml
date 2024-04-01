@@ -568,6 +568,7 @@ components:
         - previous_page
         - pages
         - export_formats
+        - results
       type: object
       properties:
         status:
@@ -627,6 +628,10 @@ components:
         - resource
         - sentiment
         - locations
+        - summary
+        - source
+        - story_id
+        - topic
       type: object
       properties:
         id:
@@ -719,41 +724,54 @@ components:
 
     NewsArticleLocation:
       title: locations
-      description: Article detected location
-      required:
-        - countries
+      description: Article detected locations
       type: array
+      required:
+        - key
+        - name
+        - type
+        - country
+        - coords
       properties:
-        countries:
+        key:
+          type: string
+          description: 'Location key'
+          format: string
+        name:
+          type: string
+          description: 'Location name'
+          format: string
+        type:
+          type: string
+          description: 'Location type.'
+          format: string
+        country:
+          type: string
+          description: 'Location country code (ISO 3166-1 alpha-2 code)'
+          format: string
+        coords:
           type: array
-          required:
-            - country_name
-            - country_code
-            - continent_code
-            - capital_name
+          description: 'City name.'
           format: array
+          required:
+            - latitude
+            - longitude
           properties:
-            country_name:
+            latitude:
+              description: 'Location place latitude.'
+              format: float
+            longitude:
               type: string
-              description: 'Country name.'
-              format: string
-            country_code:
-              type: string
-              description: 'Country code.'
-              format: string
-            continent_code:
-              type: string
-              description: 'Continent code.'
-              format: string
-            capital_name:
-              type: string
-              description: 'City name.'
-              format: string
+              description: 'Location place longitude.'
+              format: float
 
     NewsArticleSummary:
       title: sentiments
       description: Article detected location
       type: array
+      required:
+        - text
+        - sentiment
       properties:
         text:
           type: string

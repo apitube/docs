@@ -56,16 +56,18 @@ The article data model is a JSON object that represents the structure of an arti
         }
     ],
     // article's locations
-    "locations": {
-        "countries": [ // array of countries
-            [
-                "country_name": "United Kingdom",
-                "country_code": "London",
-                "continent_code": "EU",
-                "capital_name": "London"
-            ]
-        ]
-    },
+    "locations": [
+        {
+	        "key": "abcdefg1234" // location's key (string),
+            "name": "London", // location's name (string)
+            "type": "city", // location's type (string)
+            "country": "uk", // location's country (ISO 3166-1 alpha-2 code)
+            "coords": {
+                "latitude": 51.5074, // location's latitude (float)
+                "longitude": -0.1278 // location's longitude (float)
+            }
+        }
+    ],
     // article's story id (string)
     "story_id": "7c4d2791-d297-41b5-9b5f-af72412962a2",
 }
