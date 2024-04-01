@@ -292,48 +292,42 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NewsArticles'
-        '204':
-          description: No content
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
         '400':
           description: Parameter missing or invalid
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error400'
         '401':
           description: Unauthorized
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error401'
         '402':
           description: Payment required
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error402'
         '404':
           description: Not found
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error404'
         '429':
-          description: User's limit reached by key
+          description: Too many requests
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error429'
         '500':
           description: Internal server error
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error500'
 
   /news/article/{id}:
     get:
@@ -384,21 +378,39 @@ paths:
         '400':
           description: Parameter missing or invalid
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
-        '429':
-          description: User's limit reached by key
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error401'
+        '402':
+          description: Payment required
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error402'
+        '404':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '429':
+          description: Too many requests
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error429'
         '500':
           description: Internal server error
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error500'
 
   /news/story/{id}:
     get:
@@ -449,21 +461,39 @@ paths:
         '400':
           description: Parameter missing or invalid
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
-        '429':
-          description: User's limit reached by key
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error401'
+        '402':
+          description: Payment required
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error402'
+        '404':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '429':
+          description: Too many requests
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error429'
         '500':
           description: Internal server error
           content:
-            application/json:
+            text/html:
               schema:
-                $ref: '#/components/schemas/ValidationInputParamsError'
+                $ref: '#/components/schemas/Error500'
 
 #  /sentiment:
 #    post:
@@ -501,43 +531,43 @@ paths:
 #          content:
 #            application/json:
 #              schema:
-#                $ref: '#/components/schemas/ValidationInputParamsError'
+#                $ref: '#/components/schemas/Error'
 #        '400':
 #          description: Parameter missing or invalid
 #          content:
 #            application/json:
 #              schema:
-#                $ref: '#/components/schemas/ValidationInputParamsError'
+#                $ref: '#/components/schemas/Error'
 #        '401':
 #          description: Unauthorized
 #          content:
 #            application/json:
 #              schema:
-#                $ref: '#/components/schemas/ValidationInputParamsError'
+#                $ref: '#/components/schemas/Error'
 #        '402':
 #          description: Payment required
 #          content:
 #            application/json:
 #              schema:
-#                $ref: '#/components/schemas/ValidationInputParamsError'
+#                $ref: '#/components/schemas/Error'
 #        '404':
 #          description: Not found
 #          content:
 #            application/json:
 #              schema:
-#                $ref: '#/components/schemas/ValidationInputParamsError'
+#                $ref: '#/components/schemas/Error'
 #        '429':
 #          description: User's limit reached by key
 #          content:
 #            application/json:
 #              schema:
-#                $ref: '#/components/schemas/ValidationInputParamsError'
+#                $ref: '#/components/schemas/Error'
 #        '500':
 #          description: Internal server error
 #          content:
 #            application/json:
 #              schema:
-#                $ref: '#/components/schemas/ValidationInputParamsError'
+#                $ref: '#/components/schemas/Error'
 
 #  /news/categories:
 #    get:
@@ -838,30 +868,53 @@ components:
           type: string
           description: 'Language name.'
 
-    ValidationInputParamsError:
-      title: Request failed
-      description: Failed request
-      required:
-        - status
-        - error_code
-        - message
-      type: object
-      properties:
-        status:
-          type: string
-          description: 'Error status.'
-          format: string
-          enum:
-            - ok
-            - error
-        error_code:
-          type: string
-          description: 'Error code. [List HTTP Response codes](/http_response_codes)'
-          format: string
-        message:
-          type: string
-          description: 'Error message description. [List HTTP Response codes description](/http_response_codes)'
-          format: string
+    Error400:
+      title: Parameter missing or invalid
+      description: "Failed request [List HTTP Response codes](/http_response_codes)"
+      format: string
+      type: string
+      enum:
+        - 400|BadRequest
+
+    Error401:
+      title: Unauthorized
+      description: "Failed request [List HTTP Response codes](/http_response_codes)"
+      format: string
+      type: string
+      enum:
+        - 401|Unauthorized
+
+    Error402:
+      title: Payment required
+      description: "Failed request [List HTTP Response codes](/http_response_codes)"
+      format: string
+      type: string
+      enum:
+        - 402|PointsBalanceNegative
+
+    Error404:
+      title: Not found
+      description: "Failed request [List HTTP Response codes](/http_response_codes)"
+      format: string
+      type: string
+      enum:
+        - 404|NotFound
+
+    Error429:
+      title: Too many requests
+      description: "Failed request [List HTTP Response codes](/http_response_codes)"
+      format: string
+      type: string
+      enum:
+        - 429|TooManyRequests
+
+    Error500:
+      title: Internal server error
+      description: "Failed request [List HTTP Response codes](/http_response_codes)"
+      format: string
+      type: string
+      enum:
+        - 500|InternalServerError
 
     NewsArticleExportFormats:
       title: Exporting article formats
