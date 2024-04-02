@@ -23,6 +23,11 @@ The article data model is a JSON object that represents the structure of an arti
     "content": "The latest figures come as the UK government..",
     // article's image (string)
     "image": "https://ichef.bbci.co.uk/news/1024/branded_news/1A3A/production/_118073073_gettyimages-123456789.jpg",
+    // article's authors (array of strings)
+	"authors": [
+		"John Dow",
+		"Jane Dow"
+	],
     // article's links (array of links)
     "links": [
 	    "https://www.bbc.co.uk/news/uk-57228756",

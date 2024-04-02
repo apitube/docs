@@ -40,6 +40,13 @@ paths:
           example: 'content=Macbook'
           schema:
             type: string
+        - name: author
+          in: query
+          description: Find articles by author name.
+          required: false
+          example: 'author=John Doe'
+          schema:
+            type: string
         - name: search
           in: query
           description: Find articles by article title or article content match.
@@ -650,6 +657,7 @@ components:
         - description
         - content
         - image
+        - authors
         - links
         - videos
         - country
@@ -690,10 +698,14 @@ components:
           type: string
           description: 'First image in article.'
           format: string
+        authors:
+          type: array
+          description: 'Authors from article.'
+          format: array
         links:
           type: array
           description: 'Links from article.'
-          format: string
+          format: array
         videos:
           type: array
           description: 'Videos from article.'
@@ -796,7 +808,7 @@ components:
               format: float
 
     NewsArticleSummary:
-      title: sentiments
+      title: sentences
       description: Article detected location
       type: array
       required:
