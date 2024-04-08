@@ -820,11 +820,6 @@ components:
           description: 'Sentence.'
           format: string
           required: true
-        sentiment:
-          type: integer
-          description: 'Sentence sentiment score.'
-          format: float
-          required: true
 
 #    NewsCategories:
 #      title: categories
