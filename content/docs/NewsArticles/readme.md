@@ -1,9 +1,9 @@
 ---
 sidebar_position: 8
-slug: '/get-articles'
+slug: '/news-articles'
 ---
 
-# Worldwide News API
+# News Articles
 
 Access real-time breaking news worldwide with the APITUBE API. Utilize various filters to refine and obtain the specific results you're looking for.
 
@@ -25,7 +25,7 @@ Access real-time breaking news worldwide with the APITUBE API. Utilize various f
 import CardList from '@site/src/components/CardList'
 
 <CardList
-columnSize={3}
+columnSize={4}
 items={[
 {
 icon: "mdi:book-open-blank-variant",
@@ -44,12 +44,6 @@ icon: "mdi:connection",
 href: "/integrations",
 title: "Integrations",
 description: "Learn how to integrate into your application."
-},
-{
-icon: "mdi:api",
-href: "/use-cases",
-title: "Example Use Cases",
-description: "See how it works in practice and get inspired!"
 }
 ]}
 />

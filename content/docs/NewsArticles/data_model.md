@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-slug: '/get-articles/data-model'
+slug: '/news-articles/data-model'
 ---
 
 # Article data model

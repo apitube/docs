@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: '/get-articles/languages'
+slug: '/news-articles/languages'
 ---
 
 # Supported languages

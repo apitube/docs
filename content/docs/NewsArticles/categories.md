@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-slug: '/get-articles/categories'
+slug: '/news-articles/categories'
 ---
 
 # Categories list

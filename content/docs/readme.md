@@ -12,7 +12,7 @@ This documentation page is designed to showcase a variety of API endpoints that 
 import CardList from '@site/src/components/CardList'
 
 <CardList
-columnSize={3}
+columnSize={4}
 items={[
 {
 icon: "mdi:account",
@@ -31,12 +31,6 @@ icon: "mdi:connection",
 href: "/integrations",
 title: "Integrations",
 description: "Learn how to integrate into your application."
-},
-{
-icon: "mdi:api",
-href: "/use-cases",
-title: "Example Use Cases",
-description: "See how it works in practice and get inspired!"
 }
 ]}
 />

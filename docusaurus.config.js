@@ -34,14 +34,14 @@ const docs = [
     path: 'content/integrations',
     routeBasePath: '/integrations',
     sidebarPath: require.resolve('./sidebars')
-  },
-  {
-    id: 'use-cases',
-    path: 'content/use-cases',
-    routeBasePath: '/use-cases',
-    sidebarPath: require.resolve('./sidebars'),
-    sidebarCollapsible: false,
   }
+  // {
+  //   id: 'use-cases',
+  //   path: 'content/use-cases',
+  //   routeBasePath: '/use-cases',
+  //   sidebarPath: require.resolve('./sidebars'),
+  //   sidebarCollapsible: false,
+  // }
 ];
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
@@ -193,12 +193,12 @@ const config = {
               position: 'left',
               label: 'API Reference',
             },
-            {
-              to: 'use-cases',
-              // sidebarId: 'useCases',
-              label: 'Examples',
-              position: 'left'
-            },
+            // {
+            //   to: 'use-cases',
+            //   // sidebarId: 'useCases',
+            //   label: 'Examples',
+            //   position: 'left'
+            // },
             {
               position: 'right',
               href: 'https://apitube.io',
