@@ -10,14 +10,14 @@ info:
     name: Apache-2.0
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
 tags:
-  - name: Worldwide News API
+  - name: News Articles
     description: Discover news articles that align with one or multiple search criteria.
 paths:
   /news/articles:
     get:
       tags:
-        - Worldwide News API
-      summary: Get articles
+        - News Articles
+      summary: Get news articles
       description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/><br/>Calling this endpoint requires `1 point`"
       parameters:
         - name: api_key
@@ -339,8 +339,8 @@ paths:
   /news/article/{id}:
     get:
       tags:
-        - Worldwide News API
-      summary: Get single article by ID
+        - News Articles
+      summary: Get single news article
       description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`'
       parameters:
         - name: api_key
@@ -422,8 +422,8 @@ paths:
   /news/story/{id}:
     get:
       tags:
-        - Worldwide News API
-      summary: Get article story by ID
+        - News Articles
+      summary: Get story of news article
       description: "Get specific article story by ID.<br/><br/>Calling this endpoint requires `0.1 points`"
       parameters:
         - name: api_key
