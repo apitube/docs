@@ -14,28 +14,29 @@ Are you interested in accessing news/blog content that originates from sources b
 import ExampleRequest from '@site/src/components/ExampleRequest'
 
 ### Entertainment news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Arts_and_Entertainment&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/Arts_and_Entertainment&country=af"></ExampleRequest>
 
 ### Business news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Business&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/Business&country=af"></ExampleRequest>
 
 ### Environment news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Environment&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/Environment&country=af"></ExampleRequest>
 
 ### Health news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Health&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/Health&country=af"></ExampleRequest>
 
 ### Politics news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Politics&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/Politics&country=af"></ExampleRequest>
 
 ### Science news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Science&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/Science&country=af"></ExampleRequest>
 
 ### Sports news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Sports&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/Sports&country=af"></ExampleRequest>
 
 ### Technology news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/Technology&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/Technology&country=af"></ExampleRequest>
 
 ### World news
-<ExampleRequest url="https://api.apitube.io/v1/news/articles?limit=2&category=news/World&language=af"></ExampleRequest>
+<ExampleRequest url="https://api.apitube.io/v1/news/articles-demo?limit=2&category=news/World&country=af"></ExampleRequest>
+
