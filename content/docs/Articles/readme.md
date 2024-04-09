@@ -29,7 +29,7 @@ columnSize={3}
 items={[
 {
 icon: "mdi:book-open-blank-variant",
-href: "/api-reference/get-articles",
+href: "/api-reference/get-news-articles",
 title: "API Reference",
 description: "Dig into the details of using the Get Articles API."
 },

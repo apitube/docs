@@ -7,7 +7,7 @@ sidebar_position: 7
 
 Find articles by news source rank.
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/get-news-articles)
 
 ## Get news articles from sources where rank_min is 70 and rank_max is 100
 

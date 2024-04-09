@@ -7,7 +7,7 @@ sidebar_position: 3
 
 Find articles by category.
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/get-news-articles)
 
 ## Get news articles from "Business" category
 

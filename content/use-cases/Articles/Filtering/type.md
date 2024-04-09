@@ -7,7 +7,7 @@ sidebar_position: 6
 
 Find articles by news type.
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/get-news-articles)
 
 ## Get news articles where type is "news"
 

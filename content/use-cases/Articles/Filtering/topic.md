@@ -7,7 +7,7 @@ sidebar_position: 4
 
 Find articles by topic.
 
-[More filter options see in API Reference](/api-reference/get-articles)
+[More filter options see in API Reference](/api-reference/get-news-articles)
 
 ## Get news articles where topic is "financial_news"
 
