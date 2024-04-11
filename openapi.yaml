@@ -323,6 +323,12 @@ paths:
             text/html:
               schema:
                 $ref: '#/components/schemas/Error404'
+        '422':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error422'
         '429':
           description: Too many requests
           content:
@@ -406,6 +412,12 @@ paths:
             text/html:
               schema:
                 $ref: '#/components/schemas/Error404'
+        '422':
+          description: Something goes wrong
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error422'
         '429':
           description: Too many requests
           content:
@@ -489,6 +501,12 @@ paths:
             text/html:
               schema:
                 $ref: '#/components/schemas/Error404'
+        '422':
+          description: Something goes wrong
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error422'
         '429':
           description: Too many requests
           content:
@@ -502,93 +520,295 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error500'
 
-#  /sentiment:
-#    post:
-#      tags:
-#        - Text Analytics
-#      summary: Sentiment
-#      description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint requires `0.1 points`
-#      parameters:
+  /detectSentiment:
+    post:
+      tags:
+        - Text Analytics
+      summary: Detect text sentiment
+      description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint is `free`
+      parameters:
+        - name: text
+          in: query
+          description: The content that will be utilized to compute sentiment.
+          required: false
+          example: 'text=hello world'
+          schema:
+            type: string
+            format: string
+            minimum: 6
+            maximum: 20000
+            description: Max value of string is `20000 length`
 #        - name: api_key
 #          in: query
 #          description: Your API key from dashboard.
 #          required: false
 #          schema:
 #            type: string
-#        - name: text
-#          in: query
-#          description: The content that will be utilized to compute sentiment. [List of supported languages](/text-analytics/sentiment/languages).
-#          required: false
-#          example: 'text=hello world'
-#          schema:
-#            type: string
-#            format: string
-#            minimum: 6
-#            maximum: 75000
-#            description: Max value of string is `75000 length`
-#      responses:
-#        '200':
-#          description: Successful operation
-#          content:
-#            application/json:
-#              schema:
-#                $ref: '#/components/schemas/Sentiment'
-#        '204':
-#          description: No content
-#          content:
-#            application/json:
-#              schema:
-#                $ref: '#/components/schemas/Error'
-#        '400':
-#          description: Parameter missing or invalid
-#          content:
-#            application/json:
-#              schema:
-#                $ref: '#/components/schemas/Error'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  request_id:
+                    type: string
+                    description: 'Request ID.'
+                    format: string
+                  text:
+                    type: string
+                    description: 'Requested text.'
+                    format: string
+                  total_score:
+                    type: integer
+                    description: 'Total sentiment score.'
+                    format: float
+                  total_comparative:
+                    type: integer
+                    description: 'Total sentiment comparative.'
+                    format: float
+                  words_tokens:
+                    type: array
+                    description: 'Words tokens.'
+                    format: array
+                  positive_words:
+                    type: array
+                    description: 'Positive words.'
+                    format: array
+                  negative_worlds:
+                    type: array
+                    description: 'Negative words.'
+                    format: array
+                  calculation:
+                    type: array
+                    description: 'Score calculation.'
+                    format: array
+        '400':
+          description: Parameter missing or invalid
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error400'
 #        '401':
 #          description: Unauthorized
 #          content:
-#            application/json:
+#            text/html:
 #              schema:
-#                $ref: '#/components/schemas/Error'
+#                $ref: '#/components/schemas/Error401'
 #        '402':
 #          description: Payment required
 #          content:
-#            application/json:
+#            text/html:
 #              schema:
-#                $ref: '#/components/schemas/Error'
-#        '404':
-#          description: Not found
-#          content:
-#            application/json:
-#              schema:
-#                $ref: '#/components/schemas/Error'
-#        '429':
-#          description: User's limit reached by key
-#          content:
-#            application/json:
-#              schema:
-#                $ref: '#/components/schemas/Error'
-#        '500':
-#          description: Internal server error
-#          content:
-#            application/json:
-#              schema:
-#                $ref: '#/components/schemas/Error'
+#                $ref: '#/components/schemas/Error402'
+        '404':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '422':
+          description: Something goes wrong
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error422'
+        '429':
+          description: Too many requests
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error429'
+        '500':
+          description: Internal server error
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error500'
 
-#  /news/categories:
-#    get:
-#      tags:
-#        - Articles
-#      summary: Get categories
-#      description: 'Get all available categories list.'
-#      responses:
-#        '200':
-#          description: Successful operation
-#          content:
-#            application/json:
-#              schema:
-#                $ref: '#/components/schemas/NewsCategories'
+  /detectLanguage:
+    post:
+      tags:
+        - Text Analytics
+      summary: Detect text language
+      description: Detect text language.<br/><br/>Calling this endpoint is `free`
+      parameters:
+        - name: text
+          in: query
+          description: The content that will be utilized to compute language.
+          required: false
+          example: 'text=hello world'
+          schema:
+            type: string
+            format: string
+            minimum: 6
+            maximum: 20000
+            description: Max value of string is `20000 length`
+      #        - name: api_key
+      #          in: query
+      #          description: Your API key from dashboard.
+      #          required: false
+      #          schema:
+      #            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  request_id:
+                    type: string
+                    description: 'Request ID.'
+                    format: string
+                  text:
+                    type: string
+                    description: 'Requested text.'
+                    format: string
+                  language_code:
+                    type: string
+                    description: 'Detected language (ISO 639-1 code).'
+                    format: string
+        '400':
+          description: Parameter missing or invalid
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        #        '401':
+        #          description: Unauthorized
+        #          content:
+        #            text/html:
+        #              schema:
+        #                $ref: '#/components/schemas/Error401'
+        #        '402':
+        #          description: Payment required
+        #          content:
+        #            text/html:
+        #              schema:
+        #                $ref: '#/components/schemas/Error402'
+        '404':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '422':
+          description: Something goes wrong
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error422'
+        '429':
+          description: Too many requests
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error429'
+        '500':
+          description: Internal server error
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error500'
+
+  /suggestCategory:
+    post:
+      tags:
+        - Text Analytics
+      summary: Suggest category
+      description: Suggest category by text.<br/><br/>Calling this endpoint is `free`
+      parameters:
+        - name: text
+          in: query
+          description: The content that will be utilized to compute language.
+          required: false
+          example: 'text=hello world'
+          schema:
+            type: string
+            format: string
+            minimum: 6
+            maximum: 20000
+            description: Max value of string is `20000 length`
+      #        - name: api_key
+      #          in: query
+      #          description: Your API key from dashboard.
+      #          required: false
+      #          schema:
+      #            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  request_id:
+                    type: string
+                    description: 'Request ID.'
+                    format: string
+                  text:
+                    type: string
+                    description: 'Requested text.'
+                    format: string
+                  label:
+                    type: string
+                    description: 'Detected category.'
+                    format: string
+                    default: 'uncategorized'
+                  scores:
+                    type: array
+                    description: 'Scores.'
+                    format: array
+                  matched_words:
+                    type: string
+                    description: 'Matched words.'
+                    format: string
+        '400':
+          description: Parameter missing or invalid
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        #        '401':
+        #          description: Unauthorized
+        #          content:
+        #            text/html:
+        #              schema:
+        #                $ref: '#/components/schemas/Error401'
+        #        '402':
+        #          description: Payment required
+        #          content:
+        #            text/html:
+        #              schema:
+        #                $ref: '#/components/schemas/Error402'
+        '404':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '422':
+          description: Something goes wrong
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error422'
+        '429':
+          description: Too many requests
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error429'
+        '500':
+          description: Internal server error
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error500'
 
 components:
   schemas:
@@ -907,6 +1127,14 @@ components:
       enum:
         - 404|NotFound
 
+    Error422:
+      title: Something goes wrong
+      description: "Failed request [List HTTP Response codes](/http_response_codes)"
+      format: string
+      type: string
+      enum:
+        - 429|SomethingGoesWrong
+
     Error429:
       title: Too many requests
       description: "Failed request [List HTTP Response codes](/http_response_codes)"
@@ -969,22 +1197,3 @@ components:
           type: string
           description: Export to XLSX format.
           format: string
-
-    Sentiment:
-      title: language
-      description: Single language
-      required:
-        - sentiments
-        - average
-        - sentences
-      type: object
-      properties:
-        sentiments:
-          type: array
-          description: 'Array of sentiment score for each sentence.'
-        average:
-          type: string
-          description: 'Average sentiment score.'
-        sentences:
-          type: array
-          description: 'Array of sentences.'
