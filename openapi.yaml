@@ -93,7 +93,7 @@ paths:
 #            default: english
         - name: category
           in: query
-          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/get-articles/categories).'
+          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/news-articles/categories).'
           example: 'category=design/digital,design/web'
           required: false
           style: form
