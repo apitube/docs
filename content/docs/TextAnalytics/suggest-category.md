@@ -19,7 +19,7 @@ The Detect Language endpoint returns a JSON object with the following properties
 	// text data (string)
 	"text": "In making successful video game adaptations, it feels more important to strike the right tone rather than follow the source material to the letter. “Tone” in Fallout is Walton Goggins’ whiskey-soaked cowboy drawl ripped straight from the age of Gary Cooper and John Wayne extolling the virtues of bucolic Vault-Tec living with a sign that says “Test Subjects” just a touch off-screen.",
 	// suggested category (string)
-	"label": "news/Arts_and_Entertainment",
+	"category": "news/Arts_and_Entertainment",
     // scores for each category (object)
     "scores": {
         "news/Arts_and_Entertainment": 0.9999999999999999,

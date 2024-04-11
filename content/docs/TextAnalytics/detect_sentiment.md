@@ -21,30 +21,6 @@ The Detect Sentiment endpoint returns a JSON object with the following propertie
 	// total score (float)
 	"total_score": 0.8,
 	// total comparative (float)
-	"total_comparative": 0.8,
-	// words tokens
-	"words_tokens": [
-	    "straight",
-		"strike",
-		"important",
-		"successful"
-	],
-	// positive words tokens
-	"positive_words_tokens": [
-        "straight",
-        "important",
-        "successful"
-    ],
-    // negative words tokens
-    "negative_words_tokens": [
-        "strike"
-    ],
-    // calculation
-    "calculation": {
-        "straight": -1,
-        "strike": 1,
-        "important": -2,
-        "successful": 3
-    }
+	"total_comparative": 0.8
 }
 ```

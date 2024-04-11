@@ -568,22 +568,6 @@ paths:
                     type: integer
                     description: 'Total sentiment comparative.'
                     format: float
-                  words_tokens:
-                    type: array
-                    description: 'Words tokens.'
-                    format: array
-                  positive_words:
-                    type: array
-                    description: 'Positive words.'
-                    format: array
-                  negative_worlds:
-                    type: array
-                    description: 'Negative words.'
-                    format: array
-                  calculation:
-                    type: array
-                    description: 'Score calculation.'
-                    format: array
         '400':
           description: Parameter missing or invalid
           content:
@@ -754,7 +738,7 @@ paths:
                     type: string
                     description: 'Requested text.'
                     format: string
-                  label:
+                  category:
                     type: string
                     description: 'Detected category.'
                     format: string
@@ -763,10 +747,6 @@ paths:
                     type: array
                     description: 'Scores.'
                     format: array
-                  matched_words:
-                    type: string
-                    description: 'Matched words.'
-                    format: string
         '400':
           description: Parameter missing or invalid
           content:
