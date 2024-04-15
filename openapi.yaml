@@ -5,10 +5,7 @@ info:
   title: API Reference
   description: >-
     Here you have detailed documentation of all available API functions. To get started, you can make the sample request for each endpoint or [integrate into your application](/integrations).
-  version: 1.1.0
-  license:
-    name: Apache-2.0
-    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+  version: 1.0.7
 tags:
   - name: News Articles
     description: Discover news articles that align with one or multiple search criteria.
@@ -18,7 +15,7 @@ paths:
       tags:
         - News Articles
       summary: Get news articles
-      description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/><br/>Calling this endpoint requires `1 point`"
+      description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
         - name: api_key
           in: query
@@ -298,7 +295,336 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticles'
+                $ref: '#/components/schemas/NewsArticlesOutput'
+        '400':
+          description: Parameter missing or invalid
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '402':
+          description: Payment required
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error402'
+        '404':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '422':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error422'
+        '429':
+          description: Too many requests
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error429'
+        '500':
+          description: Internal server error
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error500'
+
+  /news/top-headlines:
+    get:
+      tags:
+        - News Articles
+      summary: Get top headlines
+      description: "The top headlines endpoint provides access to the most recent and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
+      parameters:
+        - name: api_key
+          in: query
+          description: Your API key from dashboard.
+          required: false
+          schema:
+            type: string
+        - name: title
+          in: query
+          description: Find articles by article title.
+          required: false
+          example: 'title=Apple'
+          schema:
+            type: string
+        - name: content
+          in: query
+          description: Find articles by article content.
+          required: false
+          example: 'content=Macbook'
+          schema:
+            type: string
+        - name: author
+          in: query
+          description: Find articles by author name.
+          required: false
+          example: 'author=John Doe'
+          schema:
+            type: string
+        - name: search
+          in: query
+          description: Find articles by article title or article content match.
+          required: false
+          example: 'search=Macbook Pro'
+          schema:
+            type: string
+        - name: type
+          in: query
+          description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
+          example: 'type=news,blog/company'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - news
+              - opinion
+              - blog/company
+              - blog/personal
+            default: available
+        - name: country
+          in: query
+          description: 'Find articles in the specified country(s). Multiple options can be specified by separating them with a comma, for example: `us,fr`. [Full list of available countries](/news-articles/countries).'
+          example: 'country=us,gb'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+        #        - name: language
+        #          in: query
+        #          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/news-articles/categories).'
+        #          example: 'language=en,fr'
+        #          required: false
+        #          style: form
+        #          explode: false
+        #          deprecated: false
+        #          schema:
+        #            type: string
+        #            enum:
+        #              - english
+        #            default: english
+        - name: category
+          in: query
+          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/news-articles/categories).'
+          example: 'category=design/digital,design/web'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - news/World
+              - news/Business
+              - news/Politics
+              - news/Technology
+              - news/Environment
+              - news/Health
+              - news/Science
+              - news/Sports
+              - news/Arts_and_Entertainment
+        - name: topic
+          in: query
+          description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/news-articles/topics).'
+          example: 'topic=crypto_news'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - crypto_news
+              - financial_news
+              - video_games_news
+              - ai_news
+        - name: source
+          in: query
+          description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
+          example: 'source=techcrunch.com,theverge.com'
+          required: false
+          style: form
+          explode: false
+          schema:
+            type: string
+        - name: date_start
+          in: query
+          description: 'The starting date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
+          example: 'date_start=2023-10-09'
+          required: false
+          examples:
+            1:
+              value: '2023-10-09'
+            2:
+              value: '2023-08-10 00:00:00'
+            3:
+              value: '2023-10-09T00:00:00'
+            4:
+              value: '2023-10-09T00:00:00+00:00'
+            5:
+              value: '2023-10-09T00:00:00+0000'
+            6:
+              value: '2023-10-09T00:00:00.000Z'
+            7:
+              value: '1698064154'
+          schema:
+            type: string
+            enum:
+              - 'RFC850'
+              - 'RFC1036'
+              - 'RFC1123'
+              - 'RFC2822'
+              - 'RFC3339'
+              - 'ISO8601'
+              - 'timestamp(as integer)'
+        - name: date_end
+          in: query
+          description: 'The last date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
+          example: 'date_end=2023-10-09'
+          required: false
+          examples:
+            1:
+              value: '2023-10-09'
+            2:
+              value: '2023-08-10 00:00:00'
+            3:
+              value: '2023-10-09T00:00:00'
+            4:
+              value: '2023-10-09T00:00:00+00:00'
+            5:
+              value: '2023-10-09T00:00:00+0000'
+            6:
+              value: '2023-10-09T00:00:00.000Z'
+            7:
+              value: '1698064154'
+          schema:
+            type: string
+            example: 3232323
+            enum:
+              - 'RFC850'
+              - 'RFC1036'
+              - 'RFC1123'
+              - 'RFC2822'
+              - 'RFC3339'
+              - 'ISO8601'
+              - 'timestamp(as integer)'
+        - name: rank_min
+          in: query
+          description: The lowest boundary of the rank of a news website to filter by.
+          required: false
+          example: 'rank_min=45'
+          schema:
+            type: integer
+            format: int
+            minimum: 1
+            maximum: 99
+        - name: rank_max
+          in: query
+          description: The upper boundary of the rank of a news website to filter by.
+          required: false
+          example: 'rank_max=45'
+          schema:
+            type: integer
+            format: int
+            minimum: 1
+            maximum: 99
+        - name: sentiment_min
+          in: query
+          description: The minimum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
+          required: false
+          example: 'sentiment_min=0.02'
+          schema:
+            type: integer
+            format: int
+            minimum: -1
+            maximum: 1
+        - name: sentiment_max
+          in: query
+          description: The maximum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
+          required: false
+          example: 'sentiment_max=0.01'
+          schema:
+            type: integer
+            format: int
+            minimum: -1
+            maximum: 1
+        - name: location_name
+          in: query
+          description: Find articles in a specific location. Country or city.
+          required: false
+          example: 'location_name=Barcelona'
+          schema:
+            type: string
+        - name: export_format
+          in: query
+          description: Export formatted data in many formats.
+          example: 'export_format=json'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - json
+              - xml
+              - rss
+              - html
+              - csv
+              - tsv
+              - xls
+              - xlsx
+            default: json
+        - name: sort_by
+          in: query
+          description: Choose the criteria for sorting the news articles.
+          example: 'sort_by=date'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - published
+              - created
+              - sentiment
+            default: created
+        - name: sort_direction
+          in: query
+          description: Choose the criteria for sorting the news articles.
+          example: 'sort_direction=desc'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - desc
+              - asc
+            default: desc
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticlesOutput'
         '400':
           description: Parameter missing or invalid
           content:
@@ -347,7 +673,7 @@ paths:
       tags:
         - News Articles
       summary: Get single news article
-      description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`'
+      description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>This api endpoint also available in `POST` request.'
       parameters:
         - name: api_key
           in: query
@@ -387,7 +713,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticles'
+                $ref: '#/components/schemas/NewsArticlesOutput'
         '400':
           description: Parameter missing or invalid
           content:
@@ -436,7 +762,7 @@ paths:
       tags:
         - News Articles
       summary: Get story of news article
-      description: "Get specific article story by ID.<br/><br/>Calling this endpoint requires `0.1 points`"
+      description: "Get specific article story by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
         - name: api_key
           in: query
@@ -476,7 +802,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/NewsArticles'
+                $ref: '#/components/schemas/NewsArticlesOutput'
         '400':
           description: Parameter missing or invalid
           content:
@@ -520,12 +846,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error500'
 
-  /detectSentiment:
+  /detect-sentiment:
     post:
       tags:
         - Text Analytics
       summary: Detect text sentiment
-      description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint is `free`
+      description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
         - name: text
           in: query
@@ -611,12 +937,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error500'
 
-  /detectLanguage:
+  /detect-language:
     post:
       tags:
         - Text Analytics
       summary: Detect text language
-      description: Detect text language.<br/><br/>Calling this endpoint is `free`
+      description: Detect text language.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
         - name: text
           in: query
@@ -703,7 +1029,7 @@ paths:
       tags:
         - Text Analytics
       summary: Suggest category
-      description: Suggest category by text.<br/><br/>Calling this endpoint is `free`
+      description: Suggest category by text.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
         - name: text
           in: query
@@ -792,7 +1118,7 @@ paths:
 
 components:
   schemas:
-    NewsArticles:
+    NewsArticlesOutput:
       title: articles
       description: Latest articles
       required:
