@@ -1,9 +1,9 @@
 ---
 sidebar_position: 9
-slug: '/text-analytics'
+slug: '/text-analytics-api'
 ---
 
-# Text Analytics
+# Text Analytics API
 
 The Text Analytics API provides a set of endpoints for analyzing text data. The API can be used to analyze the sentiment of text, extract key phrases, and detect the language of the text. The API is designed to be simple to use and easy to integrate into your applications.
 
@@ -14,19 +14,19 @@ columnSize={4}
 items={[
 {
 icon: "mdi:text-recognition",
-href: "/text-analytics/detect-sentiment",
+href: "/text-analytics-api/detect-sentiment",
 title: "Detect Sentiment",
 description: "Detect the sentiment of text data."
 },
 {
 icon: "mdi:text-recognition",
-href: "/text-analytics/detect-language",
+href: "/text-analytics-api/detect-language",
 title: "Detect Language",
 description: "Get the language of your text data."
 },
 {
 icon: "mdi:text-recognition",
-href: "/text-analytics/suggest-category",
+href: "/text-analytics-api/suggest-category",
 title: "Suggest Category",
 description: "Suggestions for categorizing text data."
 }

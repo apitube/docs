@@ -7,13 +7,13 @@ info:
     Here you have detailed documentation of all available API functions. To get started, you can make the sample request for each endpoint or [integrate into your application](/integrations).
   version: 1.0.7
 tags:
-  - name: News Articles
+  - name: News API
     description: Discover news articles that align with one or multiple search criteria.
 paths:
   /news/articles:
     get:
       tags:
-        - News Articles
+        - News API
       summary: Get news articles
       description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
@@ -342,7 +342,7 @@ paths:
   /news/top-headlines:
     get:
       tags:
-        - News Articles
+        - News API
       summary: Get top headlines
       description: "The top headlines endpoint provides access to the most recent and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
@@ -671,7 +671,7 @@ paths:
   /news/article/{id}:
     get:
       tags:
-        - News Articles
+        - News API
       summary: Get single news article
       description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>This api endpoint also available in `POST` request.'
       parameters:
@@ -760,7 +760,7 @@ paths:
   /news/story/{id}:
     get:
       tags:
-        - News Articles
+        - News API
       summary: Get story of news article
       description: "Get specific article story by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
@@ -849,7 +849,7 @@ paths:
   /detect-sentiment:
     post:
       tags:
-        - Text Analytics
+        - Text Analytics API
       summary: Detect text sentiment
       description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
@@ -940,7 +940,7 @@ paths:
   /detect-language:
     post:
       tags:
-        - Text Analytics
+        - Text Analytics API
       summary: Detect text language
       description: Detect text language.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
@@ -1027,7 +1027,7 @@ paths:
   /suggestCategory:
     post:
       tags:
-        - Text Analytics
+        - Text Analytics API
       summary: Suggest category
       description: Suggest category by text.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:

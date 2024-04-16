@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: '/news-articles/countries'
+slug: '/news-api/countries'
 ---
 
 # Supported countries

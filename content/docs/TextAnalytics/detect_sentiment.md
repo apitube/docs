@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-slug: '/text-analytics/detect-sentiment'
+slug: '/text-analytics-api/detect-sentiment'
 ---
 
 # Detect Sentiment

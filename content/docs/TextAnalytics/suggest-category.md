@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: '/text-analytics/suggest-category'
+slug: '/text-analytics-api/suggest-category'
 ---
 
 # Suggest Category

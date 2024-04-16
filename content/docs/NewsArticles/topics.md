@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-slug: '/news-articles/topics'
+slug: '/news-api/topics'
 ---
 
 # Topics list

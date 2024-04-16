@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: '/text-analytics/detect-language'
+slug: '/text-analytics-api/detect-language'
 ---
 
 # Detect Language
