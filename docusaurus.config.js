@@ -229,10 +229,10 @@ const config = {
                 //   label: 'Features',
                 //   to: 'https://apitube.pub/product/features',
                 // },
-                {
-                  label: 'API Status',
-                  to: 'https://status.apitube.io',
-                },
+                // {
+                //   label: 'API Status',
+                //   to: 'https://status.apitube.io',
+                // },
                 {
                   label: 'Blog & News',
                   to: 'https://apitube.io/blog',
