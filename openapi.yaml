@@ -5,7 +5,7 @@ info:
   title: API Reference
   description: >-
     Here you have detailed documentation of all available API functions. To get started, you can make the sample request for each endpoint or [integrate into your application](/integrations).
-  version: 1.0.7
+  version: 1.0.8
 tags:
   - name: News API
     description: Discover news articles that align with one or multiple search criteria.
@@ -1116,7 +1116,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error500'
 
-  /suggest-summary:
+  /text-summarization:
     post:
       tags:
         - Text Analytics API

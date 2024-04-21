@@ -6,10 +6,15 @@ title: 'Changelog'
 
 # Changelog
 
-## 1.0.7
+## 1.0.8
 
 ### Features
 
+- `[Text Analytics API]` Added new feature: **Suggest text Summary**
+
+## 1.0.7
+
+### Features
 
 - `[Text Analytics API]` Added new features: **Detect Sentiment by text**, **Detect Language by text**, **Suggest Category by text**
 
