@@ -15,7 +15,7 @@ paths:
       tags:
         - News API
       summary: Get news articles
-      description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
+      description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>Limit: `30 requests per minute`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
         - name: api_key
           in: query
@@ -344,7 +344,7 @@ paths:
       tags:
         - News API
       summary: Get top headlines
-      description: "The top headlines endpoint provides access to the most recent and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
+      description: "The top headlines endpoint provides access to the most recent and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>Limit: `30 requests per minute`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
         - name: api_key
           in: query
@@ -673,7 +673,7 @@ paths:
       tags:
         - News API
       summary: Get single news article
-      description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>This api endpoint also available in `POST` request.'
+      description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>Limit: `30 requests per minute`.<br/><br/>This api endpoint also available in `POST` request.'
       parameters:
         - name: api_key
           in: query
@@ -762,7 +762,7 @@ paths:
       tags:
         - News API
       summary: Get story of news article
-      description: "Get specific article story by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>This api endpoint also available in `POST` request."
+      description: "Get specific article story by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>Limit: `30 requests per minute`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
         - name: api_key
           in: query
