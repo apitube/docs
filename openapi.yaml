@@ -1215,7 +1215,6 @@ components:
       description: Latest articles
       required:
         - status
-        - total_results
         - updated_at
         - path
         - limit
