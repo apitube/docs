@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-slug: '/news-api/languages'
+slug: '/text-analytics-api/languages'
 ---
 
 # Supported languages
