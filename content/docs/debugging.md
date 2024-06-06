@@ -3,7 +3,7 @@ sidebar_position: 4
 slug: '/debugging'
 ---
 
-# Debugging
+# Debugging API Requests
 
 During the development process, closely examine the `user_input` key object, which provides access to all your parameters. If any errors occur or if certain characters were not accurately parsed due to URL encoding, you will be able to identify them.
 
