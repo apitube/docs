@@ -6,6 +6,13 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.0.9
+
+### Features
+
+- `[News API]` Add query parameters to search: title/description/content in article. Example: `Musk AND (Tesla OR SpaceX)`. More information in the [Advanced Searching](/news-api/advanced-searching).
+- [New rate limits in API requests](/rate_limits) for free and paid users.
+
 ## 1.0.8
 
 ### Features

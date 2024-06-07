@@ -14,7 +14,7 @@ The article data model is a JSON object that represents the structure of an arti
     // article's source href (string)
     "href": "https://www.bbc.co.uk/news/uk-57228757",
     // article's published time (ISO 8601 date)
-    "published_at": "2021-05-26T10:00:00Z",
+    "publishedAt": "2021-05-26T10:00:00Z",
     // article's title (string)
     "title": "Covid: UK reports 3,542 new cases and 10 deaths",
     // article's short description (string)
@@ -74,6 +74,6 @@ The article data model is a JSON object that represents the structure of an arti
         }
     ],
     // article's story id (string)
-    "story_id": "7c4d2791-d297-41b5-9b5f-af72412962a2",
+    "storyId": "7c4d2791-d297-41b5-9b5f-af72412962a2",
 }
 ```

@@ -30,6 +30,20 @@ paths:
           example: 'title=Apple'
           schema:
             type: string
+        - name: queryInTitle
+          in: query
+          description: Find articles by query. [Examples how to use](/news-api/advanced-searching).
+          required: false
+          example: 'queryInTitle=Musk AND (Tesla OR SpaceX)'
+          schema:
+              type: string
+        - name: ignoreInTitle
+          in: query
+          description: Ignore articles by article title.
+          required: false
+          example: 'ignoreInTitle=Apple'
+          schema:
+            type: string
         - name: content
           in: query
           description: Find articles by article content.
@@ -37,11 +51,485 @@ paths:
           example: 'content=Macbook'
           schema:
             type: string
+        - name: queryInContent
+          in: query
+          description: Find articles by query. [Examples how to use](/news-api/advanced-searching).
+          required: false
+          example: 'queryInContent=Musk AND (Tesla OR SpaceX)'
+          schema:
+            type: string
+        - name: ignoreInContent
+          in: query
+          description: Ignore articles by article content.
+          required: false
+          example: 'ignoreInContent=Macbook'
+          schema:
+              type: string
         - name: author
           in: query
           description: Find articles by author name.
           required: false
-          example: 'author=John Doe'
+          example: 'author=John Doe, Jane Doe'
+          schema:
+            type: string
+        - name: ignoreInAuthor
+          in: query
+          description: Ignore articles by author name.
+          required: false
+          example: 'ignoreInAuthor=John Doe'
+          schema:
+              type: string
+        - name: search
+          in: query
+          description: Find articles by article title or article content match.
+          required: false
+          example: 'search=Macbook Pro'
+          schema:
+            type: string
+        - name: ignoreInSearch
+          in: query
+          description: Ignore articles by article title or article content match.
+          required: false
+          example: 'ignoreInSearch=Macbook Pro'
+          schema:
+            type: string
+        - name: query
+          in: query
+          description: Find articles by query. [Examples how to use](/news-api/advanced-searching).
+          required: false
+          example: 'query=Musk AND (Tesla OR SpaceX)'
+          schema:
+            type: string
+        - name: type
+          in: query
+          description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
+          example: 'type=news,blog/company'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - news
+              - opinion
+              - blog/company
+              - blog/personal
+            default: available
+        - name: ignoreType
+          in: query
+          description: 'Ignore articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
+          example: 'ignoreTypes=news,blog/company'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+              type: string
+              enum:
+              - news
+              - opinion
+              - blog/company
+              - blog/personal
+              default: available
+        - name: country
+          in: query
+          description: 'Find articles in the specified country(s). Multiple options can be specified by separating them with a comma, for example: `us,fr`. [Full list of available countries](/news-api/countries).'
+          example: 'country=us,gb'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+        - name: ignoreInCountry
+          in: query
+          description: 'Ignore articles in the specified country(s). Multiple options can be specified by separating them with a comma, for example: `us,fr`. [Full list of available countries](/news-api/countries).'
+          example: 'ignoreInCountry=us,gb'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+        - name: language
+          in: query
+          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/news-api/categories).'
+          example: 'language=en,fr'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - english
+            default: english
+        - name: category
+          in: query
+          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `news/Sports,news/Science`. [List of available categories](/news-api/categories).'
+          example: 'category=news/Sports,news/Science'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - news/World
+              - news/Business
+              - news/Politics
+              - news/Technology
+              - news/Environment
+              - news/Health
+              - news/Science
+              - news/Sports
+              - news/Arts_and_Entertainment
+        - name: ignoreInCategory
+          in: query
+          description: 'Ignore articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/news-api/categories).'
+          example: 'ignoreInCategory=design/digital,design/web'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+              type: string
+              enum:
+              - news/World
+              - news/Business
+              - news/Politics
+              - news/Technology
+              - news/Environment
+              - news/Health
+              - news/Science
+              - news/Sports
+              - news/Arts_and_Entertainment
+        - name: topic
+          in: query
+          description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/news-api/topics).'
+          example: 'topic=crypto_news'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - crypto_news
+              - financial_news
+              - video_games_news
+              - ai_news
+        - name: ignoreInTopic
+          in: query
+          description: 'Ignore articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/news-api/topics).'
+          example: 'ignoreInTopic=crypto_news'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+              type: string
+              enum:
+              - crypto_news
+              - financial_news
+              - video_games_news
+              - ai_news
+        - name: source
+          in: query
+          description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
+          example: 'source=techcrunch.com,theverge.com'
+          required: false
+          style: form
+          explode: false
+          schema:
+            type: string
+        - name: ignoreInSource
+          in: query
+          description: 'Ignore articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
+          example: 'ignoreInSource=techcrunch.com,theverge.com'
+          required: false
+          style: form
+          explode: false
+          schema:
+              type: string
+        - name: dateStart
+          in: query
+          description: 'The starting date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
+          example: 'dateStart=2023-10-09'
+          required: false
+          examples:
+            1:
+              value: '2023-10-09'
+            2:
+              value: '2023-08-10 00:00:00'
+            3:
+              value: '2023-10-09T00:00:00'
+            4:
+              value: '2023-10-09T00:00:00+00:00'
+            5:
+              value: '2023-10-09T00:00:00+0000'
+            6:
+              value: '2023-10-09T00:00:00.000Z'
+            7:
+              value: '1698064154'
+          schema:
+            type: string
+            enum:
+              - 'RFC850'
+              - 'RFC1036'
+              - 'RFC1123'
+              - 'RFC2822'
+              - 'RFC3339'
+              - 'ISO8601'
+              - 'timestamp(as integer)'
+        - name: dateEnd
+          in: query
+          description: 'The last date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
+          example: 'dateEnd=2023-10-09'
+          required: false
+          examples:
+            1:
+              value: '2023-10-09'
+            2:
+              value: '2023-08-10 00:00:00'
+            3:
+              value: '2023-10-09T00:00:00'
+            4:
+              value: '2023-10-09T00:00:00+00:00'
+            5:
+              value: '2023-10-09T00:00:00+0000'
+            6:
+              value: '2023-10-09T00:00:00.000Z'
+            7:
+              value: '1698064154'
+          schema:
+            type: string
+            example: 3232323
+            enum:
+              - 'RFC850'
+              - 'RFC1036'
+              - 'RFC1123'
+              - 'RFC2822'
+              - 'RFC3339'
+              - 'ISO8601'
+              - 'timestamp(as integer)'
+        - name: rankMin
+          in: query
+          description: The lowest boundary of the rank of a news website to filter by.
+          required: false
+          example: 'rankMin=45'
+          schema:
+            type: integer
+            format: int
+            minimum: 1
+            maximum: 99
+        - name: rankMax
+          in: query
+          description: The upper boundary of the rank of a news website to filter by.
+          required: false
+          example: 'rankMax=45'
+          schema:
+            type: integer
+            format: int
+            minimum: 1
+            maximum: 99
+        - name: sentimentMin
+          in: query
+          description: The minimum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
+          required: false
+          example: 'sentimentMin=0.02'
+          schema:
+            type: integer
+            format: int
+            minimum: -1
+            maximum: 1
+        - name: sentimentMax
+          in: query
+          description: The maximum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
+          required: false
+          example: 'sentimentMax=0.01'
+          schema:
+            type: integer
+            format: int
+            minimum: -1
+            maximum: 1
+        - name: locationName
+          in: query
+          description: Find articles in a specific location. Country or city.
+          required: false
+          example: 'locationName=Barcelona'
+          schema:
+            type: string
+        - name: ignoreInLocation
+          in: query
+          description: Ignore articles in a specific location. Country or city.
+          required: false
+          example: 'ignoreInLocation=Barcelona'
+          schema:
+              type: string
+        - name: exportFormat
+          in: query
+          description: Export formatted data in many formats.
+          example: 'exportFormat=json'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - json
+              - xml
+              - rss
+              - html
+              - csv
+              - tsv
+              - xls
+              - xlsx
+            default: json
+        - name: sortBy
+          in: query
+          description: Choose the criteria for sorting the news articles.
+          example: 'sortBy=date'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - published
+              - created
+              - sentiment
+            default: created
+        - name: sortDirection
+          in: query
+          description: Choose the criteria for sorting the news articles.
+          example: 'sortDirection=desc'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - desc
+              - asc
+            default: desc
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsArticlesOutput'
+        '400':
+          description: Parameter missing or invalid
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '402':
+          description: Payment required
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error402'
+        '404':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error404'
+        '422':
+          description: Not found
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error422'
+        '429':
+          description: Too many requests
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error429'
+        '500':
+          description: Internal server error
+          content:
+            text/html:
+              schema:
+                $ref: '#/components/schemas/Error500'
+
+  /news/top-headlines:
+    get:
+      tags:
+        - News API
+      summary: Get top headlines
+      description: "The top headlines endpoint provides access to the most recent and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
+      parameters:
+        - name: apiKey
+          in: query
+          description: Your API key from dashboard.
+          required: false
+          schema:
+            type: string
+        - name: title
+          in: query
+          description: Find articles by article title.
+          required: false
+          example: 'title=Apple'
+          schema:
+            type: string
+        - name: queryInTitle
+          in: query
+          description: Find articles by query. [Examples how to use](/news-api/advanced-searching).
+          required: false
+          example: 'queryInTitle=Musk AND (Tesla OR SpaceX)'
+          schema:
+            type: string
+        - name: ignoreInTitle
+          in: query
+          description: Ignore articles by article title.
+          required: false
+          example: 'ignoreInTitle=Apple'
+          schema:
+            type: string
+        - name: content
+          in: query
+          description: Find articles by article content.
+          required: false
+          example: 'content=Macbook'
+          schema:
+            type: string
+        - name: queryInContent
+          in: query
+          description: Find articles by query. [Examples how to use](/news-api/advanced-searching).
+          required: false
+          example: 'queryInContent=Musk AND (Tesla OR SpaceX)'
+          schema:
+            type: string
+        - name: ignoreInContent
+          in: query
+          description: Ignore articles by article content.
+          required: false
+          example: 'ignoreInContent=Macbook'
+          schema:
+            type: string
+        - name: author
+          in: query
+          description: Find articles by author name.
+          required: false
+          example: 'author=John Doe, Jane Doe'
+          schema:
+            type: string
+        - name: ignoreInAuthor
+          in: query
+          description: Ignore articles by author name.
+          required: false
+          example: 'ignoreInAuthor=John Doe'
           schema:
             type: string
         - name: search
@@ -51,10 +539,40 @@ paths:
           example: 'search=Macbook Pro'
           schema:
             type: string
+        - name: ignoreInSearch
+          in: query
+          description: Ignore articles by article title or article content match.
+          required: false
+          example: 'ignoreInSearch=Macbook Pro'
+          schema:
+            type: string
+        - name: query
+          in: query
+          description: Find articles by query. [Examples how to use](/news-api/advanced-searching).
+          required: false
+          example: 'query=Musk AND (Tesla OR SpaceX)'
+          schema:
+            type: string
         - name: type
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
           example: 'type=news,blog/company'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - news
+              - opinion
+              - blog/company
+              - blog/personal
+            default: available
+        - name: ignoreType
+          in: query
+          description: 'Ignore articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
+          example: 'ignoreTypes=news,blog/company'
           required: false
           style: form
           explode: false
@@ -75,23 +593,51 @@ paths:
           style: form
           explode: false
           deprecated: false
-#        - name: language
-#          in: query
-#          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/news-api/categories).'
-#          example: 'language=en,fr'
-#          required: false
-#          style: form
-#          explode: false
-#          deprecated: false
-#          schema:
-#            type: string
-#            enum:
-#              - english
-#            default: english
+        - name: ignoreInCountry
+          in: query
+          description: 'Ignore articles in the specified country(s). Multiple options can be specified by separating them with a comma, for example: `us,fr`. [Full list of available countries](/news-api/countries).'
+          example: 'ignoreInCountry=us,gb'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+        - name: language
+          in: query
+          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/news-api/categories).'
+          example: 'language=en,fr'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - english
+            default: english
         - name: category
           in: query
-          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/news-api/categories).'
-          example: 'category=design/digital,design/web'
+          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `news/Sports,news/Science`. [List of available categories](/news-api/categories).'
+          example: 'category=news/Sports,news/Science'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - news/World
+              - news/Business
+              - news/Politics
+              - news/Technology
+              - news/Environment
+              - news/Health
+              - news/Science
+              - news/Sports
+              - news/Arts_and_Entertainment
+        - name: ignoreInCategory
+          in: query
+          description: 'Ignore articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/news-api/categories).'
+          example: 'ignoreInCategory=design/digital,design/web'
           required: false
           style: form
           explode: false
@@ -123,10 +669,34 @@ paths:
               - financial_news
               - video_games_news
               - ai_news
+        - name: ignoreInTopic
+          in: query
+          description: 'Ignore articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/news-api/topics).'
+          example: 'ignoreInTopic=crypto_news'
+          required: false
+          style: form
+          explode: false
+          deprecated: false
+          schema:
+            type: string
+            enum:
+              - crypto_news
+              - financial_news
+              - video_games_news
+              - ai_news
         - name: source
           in: query
           description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
           example: 'source=techcrunch.com,theverge.com'
+          required: false
+          style: form
+          explode: false
+          schema:
+            type: string
+        - name: ignoreInSource
+          in: query
+          description: 'Ignore articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
+          example: 'ignoreInSource=techcrunch.com,theverge.com'
           required: false
           style: form
           explode: false
@@ -240,339 +810,17 @@ paths:
           example: 'locationName=Barcelona'
           schema:
             type: string
+        - name: ignoreInLocation
+          in: query
+          description: Ignore articles in a specific location. Country or city.
+          required: false
+          example: 'ignoreInLocation=Barcelona'
+          schema:
+            type: string
         - name: exportFormat
           in: query
           description: Export formatted data in many formats.
           example: 'exportFormat=json'
-          required: false
-          style: form
-          explode: false
-          deprecated: false
-          schema:
-            type: string
-            enum:
-              - json
-              - xml
-              - rss
-              - html
-              - csv
-              - tsv
-              - xls
-              - xlsx
-            default: json
-        - name: sortBy
-          in: query
-          description: Choose the criteria for sorting the news articles.
-          example: 'sortBy=date'
-          required: false
-          style: form
-          explode: false
-          deprecated: false
-          schema:
-            type: string
-            enum:
-              - published
-              - created
-              - sentiment
-            default: created
-        - name: sort_direction
-          in: query
-          description: Choose the criteria for sorting the news articles.
-          example: 'sortDirection=desc'
-          required: false
-          style: form
-          explode: false
-          deprecated: false
-          schema:
-            type: string
-            enum:
-              - desc
-              - asc
-            default: desc
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/NewsArticlesOutput'
-        '400':
-          description: Parameter missing or invalid
-          content:
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '402':
-          description: Payment required
-          content:
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Error402'
-        '404':
-          description: Not found
-          content:
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Error404'
-        '422':
-          description: Not found
-          content:
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Error422'
-        '429':
-          description: Too many requests
-          content:
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Error429'
-        '500':
-          description: Internal server error
-          content:
-            text/html:
-              schema:
-                $ref: '#/components/schemas/Error500'
-
-  /news/top-headlines:
-    get:
-      tags:
-        - News API
-      summary: Get top headlines
-      description: "The top headlines endpoint provides access to the most recent and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
-      parameters:
-        - name: apiKey
-          in: query
-          description: Your API key from dashboard.
-          required: false
-          schema:
-            type: string
-        - name: title
-          in: query
-          description: Find articles by article title.
-          required: false
-          example: 'title=Apple'
-          schema:
-            type: string
-        - name: content
-          in: query
-          description: Find articles by article content.
-          required: false
-          example: 'content=Macbook'
-          schema:
-            type: string
-        - name: author
-          in: query
-          description: Find articles by author name.
-          required: false
-          example: 'author=John Doe'
-          schema:
-            type: string
-        - name: search
-          in: query
-          description: Find articles by article title or article content match.
-          required: false
-          example: 'search=Macbook Pro'
-          schema:
-            type: string
-        - name: type
-          in: query
-          description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `news,blog/company`.'
-          example: 'type=news,blog/company'
-          required: false
-          style: form
-          explode: false
-          deprecated: false
-          schema:
-            type: string
-            enum:
-              - news
-              - opinion
-              - blog/company
-              - blog/personal
-            default: available
-        - name: country
-          in: query
-          description: 'Find articles in the specified country(s). Multiple options can be specified by separating them with a comma, for example: `us,fr`. [Full list of available countries](/news-api/countries).'
-          example: 'country=us,gb'
-          required: false
-          style: form
-          explode: false
-          deprecated: false
-        #        - name: language
-        #          in: query
-        #          description: 'Find articles in the specified language(s). Multiple options can be specified by separating them with a comma, for example: `en,fr`. [Full list of available languages](/news-api/categories).'
-        #          example: 'language=en,fr'
-        #          required: false
-        #          style: form
-        #          explode: false
-        #          deprecated: false
-        #          schema:
-        #            type: string
-        #            enum:
-        #              - english
-        #            default: english
-        - name: category
-          in: query
-          description: 'Find articles in the specified category(s). Multiple options can be specified by separating them with a comma, for example: `design/digital,design/web`. [List of available categories](/news-api/categories).'
-          example: 'category=design/digital,design/web'
-          required: false
-          style: form
-          explode: false
-          deprecated: false
-          schema:
-            type: string
-            enum:
-              - news/World
-              - news/Business
-              - news/Politics
-              - news/Technology
-              - news/Environment
-              - news/Health
-              - news/Science
-              - news/Sports
-              - news/Arts_and_Entertainment
-        - name: topic
-          in: query
-          description: 'Find articles in the specified topics(s). Multiple options can be specified by separating them with a comma, for example: `crypto_news,financial_news`. [List of available topics](/news-api/topics).'
-          example: 'topic=crypto_news'
-          required: false
-          style: form
-          explode: false
-          deprecated: false
-          schema:
-            type: string
-            enum:
-              - crypto_news
-              - financial_news
-              - video_games_news
-              - ai_news
-        - name: source
-          in: query
-          description: 'Find articles in the specified resource type(s). Multiple options can be specified by separating them with a comma, for example: `techcrunch.com,theverge.com`.'
-          example: 'source=techcrunch.com,theverge.com'
-          required: false
-          style: form
-          explode: false
-          schema:
-            type: string
-        - name: dateStart
-          in: query
-          description: 'The starting date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
-          example: 'dateStart=2023-10-09'
-          required: false
-          examples:
-            1:
-              value: '2023-10-09'
-            2:
-              value: '2023-08-10 00:00:00'
-            3:
-              value: '2023-10-09T00:00:00'
-            4:
-              value: '2023-10-09T00:00:00+00:00'
-            5:
-              value: '2023-10-09T00:00:00+0000'
-            6:
-              value: '2023-10-09T00:00:00.000Z'
-            7:
-              value: '1698064154'
-          schema:
-            type: string
-            enum:
-              - 'RFC850'
-              - 'RFC1036'
-              - 'RFC1123'
-              - 'RFC2822'
-              - 'RFC3339'
-              - 'ISO8601'
-              - 'timestamp(as integer)'
-        - name: dateEnd
-          in: query
-          description: 'The last date on or after the articles of interest were published or created. The date should be in the `Possible values` formats.'
-          example: 'dateEnd=2023-10-09'
-          required: false
-          examples:
-            1:
-              value: '2023-10-09'
-            2:
-              value: '2023-08-10 00:00:00'
-            3:
-              value: '2023-10-09T00:00:00'
-            4:
-              value: '2023-10-09T00:00:00+00:00'
-            5:
-              value: '2023-10-09T00:00:00+0000'
-            6:
-              value: '2023-10-09T00:00:00.000Z'
-            7:
-              value: '1698064154'
-          schema:
-            type: string
-            example: 3232323
-            enum:
-              - 'RFC850'
-              - 'RFC1036'
-              - 'RFC1123'
-              - 'RFC2822'
-              - 'RFC3339'
-              - 'ISO8601'
-              - 'timestamp(as integer)'
-        - name: rank_min
-          in: query
-          description: The lowest boundary of the rank of a news website to filter by.
-          required: false
-          example: 'rank_min=45'
-          schema:
-            type: integer
-            format: int
-            minimum: 1
-            maximum: 99
-        - name: rank_max
-          in: query
-          description: The upper boundary of the rank of a news website to filter by.
-          required: false
-          example: 'rank_max=45'
-          schema:
-            type: integer
-            format: int
-            minimum: 1
-            maximum: 99
-        - name: sentimentMin
-          in: query
-          description: The minimum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
-          required: false
-          example: 'sentimentMin=0.02'
-          schema:
-            type: integer
-            format: int
-            minimum: -1
-            maximum: 1
-        - name: sentimentMax
-          in: query
-          description: The maximum value of the sentiment, the article should have. Valid value is any floating number between -1 (very negative) to 1 (very positive).
-          required: false
-          example: 'sentimentMax=0.01'
-          schema:
-            type: integer
-            format: int
-            minimum: -1
-            maximum: 1
-        - name: locationName
-          in: query
-          description: Find articles in a specific location. Country or city.
-          required: false
-          example: 'locationName=Barcelona'
-          schema:
-            type: string
-        - name: export_format
-          in: query
-          description: Export formatted data in many formats.
-          example: 'export_format=json'
           required: false
           style: form
           explode: false
@@ -688,7 +936,7 @@ paths:
           example: 'bd4ddb06-c2e2-4ada-8228-7c952da9ed22'
           schema:
             type: string
-        - name: export_format
+        - name: exportFormat
           in: query
           description: Export formatted data in many formats.
           required: false
@@ -777,7 +1025,7 @@ paths:
           example: 'bd4ddb06-c2e2-4ada-8228-7c952da9ed22'
           schema:
             type: string
-        - name: export_format
+        - name: exportFormat
           in: query
           description: Export formatted data in many formats.
           required: false
@@ -1215,13 +1463,12 @@ components:
       description: Latest articles
       required:
         - status
-        - updated_at
         - path
         - limit
-        - next_page
-        - previous_page
+        - nextPage
+        - previousPage
         - pages
-        - export_formats
+        - exportFormats
         - results
       type: object
       properties:
@@ -1238,27 +1485,23 @@ components:
           type: string
           description: 'Current request href.'
           format: string
-        next_page:
+        nextPage:
           type: string
           description: 'Next page href.'
           format: string
-        previous_page:
+        previousPage:
           type: string
           description: 'Previous page href.'
           format: string
-        user_input:
+        userInput:
           type: object
           description: 'Current request parameters.'
           format: int
-        export_formats:
+        exportFormats:
           type: object
           description: Export to format.
           items:
             $ref: '#/components/schemas/NewsArticleExportFormats'
-        updated_at:
-          type: string
-          description: 'Latest updated date.'
-          format: 'string in RFC 3339 format'
         results:
           type: object
           items:
@@ -1269,7 +1512,7 @@ components:
       required:
         - id
         - href
-        - published_at
+        - publishedAt
         - title
         - description
         - content
@@ -1285,7 +1528,7 @@ components:
         - locations
         - summary
         - source
-        - story_id
+        - storyId
         - topic
       type: object
       properties:
@@ -1295,7 +1538,7 @@ components:
         href:
           type: string
           description: 'Direct url.'
-        published_at:
+        publishedAt:
           type: string
           description: 'The date and time that the article was published or created, in UTC (+000).'
           format: 'string in RFC 3339 format'
@@ -1343,7 +1586,7 @@ components:
           type: string
           description: 'Article topic id.'
           format: string
-        story_id:
+        storyId:
           type: string
           description: 'Story ID.'
           format: string
