@@ -1529,6 +1529,7 @@ components:
         - summary
         - source
         - storyId
+        - isDuplicate
         - topic
       type: object
       properties:
@@ -1590,6 +1591,10 @@ components:
           type: string
           description: 'Story ID.'
           format: string
+        isDuplicate:
+          type: boolean
+          description: 'Is article duplicate.'
+          format: boolean
         source:
           type: array
           description: 'Information about source.'
