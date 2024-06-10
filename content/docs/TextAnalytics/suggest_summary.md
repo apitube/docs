@@ -14,6 +14,10 @@ For more information check [API Reference](/api-reference/suggest-summary).
 The Suggest Summary endpoint returns a JSON object with the following properties:
 ```json
 {
+	// status of the request (ok, error)
+	"status": "ok",
+	// is API points decremented (true, false)
+	"isApiPointsDecremented": false,
 	// request ID (unique article's ID, alwais uuid)
 	"requestId": "7c4d2791-d297-41b5-9b5f-af72412962a2",
 	// text data (string)

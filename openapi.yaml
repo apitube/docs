@@ -1469,6 +1469,7 @@ components:
         - previousPage
         - pages
         - exportFormats
+        - isApiPointsDecremented
         - results
       type: object
       properties:
@@ -1502,6 +1503,10 @@ components:
           description: Export to format.
           items:
             $ref: '#/components/schemas/NewsArticleExportFormats'
+        isApiPointsDecremented:
+          type: boolean
+          description: 'Is API points decremented.'
+          format: boolean
         results:
           type: object
           items:
@@ -1529,6 +1534,7 @@ components:
         - summary
         - source
         - storyId
+        - storyURI
         - isDuplicate
         - topic
       type: object
@@ -1590,6 +1596,10 @@ components:
         storyId:
           type: string
           description: 'Story ID.'
+          format: string
+        storyURI:
+          type: string
+          description: 'Story URI.'
           format: string
         isDuplicate:
           type: boolean

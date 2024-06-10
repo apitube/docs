@@ -75,6 +75,8 @@ The article data model is a JSON object that represents the structure of an arti
     ],
     // article's story id (string)
     "storyId": "7c4d2791-d297-41b5-9b5f-af72412962a2",
+    // article's story URL (string)
+    "storyURI": "https://api.apitube.io/v1/news/story/12345",
 	// article's duplicate flag (boolean)
     "isDuplicate": false
 }
