@@ -3,7 +3,7 @@ sidebar_position: 8
 slug: '/news-api'
 ---
 
-# News API
+# News Data API
 
 Access real-time breaking news worldwide with the APITUBE API. Utilize various filters to refine and obtain the specific results you're looking for.
 

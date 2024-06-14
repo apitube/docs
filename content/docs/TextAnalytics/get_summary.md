@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-slug: '/text-analytics-api/suggest-summary'
+slug: '/text-analytics-api/get-text-summary'
 ---
 
 # Suggest Summary
 
 The Suggest Summary endpoint analyzes text data and returns a summary of the text. The summary can be any of the supported categories. The API is designed to be simple to use and easy to integrate into your applications.
 
-For more information check [API Reference](/api-reference/suggest-summary).
+For more information check [API Reference](/api-reference/get-text-summary).
 
 ## Data Model
 

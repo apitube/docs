@@ -1,13 +1,13 @@
 ---
 sidebar_position: 0
-slug: '/text-analytics-api/detect-sentiment'
+slug: '/text-analytics-api/get-text-sentiment'
 ---
 
 # Detect Sentiment
 
 The Detect Sentiment endpoint analyzes text data and returns the sentiment of the text. The sentiment can be positive, negative, or neutral. The API is designed to be simple to use and easy to integrate into your applications.
 
-For more information check [API Reference](/api-reference/detect-text-sentiment).
+For more information check [API Reference](/api-reference/get-text-sentiment).
 
 ## Data Model
 

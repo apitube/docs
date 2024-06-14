@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-slug: '/text-analytics-api/detect-language'
+slug: '/text-analytics-api/get-text-language'
 ---
 
 # Detect Language
 
 The Detect Language endpoint analyzes text data and returns the language of the text. The language can be any of the supported languages. The API is designed to be simple to use and easy to integrate into your applications.
 
-For more information check [API Reference](/api-reference/detect-text-language).
+For more information check [API Reference](/api-reference/get-text-language).
 
 ## Data Model
 

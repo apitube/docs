@@ -1094,11 +1094,11 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error500'
 
-  /detect-sentiment:
+  /get-text-sentiment:
     post:
       tags:
         - Text Analytics API
-      summary: Detect text sentiment
+      summary: Get text sentiment
       description: Detect text sentiment by sentences.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
         - name: text
@@ -1185,11 +1185,11 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error500'
 
-  /detect-language:
+  /get-text-language:
     post:
       tags:
         - Text Analytics API
-      summary: Detect text language
+      summary: Get text language
       description: Detect text language.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
         - name: text
@@ -1272,11 +1272,11 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error500'
 
-  /suggest-category:
+  /get-text-category:
     post:
       tags:
         - Text Analytics API
-      summary: Suggest category
+      summary: Get text category
       description: Suggest category by text.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
         - name: text
@@ -1364,11 +1364,11 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error500'
 
-  /text-summarization:
+  /get-summary:
     post:
       tags:
         - Text Analytics API
-      summary: Suggest summary
+      summary: Get text summary
       description: Suggest summary by text.<br/><br/>Calling this endpoint is `free`.<br/><br/>This api endpoint also available in `POST` request.
       parameters:
         - name: text

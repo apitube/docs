@@ -14,19 +14,19 @@ columnSize={4}
 items={[
 {
 icon: "mdi:text-recognition",
-href: "/text-analytics-api/detect-sentiment",
+href: "/text-analytics-api/get-text-sentiment",
 title: "Detect Sentiment",
 description: "Detect the sentiment of text data."
 },
 {
 icon: "mdi:text-recognition",
-href: "/text-analytics-api/detect-language",
+href: "/text-analytics-api/get-text-language",
 title: "Detect Language",
 description: "Get the language of your text data."
 },
 {
 icon: "mdi:text-recognition",
-href: "/text-analytics-api/suggest-category",
+href: "/text-analytics-api/get-text-category",
 title: "Suggest Category",
 description: "Suggestions for categorizing text data."
 }

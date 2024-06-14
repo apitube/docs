@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-slug: '/text-analytics-api/suggest-category'
+slug: '/text-analytics-api/get-text-category'
 ---
 
 # Suggest Category
 
 The Suggest Category endpoint analyzes text data and returns the category of the text. The category can be any of the supported categories. The API is designed to be simple to use and easy to integrate into your applications.
 
-For more information check [API Reference](/api-reference/suggest-category).
+For more information check [API Reference](/api-reference/get-text-category).
 
 ## Data Model
 
