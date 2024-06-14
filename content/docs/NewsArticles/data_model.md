@@ -49,18 +49,36 @@ The article data model is a JSON object that represents the structure of an arti
     "source": {
         "id": 6482938, // source's ID (integer)
         "domain": "bbc.co.uk", // source's domain (string)
+	    "homePageUrl": "https://www.bbc.co.uk/news", // source's home page URL (string)
         "type": "news", // source's type (string)
         "rank": 12002 // source's rank (integer)
+        "location": {
+            "countryName": "England", // location's name (string)
+            "countryCode": "UK" // location's country (ISO 3166-1 alpha-2 code)
+        }
     },
     // article's sentiment score (float)
-    "sentiment": 0.05,
-    // article's summary (array of sentences)
-    "summary": [
-        {
-            "sentence": "The latest figures come as the UK government announces...", // sentence (string)
-            "score": 0.8 // sentence's score (float)
+    "sentiment": {
+        "overall": {
+            "score": 0.4, // sentiment score (float)
+            "label": "positive" // sentiment label (string)
+        },
+        "title": {
+            "score": 0.5, // sentiment score (float)
+            "label": "positive" // sentiment label (string)
+        },
+        "body": {
+            "score": 0.3, // sentiment score (float)
+            "label": "positive" // sentiment label (string)
         }
-    ],
+    },
+    // article's summary
+    "summary": {
+	    // article's summary (array of sentences)
+        "sentences": [
+            "The latest figures come as the UK government announces..."
+        ]
+    },
     // article's locations
     "locations": [
         {

@@ -1528,7 +1528,6 @@ components:
         - country
         - language
         - category
-        - resource
         - sentiment
         - locations
         - summary
@@ -1631,8 +1630,10 @@ components:
           required:
             - id
             - domain
+            - homePageUrl
             - type
             - rank
+            - location
           format: object
           properties:
             id:
@@ -1643,6 +1644,10 @@ components:
               type: string
               description: 'Source domain.'
               format: string
+            homePageUrl:
+              type: string
+              description: 'Source home page url.'
+              format: string
             type:
               type: string
               description: 'Source type.'
@@ -1651,10 +1656,79 @@ components:
               type: integer
               description: 'Source rank.'
               format: int
+            location:
+              type: array
+              description: 'Information about source location.'
+              required:
+                - countryName
+                - countryCode
+              format: object
+              properties:
+                countryName:
+                  type: string
+                  description: 'Country name.'
+                  format: string
+                countryCode:
+                  type: string
+                  description: 'Country code.'
+                  format: string
         sentiment:
-          type: integer
-          format: float
+          type: array
+          format: object
           description: Valid value is any floating number between -1 (very negative) to 1 (very positive).
+          required:
+            - overall
+            - title
+            - body
+          properties:
+              overall:
+                type: array
+                description: 'Overall sentiment.'
+                format: object
+                required:
+                  - score
+                  - polarity
+                properties:
+                  score:
+                      type: number
+                      description: 'Overall sentiment score.'
+                      format: float
+                  polarity:
+                      type: string
+                      description: 'Overall sentiment polarity.'
+                      format: string
+              title:
+                type: array
+                description: 'Article title sentiment.'
+                format: object
+                required:
+                  - score
+                  - polarity
+                properties:
+                  score:
+                    type: number
+                    description: 'Overall sentiment score.'
+                    format: float
+                  polarity:
+                    type: string
+                    description: 'Overall sentiment polarity.'
+                    format: string
+              body:
+                type: array
+                description: 'Article body sentiment.'
+                format: object
+                required:
+                  - score
+                  - polarity
+                properties:
+                  score:
+                    type: number
+                    description: 'Overall sentiment score.'
+                    format: float
+                  polarity:
+                    type: string
+                    description: 'Overall sentiment polarity.'
+                    format: string
         summary:
           type: array
           items:
@@ -1709,17 +1783,16 @@ components:
 
     NewsArticleSummary:
       title: sentences
-      description: Article detected location
+      description: Article summary
       type: array
       required:
         - text
         - sentiment
       properties:
-        text:
-          type: string
-          description: 'Sentence.'
-          format: string
-          required: true
+        sentences:
+          type: array
+          description: 'Array list of sentences.'
+          format: array
 
 #    NewsCategories:
 #      title: categories
