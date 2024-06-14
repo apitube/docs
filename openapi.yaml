@@ -44,25 +44,25 @@ paths:
           example: 'ignoreInTitle=Apple'
           schema:
             type: string
-        - name: content
+        - name: body
           in: query
-          description: Find articles by article content.
+          description: Find articles by article body.
           required: false
-          example: 'content=Macbook'
+          example: 'body=Macbook'
           schema:
             type: string
-        - name: queryInContent
+        - name: queryInBody
           in: query
           description: Find articles by query. [Examples how to use](/news-api/advanced-searching).
           required: false
-          example: 'queryInContent=Musk AND (Tesla OR SpaceX)'
+          example: 'queryInBody=Musk AND (Tesla OR SpaceX)'
           schema:
             type: string
-        - name: ignoreInContent
+        - name: ignoreInBody
           in: query
-          description: Ignore articles by article content.
+          description: Ignore articles by article body.
           required: false
-          example: 'ignoreInContent=Macbook'
+          example: 'ignoreInBody=Macbook'
           schema:
               type: string
         - name: author
@@ -497,25 +497,25 @@ paths:
           example: 'ignoreInTitle=Apple'
           schema:
             type: string
-        - name: content
+        - name: body
           in: query
-          description: Find articles by article content.
+          description: Find articles by article body.
           required: false
-          example: 'content=Macbook'
+          example: 'body=Macbook'
           schema:
             type: string
-        - name: queryInContent
+        - name: queryInBody
           in: query
           description: Find articles by query. [Examples how to use](/news-api/advanced-searching).
           required: false
-          example: 'queryInContent=Musk AND (Tesla OR SpaceX)'
+          example: 'queryInBody=Musk AND (Tesla OR SpaceX)'
           schema:
             type: string
-        - name: ignoreInContent
+        - name: ignoreInBody
           in: query
-          description: Ignore articles by article content.
+          description: Ignore articles by article body.
           required: false
-          example: 'ignoreInContent=Macbook'
+          example: 'ignoreInBody=Macbook'
           schema:
             type: string
         - name: author
@@ -1520,7 +1520,7 @@ components:
         - publishedAt
         - title
         - description
-        - content
+        - body
         - image
         - authors
         - links
@@ -1537,6 +1537,10 @@ components:
         - storyURI
         - isDuplicate
         - topic
+        - sentencesCount
+        - paragraphsCount
+        - wordsCount
+        - charactersCount
       type: object
       properties:
         id:
@@ -1557,7 +1561,7 @@ components:
           type: string
           description: 'Short description.'
           format: string
-        content:
+        body:
           type: string
           description: 'Full body without html tags.'
           format: string
@@ -1605,11 +1609,28 @@ components:
           type: boolean
           description: 'Is article duplicate.'
           format: boolean
+        sentencesCount:
+          type: integer
+          description: 'Sentences count.'
+          format: int
+        paragraphsCount:
+          type: integer
+          description: 'Paragraphs count.'
+          format: int
+        wordsCount:
+          type: integer
+          description: 'Words count.'
+          format: int
+        charactersCount:
+          type: integer
+          description: 'Characters count.'
+          format: int
         source:
           type: array
           description: 'Information about source.'
           required:
             - id
+            - domain
             - type
             - rank
           format: object
@@ -1617,6 +1638,10 @@ components:
             id:
               type: string
               description: 'Source ID.'
+              format: string
+            domain:
+              type: string
+              description: 'Source domain.'
               format: string
             type:
               type: string

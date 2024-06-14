@@ -6,6 +6,12 @@ title: 'Changelog'
 
 # Changelog
 
+## 1.1.0
+
+### Features
+
+- `[News API]` Add new properties: `sentencesCount`, `paragraphsCount`, `wordsCount` and `charactersCount` to the article output.
+
 ## 1.0.9
 
 ### Features

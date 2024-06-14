@@ -20,7 +20,7 @@ The article data model is a JSON object that represents the structure of an arti
     // article's short description (string)
     "description": "The latest figures come as the UK government announces...",
     // article's content (string)
-    "content": "The latest figures come as the UK government..",
+    "body": "The latest figures come as the UK government..",
     // article's image (string)
     "image": "https://ichef.bbci.co.uk/news/1024/branded_news/1A3A/production/_118073073_gettyimages-123456789.jpg",
     // article's authors (array of strings)
@@ -47,7 +47,8 @@ The article data model is a JSON object that represents the structure of an arti
     "topic": "not_folded",
     // article's source info (object)
     "source": {
-        "id": "bbc.co.uk", // source's ID (string)
+        "id": 6482938, // source's ID (integer)
+        "domain": "bbc.co.uk", // source's domain (string)
         "type": "news", // source's type (string)
         "rank": 12002 // source's rank (integer)
     },
@@ -78,6 +79,14 @@ The article data model is a JSON object that represents the structure of an arti
     // article's story URL (string)
     "storyURI": "https://api.apitube.io/v1/news/story/12345",
 	// article's duplicate flag (boolean)
-    "isDuplicate": false
+    "isDuplicate": false,
+    // sentence count (integer)
+    "sentencesCount": 86,
+    // paragraphs count (integer)
+    "paragraphsCount": 12,
+    // words count (integer)
+    "wordsCount": 5856,
+    // characters count (integer)
+    "charactersCount": 15428
 }
 ```
