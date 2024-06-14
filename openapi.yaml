@@ -1793,6 +1793,31 @@ components:
           type: array
           description: 'Array list of sentences.'
           format: array
+          required:
+            - sentence
+            - sentiment
+          properties:
+            sentence:
+              type: string
+              description: 'Sentence text.'
+              format: string
+            sentiment:
+              type: array
+              description: 'Sentence sentiment.'
+              format: object
+              required:
+                - score
+                - polarity
+              properties:
+                score:
+                  type: number
+                  description: 'Sentence sentiment score.'
+                  format: float
+                polarity:
+                  type: string
+                  description: 'Sentence sentiment polarity.'
+                  format: string
+
 
 #    NewsCategories:
 #      title: categories

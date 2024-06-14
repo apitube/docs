@@ -76,7 +76,14 @@ The article data model is a JSON object that represents the structure of an arti
     "summary": {
 	    // article's summary (array of sentences)
         "sentences": [
-            "The latest figures come as the UK government announces..."
+	        {
+		        sentence: "The latest figures come as the UK government announces...", // sentence (string)
+		        // sentence sentiment
+                "sentiment": {
+                    "score": 0.4, // sentiment score (float)
+                    "polarity": "positive" // sentiment label (string)
+                }
+	        }
         ]
     },
     // article's locations
