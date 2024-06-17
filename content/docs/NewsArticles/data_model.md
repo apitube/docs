@@ -33,10 +33,22 @@ The article data model is a JSON object that represents the structure of an arti
 	    "https://www.bbc.co.uk/news/uk-57228756",
         "https://www.bbc.co.uk/news/uk-57228757"
     ],
-    // article's videos (array of video links)
-    "videos": [
-        "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    ],
+	// article's media (array of media objects)
+	"media": [
+		{
+			"type": "image", // media type (string)
+            "format": "jpg", // media format (string)
+            "width": 1024, // media width (integer)
+            "height": 768, // media height (integer)
+            "size": 1024, // media size (integer)
+			"url": "https://ichef.bbci.co.uk/news/1024/branded_news/1A3A/production/_118073073_gettyimages-123456789.jpg" // media URL (string)
+		},
+		{
+            "type": "video", // media type (string)
+            "format": "youtube", // media format (string)
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ" // media URL (string)
+        }
+	],
     // article's country (ISO 3166-1 alpha-2 code)
     "country": "uk",
     // article's language (ISO 639-1 code)

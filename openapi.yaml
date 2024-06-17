@@ -301,7 +301,6 @@ paths:
               value: '1698064154'
           schema:
             type: string
-            example: 3232323
             enum:
               - 'RFC850'
               - 'RFC1036'
@@ -1524,7 +1523,7 @@ components:
         - image
         - authors
         - links
-        - videos
+        - media
         - country
         - language
         - category
@@ -1576,10 +1575,35 @@ components:
           type: array
           description: 'Links from article.'
           format: array
-        videos:
+        media:
           type: array
-          description: 'Videos from article.'
-          format: string
+          description: 'Media from article.'
+          format: array
+          properties:
+            type:
+              type: string
+              description: 'type of media.'
+              format: string
+            format:
+              type: string
+              description: 'format of media.'
+              format: string
+            width:
+              type: integer
+              description: 'width of media.'
+              format: int
+            height:
+              type: integer
+              description: 'height of media.'
+              format: int
+            size:
+              type: integer
+              description: 'size of media.'
+              format: int
+            url:
+              type: string
+              description: 'url of media.'
+              format: string
         country:
           type: string
           description: 'Article country code.'
