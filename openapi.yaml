@@ -7,13 +7,13 @@ info:
     Here you have detailed documentation of all available API functions. To get started, you can make the sample request for each endpoint or [integrate into your application](/integrations).
   version: 1.0.8
 tags:
-  - name: News API
+  - name: News Data API
     description: Discover news articles that align with one or multiple search criteria.
 paths:
   /news/articles:
-    get:
+    post:
       tags:
-        - News API
+        - News Data API
       summary: Get news articles
       description: "The most recent news endpoint offers access to the most up-to-date and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
@@ -464,9 +464,9 @@ paths:
                 $ref: '#/components/schemas/Error500'
 
   /news/top-headlines:
-    get:
+    post:
       tags:
-        - News API
+        - News Data API
       summary: Get top headlines
       description: "The top headlines endpoint provides access to the most recent and significant news stories.<br/><br/>Calling this endpoint requires `1 point`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
@@ -917,9 +917,9 @@ paths:
                 $ref: '#/components/schemas/Error500'
 
   /news/article/{id}:
-    get:
+    post:
       tags:
-        - News API
+        - News Data API
       summary: Get single news article
       description: 'Get specific article by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>This api endpoint also available in `POST` request.'
       parameters:
@@ -1006,9 +1006,9 @@ paths:
                 $ref: '#/components/schemas/Error500'
 
   /news/story/{id}:
-    get:
+    post:
       tags:
-        - News API
+        - News Data API
       summary: Get story of news article
       description: "Get specific article story by ID.<br/><br/>Calling this endpoint requires `0.1 points`.<br/><br/>This api endpoint also available in `POST` request."
       parameters:
@@ -1532,10 +1532,10 @@ components:
         - locations
         - summary
         - source
-        - storyId
-        - storyURI
+        - story
         - isDuplicate
         - topic
+        - hashtags
         - sentencesCount
         - paragraphsCount
         - wordsCount
@@ -1596,10 +1596,22 @@ components:
           type: string
           description: 'Article topic id.'
           format: string
-        storyId:
-          type: string
-          description: 'Story ID.'
-          format: string
+        story:
+          type: array
+          description: 'Information about story.'
+          required:
+            - id
+            - uri
+          format: object
+          properties:
+            id:
+              type: string
+              description: 'Story ID.'
+              format: string
+            uri:
+              type: string
+              description: 'Story uri.'
+              format: string
         storyURI:
           type: string
           description: 'Story URI.'
@@ -1608,6 +1620,10 @@ components:
           type: boolean
           description: 'Is article duplicate.'
           format: boolean
+        hashtags:
+          type: array
+          description: 'Hashtags from article.'
+          format: array
         sentencesCount:
           type: integer
           description: 'Sentences count.'

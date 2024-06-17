@@ -99,10 +99,16 @@ The article data model is a JSON object that represents the structure of an arti
             }
         }
     ],
-    // article's story id (string)
-    "storyId": "7c4d2791-d297-41b5-9b5f-af72412962a2",
-    // article's story URL (string)
-    "storyURI": "https://api.apitube.io/v1/news/story/12345",
+    // article's story
+    "story": {
+        "id": "7c4d2791-d297-41b5-9b5f-af72412962a2", // story's ID (string)
+        "uri": "https://api.apitube.io/v1/news/story/7c4d2791-d297-41b5-9b5f-af72412962a2", // story's URI (string)
+    },
+    // article's hashtags (array of strings)
+    "hashtags": [
+        "#covid19",
+        "#uk"
+    ],
 	// article's duplicate flag (boolean)
     "isDuplicate": false,
     // sentence count (integer)
