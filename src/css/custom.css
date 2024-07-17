@@ -25,7 +25,7 @@ html[data-theme='light'] {
   --ifm-font-color-base: #1f2937;
   --ifm-navbar-background-color: #ffffff;
   --openapi-input-background: #ffffff;
-  --ifm-footer-background-color: #dce0e7;
+  --ifm-footer-background-color: #f0f5fe;
   --ifm-footer-link-color: #312b41;
   --ifm-footer-link-hover-color: #312b41;
   --ifm-heading-color: #1f2937;
@@ -35,7 +35,7 @@ html[data-theme='dark'] {
   --ifm-font-color-base: #f5f6f7;
   --ifm-navbar-background-color: #353a48;
   --openapi-input-background: #282a36;
-  --ifm-footer-background-color: #2e3440;
+  --ifm-footer-background-color: #f0f5fe;
   --ifm-footer-link-color: #ddd;
   --ifm-footer-link-hover-color: #ddd;
 }

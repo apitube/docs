@@ -223,7 +223,7 @@ const config = {
           // style: 'dark',
           links: [
             {
-              title: 'APITUBE',
+              title: 'Product',
               items: [
                 // {
                 //   label: 'Features',
@@ -340,7 +340,7 @@ const config = {
               ],
             }
           ],
-          copyright: `Worldwide Live News API for your Next project `,
+          // copyright: `APITUBE.io`,
         },
         prism: {
           theme: require('prism-react-renderer/themes/palenight'),
